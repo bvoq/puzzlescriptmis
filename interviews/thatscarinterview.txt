@@ -1,0 +1,59 @@
+Tell me about your experience with the editor.
+The editor is almost exactly as you expected. I think it's really useful and he likes to use it & it's liberating. I don't have to solve 
+
+
+How was this design process different from your usual practice?
+It was more rapid. Maybe was relying a bit too much on it. Many iterations, more random stuff, patch it up, more random stuff.
+
+How satisfied are you with the design(s)?
+Fairly satisfied, never made Sokoban levels.
+
+How original do you think are the levels?
+Nothing quite like you create it.
+
+How did you experience the functionalities of the editor?
+...
+
+Did it hinder you to do anything and if yes what was it?
+Yea it hindered you by keeping it all in the head. So many transformations, clicked on something and already forgot  => Usually never happens when designing levels yourself.
+
+Can you tell me how you experienced the interaction with the editor?
+Pretty good, but I really disliked that the transformations moved around left and right which was distracting. The show complexity was quite nice => gives you expectations without solving them.
+
+How useful were the suggestions by the system? How did they help you?
+Any suggestion that isn't just trashing the old ideas is good.
+
+Did you think that the system pointed you in different directions than you intended?
+No, not really. If it did I knew exactly why it pointed me that way and I could correct it.
+
+In your view, how did the system make the suggestions? 
+It placed random blocks according to the transformations.
+
+Can you reflect on how your behaviour impacted the suggestions of the system?
+Modify and leave buttons that impacted it.
+
+How much did you feel the system understood your aim?
+Didn't really understand it it's just a tool.
+
+
+How would you characterize the tool within the design process?
+Good starter. Not a jack of all trades.
+
+How well did the scores for the difficulty of the level match your estimation?
+It matched quite well, it seemed like big walks is difficult.
+
+Did a suggestion inspire you without you clicking on it?
+Yea, exactly what happened in the end.
+
+Would you use such a system in your work practice and when?
+Maybe. Depends on the game.
+
+Where do you see the potential of such systems and where the limitation?
+The limitations are it's judging abilities.
+
+Do you have any thoughts you would like to add?
+No. 
+
+
+
+

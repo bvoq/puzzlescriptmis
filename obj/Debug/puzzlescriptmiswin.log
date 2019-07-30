@@ -1,0 +1,87 @@
+﻿  visualsandide.cpp
+c:\users\kdkdk\desktop\of_v20190324_vs2017_release\libs\openframeworks\math\ofmatrix4x4.h(326): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\kdkdk\desktop\of_v20190324_vs2017_release\libs\openframeworks\math\ofmatrix4x4.h(331): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\kdkdk\desktop\of_v20190324_vs2017_release\libs\openframeworks\math\ofmatrix4x4.h(912): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\kdkdk\desktop\of_v20190324_vs2017_release\libs\openframeworks\math\ofmatrix4x4.h(913): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\kdkdk\desktop\of_v20190324_vs2017_release\libs\openframeworks\math\ofmatrix4x4.h(914): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\kdkdk\desktop\of_v20190324_vs2017_release\libs\openframeworks\math\ofmatrix4x4.h(915): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\logerror.h(6): warning C4099: 'Logger': type name first seen using 'struct' now seen using 'class'
+  c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\logerror.h(6): note: see declaration of 'Logger'
+c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\visualsandide.cpp(186): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\visualsandide.cpp(236): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\visualsandide.cpp(238): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\visualsandide.cpp(240): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\visualsandide.cpp(245): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\visualsandide.cpp(251): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\visualsandide.cpp(316): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\visualsandide.cpp(429): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\visualsandide.cpp(444): warning C4267: '=': conversion from 'size_t' to '_Ty2', possible loss of data
+          with
+          [
+              _Ty2=int
+          ]
+c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\visualsandide.cpp(459): warning C4267: '=': conversion from 'size_t' to '_Ty1', possible loss of data
+          with
+          [
+              _Ty1=int
+          ]
+c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\visualsandide.cpp(460): warning C4267: '=': conversion from 'size_t' to '_Ty2', possible loss of data
+          with
+          [
+              _Ty2=int
+          ]
+c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\visualsandide.cpp(478): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\visualsandide.cpp(486): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\visualsandide.cpp(502): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\visualsandide.cpp(947): warning C4267: '=': conversion from 'size_t' to '_Ty2', possible loss of data
+          with
+          [
+              _Ty2=int
+          ]
+c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\visualsandide.cpp(960): warning C4267: '=': conversion from 'size_t' to '_Ty2', possible loss of data
+          with
+          [
+              _Ty2=int
+          ]
+c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\visualsandide.cpp(979): warning C4267: '=': conversion from 'size_t' to '_Ty2', possible loss of data
+          with
+          [
+              _Ty2=int
+          ]
+c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\visualsandide.cpp(990): warning C4267: '=': conversion from 'size_t' to '_Ty2', possible loss of data
+          with
+          [
+              _Ty2=int
+          ]
+c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\visualsandide.cpp(1017): warning C4267: '=': conversion from 'size_t' to '_Ty2', possible loss of data
+          with
+          [
+              _Ty2=int
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\utility(174): warning C4267: 'initializing': conversion from 'size_t' to '_Ty2', possible loss of data
+          with
+          [
+              _Ty2=int
+          ]
+  c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\visualsandide.cpp(1014): note: see reference to function template instantiation 'std::pair<int,int>::pair<_Ty1&,unsigned __int64,0>(_Other1,_Other2 &&) noexcept' being compiled
+          with
+          [
+              _Ty1=int,
+              _Other1=int &,
+              _Other2=unsigned __int64
+          ]
+  c:\users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\src\visualsandide.cpp(1014): note: see reference to function template instantiation 'std::pair<int,int>::pair<_Ty1&,unsigned __int64,0>(_Other1,_Other2 &&) noexcept' being compiled
+          with
+          [
+              _Ty1=int,
+              _Other1=int &,
+              _Other2=unsigned __int64
+          ]
+  puzzlescriptmiswin.vcxproj -> C:\Users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\bin\puzzlescriptmiswin_debug.exe
+  
+  	                   2	C:\Users\kdkdk\Desktop\of_v20190324_vs2017_release\libs\fmodex\lib\vs\x64\
+  	  *EXTRA File 		 6942208	C:\Users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\bin\FreeImage.dll
+  
+  	                   1	C:\Users\kdkdk\Desktop\of_v20190324_vs2017_release\libs\FreeImage\lib\vs\x64\
+  	  *EXTRA File 		 1503232	C:\Users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\bin\fmodex64.dll
+  	  *EXTRA File 		 1552384	C:\Users\kdkdk\source\repos\puzzlescriptmiswin\puzzlescriptmiswin\bin\fmodexL64.dll

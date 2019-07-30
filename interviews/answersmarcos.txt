@@ -1,0 +1,87 @@
+
+Tell me about your experience with the editor.
+
+Overall it's a very interesting project. Some quirks of the interface are to be solved but I hope you can expand it and make it more powerful.
+
+
+How was this design process different from your usual practice?
+
+The loop of mutating/trying/repeat is very appealing, reminiscent to genetic art generators. Usually I make a loop of generating/curating/repeat for my games, perhaps this type of tool can insert a very useful step with the mutator.
+
+
+Outcome quality / usefulness:
+How satisfied are you with the design(s)? 
+How original do you think are the levels?
+
+Some of the levels I found are very surprising and pleasing.
+
+
+Tool: 
+How did you experience the functionalities of the editor?  
+Did it hinder you to do anything and if yes what was it?
+
+Some elements of the interface are difficult to understand at first, and some others are difficult to use, like the text editor.
+
+
+
+Interaction: 
+Can you tell me how you experienced the interaction with the editor?  
+
+I used mainly the mouse, and some of the suggested shortcuts. I did not try to use the text editor very much.
+
+
+Level suggestions: 
+How useful were the suggestions by the system? How did they help you?
+Did you think that the system pointed you in different directions than you intended?
+
+The mutations were generally chaotic, but some of them were surprising, apparently impossible to solve, hence very fun to solve.
+
+
+Agency / communication / interpretability: 
+In your view, how did the system make the suggestions?
+
+I suspect the system uses digital mutation operations that modify the current element of the levels, and tries to solve the new levels, discarding unsolvable/trivial ones.
+
+
+Can you reflect on how your behavior impacted the suggestions of the system?
+
+I feel that the selection of levels from me reinforces the kind of variations the system makes later.
+
+
+How much did you feel the system understood your aim?
+
+I feel like in its current state the system does not use all the feedback loops it could use.
+
+
+How would you characterize the tool within the design process?
+
+As an integral part, like a canvas where experiment within the level space.
+
+
+How well did the scores for the difficulty of the level match your estimation? 
+
+Good enough to be useful, but somewhat uneven. I believe the system could integrate more evaluation criteria to make the estimation more exact.
+
+
+Did a suggestion inspire you without you clicking on it?
+
+Yes.
+
+
+Wrap up: 
+Would you use such a system in your work practice and when? 
+If Yes: What for in specific; If No: What needs to be changed? 
+
+I would use it to find new levels for my games, but also to inspire my level generators with some kind of variations I usually don't explore because lack of real time visualization.
+
+
+Where do you see the potential of such systems and where the limitation?  
+
+There is great potential to explore rule variation in addition to level variation. Limitations are, like always, memory and cpu usage when using mutators and solvers not tuned to specific rules.
+
+
+Do you have any thoughts you would like to add?
+
+I hope more kind of games are added later to the system (3D and/or continuous-like rules).
+This project is very promising, I cannot wait to try the next version, and possibly contribute to it.
+

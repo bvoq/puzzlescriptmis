@@ -1,0 +1,73 @@
+This is BibTeX, Version 0.99d (TeX Live 2019)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: /Users/kdkdk/Desktop/Supersync/of_v20190324_osx_release/apps/myApps/puzzleScriptMIS/bscwriteup3/.texpadtmp/main.aux
+The style file: ../acmsiggraph.bst
+Database file #1: ../graphics.bib
+Warning--I didn't find a database entry for "apx:interview"
+Warning--I didn't find a database entry for "Jurgen"
+Warning--empty journal in Baldwin2017
+Warning--empty journal in Butler2013
+Warning--empty journal in Csikszentmihalyi
+Warning--empty journal in Culberson1997
+Warning--empty journal in Froleyks2016
+Warning--empty journal in Giaccardi2008
+Warning--empty journal in Guzdial
+Warning--empty journal in Hard2015
+Warning--empty journal in Pelanek2011
+Warning--empty journal in Junghanns1999
+Warning--empty journal in Kangas2017
+Warning--empty journal in Kartal2015
+Warning--empty journal in Khalifa2015
+Warning--empty journal in Koch
+Warning--empty journal in Lee2014
+Warning--empty journal in Lim2014
+Warning--empty journal in Science1996
+Warning--empty journal in Nelson2009
+Warning--empty journal in Perez2014
+Warning--empty journal in Schmidhuber
+Warning--empty organization in Shaker2013Ropossum
+Warning--empty journal in Smith2008
+Warning--empty journal in Weber2017
+Warning--empty journal in Williams2017
+You've used 39 entries,
+            2873 wiz_defined-function locations,
+            835 strings with 10917 characters,
+and the built_in function-call counts, 98275 in all, are:
+= -- 10649
+> -- 701
+< -- 0
++ -- 571
+- -- 251
+* -- 10322
+:= -- 12272
+add.period$ -- 133
+call.type$ -- 39
+change.case$ -- 267
+chr.to.int$ -- 37
+cite$ -- 63
+duplicate$ -- 839
+empty$ -- 10183
+format.name$ -- 279
+if$ -- 21219
+int.to.chr$ -- 3
+int.to.str$ -- 0
+missing$ -- 38
+newline$ -- 214
+num.names$ -- 117
+pop$ -- 366
+preamble$ -- 1
+purify$ -- 228
+quote$ -- 0
+skip$ -- 332
+stack$ -- 0
+substring$ -- 27646
+swap$ -- 211
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 312
+warning$ -- 24
+while$ -- 437
+width$ -- 45
+write$ -- 476
+(There were 26 warnings)

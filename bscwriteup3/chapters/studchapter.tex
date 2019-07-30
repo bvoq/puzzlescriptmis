@@ -1,0 +1,31 @@
+% !TEX root = ../thesis.tex
+
+\addtokomafont{chapter}{\setlength{\parskip}{190pt}}   % SEVERE HACK to keep spacing to chapter art work
+%\addtokomafont{chapter}{\rmfamily}        % remove this if you prefer sans-serif section titles
+%\addtokomafont{section}{\rmfamily}        % remove this if you prefer sans-serif section titles
+%\addtokomafont{subsection}{\rmfamily}     % remove this if you prefer sans-serif section titles
+%\addtokomafont{subsubsection}{\rmfamily}  % remove this if you prefer sans-serif section titles
+%\addtokomafont{paragraph}{\rmfamily}      % replace by \sffamily if you prefer sans-serif para titles
+\addtokomafont{paragraph}{\sffamily}
+
+\def\mychpstyleintl{%
+{\noindent\setlength{\tabcolsep}{0pt}\setlength{\arrayrulewidth}{2pt}%
+\begin{tabular}{c}
+\\[100pt]
+\begin{tabular}{lr}
+\begin{tabular}{p{0.6\linewidth}}
+\\
+\end{tabular}
+&
+\begin{tabular}{p{0.4\linewidth}}
+\rightline{{%
+\sffamily%
+\fontseries{bx}%
+\fontshape{n}%
+\fontsize{100}{120}%choose baselineskip to be 1.2 times font size
+\selectfont
+\thechapter}}
+\end{tabular}
+\end{tabular}\\[300pt]
+\end{tabular}
+}}

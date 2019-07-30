@@ -1,0 +1,128 @@
+• Tell me about your experience with the editor.
+In broad terms it does some cool things. Bunch of usability suggestions. Have to figure out use cases!
+
+Kernelizing the level: .
+Clear UI flow. Not great text editor. No undo button.
+
+Shift 
+
+Favorite icon mode.
+
+How was this design process different from your usual practice?
+Using it as a solver to have a certain game, change the mechanics, and then change the level editor
+Interesting comparison marcosd's approach
+
+For compact complicated games it would work. Beautiful games.
+
+Moral responsibility for creating non-generated levels.
+
+
+How satisfied are you with the design(s)? 
+Gray level was fine, not nice enough to add in a game.
+Simple charming sokoban level
+
+Minimalist => No walls
+Better at juggling a lot of objects
+
+How original do you think are the levels?
+Loopy thing. Can have personality.
+
+How did you experience the functionalities of the editor?
+
+Did it hinder you to do anything and if yes what was it?
+Usability things, having to make decisions with the scripting is a bit tricky.
+Accepting what it can and can't do
+
+Resize levels in editor.
+4 is enough.
+brackets instead of =
+
+• Can you tell me how you experienced the interaction with the editor?  
+I have a powercable is a cheap knock off and is very handy, but when i touch the metal part i get shocked.
+
+Watching numbers go up and gradually if it's too slow i'll change the transform and fiddle with the level size.
+
+Polishing I would do by hand.
+For iterative just change the mechanics of the game.
+
+
+
+• How useful were the suggestions by the system? How did they help you?
+I don't have a loop of iterative design, I'm just looking for a good starting point.
+The suggestions are nice and interesting. I will try and solve it.
+
+• Did you think that the system pointed you in different directions than you intended?
+Finding out what the tool can compute. I did not approach the tool with a predefined mindset. I was just trying to figure out what the tool can and cannot do.
+
+• In your view, how did the system make the suggestions? 
+By the rules, based on the skills.
+
+
+• Can you reflect on how your behavior impacted the suggestions of the system?
+Partial solution steps.
+
+• How much did you feel the system understood your aim?
+Pretty well. Learning what the system can do. Now that I have an idea how it works.
+I don't come here to say: I want help from the puzzle.
+
+
+• How would you characterize the tool within the design process?
+Seen
+
+• How well did the scores for the difficulty of the level match your estimation? 
+Pretty accurate
+There seems to be a threshold of levels that are interesting, qualitatively how it feels like.
+
+
+• Did a suggestion inspire you without you clicking on it?
+No, but could happen. Looking at them and trying to solve them in the head
+
+• Would you use such a system in your work practice and when? 
+Yea, for certain particular games. Also for super compacting.
+
+
+•  If Yes: What for in specific; If No: What needs to be changed? 
+Mechanics that I feel can be easily simulated, with very simple rules, something like this is a good candidate.
+
+• Where do you see the potential of such systems and where the limitation?
+Performance limitations. Level size, # of rules, people making bad levels with it, people making levels that aren't fun. Always going to try to make small levels.
+
+• Do you have any thoughts you would like to add?
+Random other things: 
+1. Level editor should be a script editor.
+2. Name: Mutations rather than retransformation
+3. Keep record of everything you do -> Don't make it to save.
+
+Polymonial
+
+
+Small simple rules, game where you can't backtrack.
+
+trapdoor puzzles, snake are GOOD. Potential function that always increases.
+
+forward design vs. backward design
+
+have used backward generation
+
+picross-like design approach
+
+change mechanics all the way
+
+two nice interactions
+
+two nice interactions => merging method 
+
+cool level => smallest version of the puzzle => kernelizing => red herrings ()
+
+Unsolvable => Solvable in this way
+
+again only doesn't 
+
+200 or 300
+
+
+
+
+=======
+Suddenly I can play the levels I designed
+

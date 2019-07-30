@@ -1,0 +1,36 @@
+-
+
+Faster, felt like communication, not trivial.
+
+I did more than I imagined I could with the tool.
+
+Not really. Too few curated suggestion levels.
+
+I was able to do more in a short amount of time and check more things than I would usually.
+
+It felt like a communication with the exception of the things I controlled. (This participant only used the suggested buttons and did not implement his own transformation rules). 
+
+-
+-
+
+Well I kind of knew what it did after you explained it so it just did what I wanted it to do.
+
+It allowed to limit well. 
+
+It is not intelligent, it just did what I told it to do and it was a useful tool.
+
+The role of saving levels, play them , finding their solutions and checking if it has solutions. Additionally, it brought me ideas and did its job quite well.
+
+I did not look at the difficulty scores, just at the curated levels.
+
+Yes, especially as a level of confidence so I was sure that the current design was pretty solid when the suggestions seemed worse.
+
+Not for the game I'm currently working on but if I design puzzle levels again sure.
+
+The limits are the language of PuzzleScript and the language of the transformer.
+
+Potential is to create low effort levels and it allows you to constrain your creativity. There's a kind of Google Effect where I stop thinking about solvability. Probably if you've been designing puzzles for a specific game for a long period of time the tool probably won't help much anymore, so it's more useful in the prototype phase.
+
+
+
+Too little solutions.

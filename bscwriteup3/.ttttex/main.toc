@@ -1,0 +1,17 @@
+\contentsline {chapter}{List of Figures}{vii}{section*.4}
+\contentsline {chapter}{List of Tables}{ix}{section*.6}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Related Work}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Human Skin Rendering}{9}{section.2.1}
+\contentsline {chapter}{\numberline {3}The Mixed Initiative System}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}PuzzleScript}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}PuzzleScript}{13}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Fist Subsection}{14}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Another Subsection}{14}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Second Section}{15}{section.3.3}
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{17}{chapter.4}
+\contentsline {chapter}{\numberline {A}Information For The Few (Appendix)}{19}{appendix.A}
+\contentsline {section}{\numberline {A.1}Needfinding survey}{19}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Interview questions}{19}{subsection.A.1.1}
+\contentsline {section}{\numberline {A.2}PuzzleScript}{20}{section.A.2}
+\contentsline {chapter}{Bibliography}{23}{section*.18}

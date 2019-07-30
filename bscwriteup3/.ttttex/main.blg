@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: /Users/kdkdk/Desktop/Supersync/of_v20190324_osx_release/apps/myApps/puzzleScriptMIS/bscwriteup3/.texpadtmp/main.aux
+The style file: ../acmsiggraph.bst
+Database file #1: ../graphics.bib
+Warning--to sort, need author or key in listofsokobobangames
+Warning--empty journal in Baldwin2017
+Warning--empty journal in Butler2013
+Warning--empty journal in Culberson1997
+Warning--empty journal in Froleyks2016
+Warning--empty journal in Giaccardi2008
+Warning--empty journal in Guzdial
+Warning--empty journal in Hard2015
+Warning--empty journal in Junghanns1999
+Warning--empty journal in Kangas2017
+Warning--empty journal in Kartal2015
+Warning--empty journal in Lee2014
+Warning--empty journal in Liapis2016
+Warning--empty journal in Nelson2009
+Warning--empty journal in Osborn2011
+Warning--empty journal in Pelanek2011
+Warning--empty journal in Science1996
+Warning--empty organization in Shaker2013Ropossum
+Warning--empty journal in Smith2008
+Warning--empty journal in Weber2017
+You've used 29 entries,
+            2873 wiz_defined-function locations,
+            781 strings with 9387 characters,
+and the built_in function-call counts, 75450 in all, are:
+= -- 8195
+> -- 517
+< -- 0
++ -- 434
+- -- 183
+* -- 7939
+:= -- 9381
+add.period$ -- 102
+call.type$ -- 29
+change.case$ -- 199
+chr.to.int$ -- 28
+cite$ -- 50
+duplicate$ -- 623
+empty$ -- 7832
+format.name$ -- 204
+if$ -- 16305
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 28
+newline$ -- 163
+num.names$ -- 84
+pop$ -- 275
+preamble$ -- 1
+purify$ -- 170
+quote$ -- 0
+skip$ -- 245
+stack$ -- 0
+substring$ -- 21330
+swap$ -- 155
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 232
+warning$ -- 20
+while$ -- 331
+width$ -- 34
+write$ -- 359
+(There were 20 warnings)

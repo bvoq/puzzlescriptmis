@@ -1,0 +1,20 @@
+. The editor was fun to use, but oftentimes I found it was lacking visual feedback of the ongoing generation process 
+. Designing with a level generator gives the advantage of encountering new object 'constellations' that are sometimes unintuitive and difficult to solve.
+. I wasn't happy with the designs (of the sokoban levels) but attribute that mainly to my error, could have used a more interesting generation algorithm and level base. Sokoban levels have been generated for ages, so my levels were probably not original. Maybe going with a different base game (block pulling maybe?) would have resulted in more originality.
+. The editor had most of the functionality that it needs, some QOL improvements would be required to tie it all together though.
+. Not being able to alter level size from within the editor was annoying, also the Transform text box clearing on tab switch was a hindrance.
+Interaction:
+. Without the verbal confirmation that the generator is working I'd have believed it was not generating and kept restarting the process. Otherwise it was mostly fine.
+Levels:
+. The level suggestions were as useful as the generation rules I fed into the system. The suggestions can be helpful for coming up with own design ideas.
+. If the purpose of the system is generating new ideas, then new ideas would be an intended direction, so no.
+Agency:
+. It made the suggestions based on the results of my transformation rules, a solver and a complexity rating algorithm.
+. The transformation rules directly impact what levels are generated, the solvable subset of those gets rated by complexity, the four highest-razed levels get presented to me, so the impact of the rules is indirect.
+. The system has the aim of creating complex levels from a set of rules. Formulating intentions would happen by setting rules and base level but the system would not 'understand', just process.
+. Perhaps useful for coming up with variations and unintuitive level designs.
+. Difficulty rating did not align with my perception of difficulty, but I've not yet explored enough to be sure.
+.(the generator inspired me to make my own, some level states resulting from generated levels were inspiration for forward-designed levels)
+Wrap up:
+. Yes, for creating level states that I hadn't encountered before, then using those as inspiration.
+. Potential for creating unintuitive and thus hard to solve levels. Potential for improving handmade levels. Limitation in  complexity heuristics and level size (since computation effort increases exponentially)

@@ -1,0 +1,14 @@
+This is a template for student theses in the AIT lab at ETH.
+
+Do not directly edit the files in this directory (unless you're feeding back generic improvements to the template).
+
+If you are starting to write your thesis copy, please clone this project, and then either edit locally, or create your own personal Overleaf project
+To do so, go to the share menu of this project and copy the git link from "Clone with git" (e.g. https://git.overleaf.com/ait-thesis-template)
+
+git clone https://git.overleaf.com/ait-thesis-template my-thesis
+
+DO NOT PUSH YOUR THESIS CHANGES IN THIS REPO.
+
+Last update: 
+Otmar 	 | 26/2/2014
+Fabrizio | 29/5/2017

@@ -1,0 +1,267 @@
+
+\documentclass[a4paper,twoside,12pt,nochapterprefix]{scrbook}
+
+% ADDITIONAL PACKAGES ADDED BY ME
+\usepackage{listings}
+\usepackage[utf8]{inputenc}
+\usepackage[usenames,dvipsnames]{color}     
+\usepackage{booktabs}
+\usepackage{diagbox}
+\usepackage{dirtytalk}
+
+%\usepackage{rotating}
+%\usepackage{fontspec}
+
+\newcommand{\specialcell}[2][c]{%
+\begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+
+
+\lstset{
+    alsoletter=?!-><=[]|,
+    % literate={>}{{\(\ge\)}}1,
+  	% alsodigit=\$\%&*+./:<=>@^_~,
+	columns=fullflexible,
+	basicstyle=\linespread{0.8}\ttfamily,
+	keywordstyle=\color{RoyalBlue}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	commentstyle=\color{ForestGreen}\ttfamily,
+	tabsize=4,
+	frame=single,
+	literate=%
+    {Ö}{{\"O}}1
+    {Ä}{{\"A}}1
+    {Ü}{{\"U}}1
+    {ß}{{\ss}}1
+    {ü}{{\"u}}1
+    {ä}{{\"a}}1
+    {ö}{{\"o}}1
+}
+
+\lstdefinelanguage{PuzzleScript}{%
+  alsoletter={v,^,<,>,-,+},
+  keywords=[1]{OBJECTS, LEGEND, SOUNDS, COLLISIONLAYERS, RULES, WINCONDITIONS, LEVELS, GENERATION},
+  keywordstyle=[1]\color{RoyalBlue}\ttfamily\bfseries,
+  keywords=[2]{Player,Wall,Background,Crate,Target,Key,Door,UP,DOWN,LEFT,RIGHT},
+  keywordstyle=[2]\color{RoyalBlue}\ttfamily,
+  keywords=[3]{->,+},
+  keywordstyle=[3]\color{Red}\ttfamily\bfseries,
+  keywords=[4]{>,<,v,^},
+  keywordstyle=[4]\color{ForestGreen}\ttfamily\bfseries,
+  keywords=[5]{up,down,left,right,action,no,No},
+  keywordstyle=[5]\color{ForestGreen}\ttfamily,
+  morecomment=[l][\color{Gray}]{==},
+  morecomment=[s]{(}{)},
+  morestring=[b]",
+  morestring=[b]',
+  alsoother={\,0"},
+  sensitive=true,
+  literate=*{"}{,}{1}
+}
+\lstset{
+language=PuzzleScript
+}
+
+%\usepackage[symbol]{footmisc}
+
+%\@addtoreset{footnote}{page}
+
+
+% \renewcommand*{\footnotelayout}{\small\tffamily}
+% \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+%\renewcommand*{\thefootnote}{\alph{footnote}}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[footnotesize,sl,SL,hang,tight]{subfigure}  % helpful package for aligning figures next to each other
+\usepackage{longtable} % tables over several pages
+\usepackage[font={small,sl},hang,labelfont=bf]{caption} % configure captions
+\usepackage{booktabs} % publication quality tables for LaTeX
+%\usepackage{showkeys} % shows the labels above the references for easier development
+
+\ifpdfoutput{%
+	\usepackage[pdftex]{graphicx}
+	\usepackage[]{pdfpages} %for including full pdf pages
+}{%
+	\usepackage{graphicx}
+}
+\usepackage{epstopdf}
+\epstopdfsetup{update} % only regenerate pdf files when eps file is newer
+
+\usepackage{rotating} % rotate figures
+
+\usepackage[headinclude]{scrpage2}
+
+% Font packages:
+\usepackage{times}
+\usepackage{helvet}   % sets sans serif font
+\usepackage[T1]{fontenc}
+
+%PDF hyperref config
+\ifpdfoutput{%
+	\usepackage[pdftex,
+		a4paper,
+		bookmarks,
+		bookmarksopen=true,
+		bookmarksnumbered=true,
+		pdfauthor={My Name},       % FILL THIS IN PROPERLY
+		pdftitle={Thesis Title},   % FILL THIS IN PRPERLY
+		colorlinks,
+		linkcolor=black,
+		citecolor=black,
+		filecolor=black,
+		urlcolor=black,
+		anchorcolor=black,
+		menucolor=black,
+		breaklinks=true,
+		pageanchor=true,
+		plainpages=false,
+		pdfpagelabels=true]{hyperref}
+}{}
+
+\ifpdfoutput{%
+	\pdfcompresslevel=9
+	\pdfoutput=1
+	\DeclareGraphicsExtensions{.pdf,.png}
+}{}
+
+\bibliographystyle{acmsiggraph}
+
+
+
+% A4
+%
+\topmargin -0.5in
+\textheight 9.3in
+\textwidth 6.3in
+\oddsidemargin 0.18in
+\evensidemargin -0.22in
+\parskip 0.1in
+\parindent 0in
+
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\baselinestretch}{1}
+
+\input{./chapters/preamble}
+\input{./chapters/bibpre}
+
+\begin{document}
+
+%% Define leading chapter pages
+%
+\input{./chapters/studchapter}
+\newpagestyle{mychapterpagestyle}{{\protect\mychpstyleintl}{\protect\mychpstyleintl}}{}
+\newpagestyle{myappendixpagestyle}{{\protect\mychpstyleintl}{\protect\mychpstyleintl}}{}
+%%
+
+%% macros e.g.
+\newcommand{\mfytext}[0]{my fancy text}
+
+%refs
+\newcommand{\chpref}[1]{Chapter \ref{#1}}
+\newcommand{\secref}[1]{Section \ref{#1}}
+%\newcommand{\equref}[1]{Equation \ref{#1}} %better use builtin \eqref{}
+\newcommand{\figref}[1]{Figure \ref{#1}}
+\newcommand{\tabref}[1]{Table \ref{#1}}
+\newcommand{\apxref}[1]{Appendix \ref{#1}}
+%%
+
+%% Replace this by your own design of a title page
+%
+%\title{Thesis Title}
+%\author{My Name}
+%\date{September 2042}
+%\maketitle
+%\clearemptydoublepage
+% --- selfmade version ----
+\begin{titlepage}
+	\topmargin 1.0cm
+	\oddsidemargin 0.0cm
+	\evensidemargin 0.0cm
+	%\textwidth 6.5in
+	\centering
+	\Huge
+	\vspace{3.0cm}
+	\textbf{\textsf{Mixed-initiative methods for designing Sokoban-like puzzles}} \\[2.0cm]
+	\includegraphics*[width=0.8\textwidth]{figures/titleimage} \\ % TITLE IMAGE - replace by attractive and representative images from your thesis
+	\vspace{3cm}
+	\sffamily
+	\Large
+	Kevin De Keyser
+	\\[0.8cm]
+	\large
+	Bachelor Thesis % Bachelor Thesis
+	\\
+	July 2019
+	\\[1.3cm]
+	\emph{Supervisors:}\\
+	Dr.\ Anna Maria Feit\\ 					% The name of the thesis supervisor
+	Prof.\ Dr.\ Otmar Hilliges		% The supervising professor
+	\vfill
+	\includegraphics*[height=0.8cm]{figures/eth_logo_kurz_pos.eps} \hfill
+	\includegraphics*[height=0.8cm]{figures/logo-ait}
+	\vspace{3.4cm}
+\end{titlepage}
+\clearemptydoublepage
+%%
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\input{./chapters/abstract}
+
+%-----------------------------------------------------------------------------------------------
+%include task description here:
+\cleardoublepage
+%\includegraphics[viewport=3cm 0cm 20cm 27.5cm]{task_description} %better use includepdf below!
+%\includepdf{task_description}
+\cleardoublepage
+%-----------------------------------------------------------------------------------------------
+
+%include acknowledgment here:
+%\include{./chapters/acknowledgment}
+
+\tableofcontents
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+\cleardoublepage
+
+\pagenumbering{arabic}
+\renewcommand*{\chapterpagestyle}{mychapterpagestyle}
+\renewcommand*{\chapterformat}{} % show chapter titles only (no numbers)
+% \setchapterpreamble[o]{...}  unfortunately does not move the \chapter output downwards
+
+% ---- MAIN PART ----
+
+\input{./chapters/ch01-introduction}
+\input{./chapters/ch02-related-work}
+\input{./chapters/ch03-more-chapters}
+\input{./chapters/ch04-conclusion}
+
+
+% ---- END MAIN PART ----
+
+\clearpage
+\appendix
+\clearpage
+\renewcommand*{\chapterpagestyle}{myappendixpagestyle}
+
+\input{./chapters/apx-sample-appendix}
+
+\clearpage
+\renewcommand*{\chapterpagestyle}{empty}
+
+%\nocite{*}
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{graphics}
+
+\end{document}
