@@ -1,9 +1,9 @@
 \contentsline {chapter}{List of Figures}{vii}{section*.4}% 
 \contentsline {chapter}{List of Tables}{ix}{section*.6}% 
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}% 
-\contentsline {section}{\numberline {1.1}Formal theory of fun}{2}{section.1.1}% 
-\contentsline {section}{\numberline {1.2}Sokoban}{3}{section.1.2}% 
-\contentsline {section}{\numberline {1.3}Aim of the study}{4}{section.1.3}% 
+\contentsline {section}{\numberline {1.1}Sokoban}{2}{section.1.1}% 
+\contentsline {section}{\numberline {1.2}Aim of the study}{3}{section.1.2}% 
+\contentsline {section}{\numberline {1.3}Formal theory of fun}{3}{section.1.3}% 
 \contentsline {chapter}{\numberline {2}Related Work}{5}{chapter.2}% 
 \contentsline {subsubsection}{\nonumberline Generating Sokoban Levels}{5}{section*.9}% 
 \contentsline {subsubsection}{\nonumberline Solving Sokoban Levels}{6}{section*.10}% 

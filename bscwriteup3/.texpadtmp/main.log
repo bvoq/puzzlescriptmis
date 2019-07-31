@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.7.10)  30 JUL 2019 22:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.7.10)  31 JUL 2019 13:45
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -755,19 +755,19 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 
 ] [2
 
-]
-LaTeX Font Info:    Try loading font information for U+msa on input line 30.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 30.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)) [3
+]) [3
 
 ] [4
 
-] (/Users/kdkdk/Desktop/Supersync/of_v20190324_osx_release/apps/myApps/puzzleScriptMIS/bscwriteup3/.texpadtmp/main.toc [5
+] (/Users/kdkdk/Desktop/Supersync/of_v20190324_osx_release/apps/myApps/puzzleScriptMIS/bscwriteup3/.texpadtmp/main.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 4.
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 4.
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [5
 
 
 ])
@@ -807,13 +807,17 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              a package that still implements the
 (scrbook)              deprecated \float@addtolist interface .
 
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 9.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 21.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 25.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <100> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 24.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 28.
 
 Overfull \hbox (2.28006pt too wide) has occurred while \output is active
 []|[] []
@@ -825,33 +829,30 @@ Overfull \vbox (459.92477pt too high) has occurred while \output is active []
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.24 
+l.28 
       [1
 
 ]
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 33.
-
-Overfull \hbox (0.5748pt too wide) in paragraph at lines 35--36
-[]\T1/ptm/m/n/12 Unfortunately, re-in-force-ment learn-ing al-go-rithms have not been suc-cess-fully ap-plied to Sokoban
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+<figures/45minslevel.png, id=217, 939.51pt x 749.80125pt>
+File: figures/45minslevel.png Graphic file (type png)
+<use figures/45minslevel.png>
+Package pdftex.def Info: figures/45minslevel.png  used on input line 35.
+(pdftex.def)             Requested size: 221.73146pt x 176.95842pt.
+LaTeX Font Info:    Font shape `T1/ptm/bx/sl' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/sl' tried instead on input line 43.
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.36 
-      [2]
-<figures/45minslevel.png, id=222, 939.51pt x 749.80125pt>
-File: figures/45minslevel.png Graphic file (type png)
-<use figures/45minslevel.png>
-Package pdftex.def Info: figures/45minslevel.png  used on input line 51.
-(pdftex.def)             Requested size: 221.73146pt x 176.95842pt.
-LaTeX Font Info:    Font shape `T1/ptm/bx/sl' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/sl' tried instead on input line 59.
- [3 <./figures/45minslevel.png>]) (./chapters/ch02-related-work.tex [4]
+l.52 
+      [2 <./figures/45minslevel.png>] [3]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 74.
+
+Overfull \hbox (0.5748pt too wide) in paragraph at lines 76--78
+[]\T1/ptm/m/n/12 Unfortunately, re-in-force-ment learn-ing al-go-rithms have not been suc-cess-fully ap-plied to Sokoban
+ []
+
+) (./chapters/ch02-related-work.tex [4]
 chapter 2.
 
 Overfull \hbox (0.70729pt too wide) in paragraph at lines 16--17
@@ -873,14 +874,19 @@ Overfull \hbox (26.93854pt too wide) in paragraph at lines 18--19
 []\T1/ptm/m/n/12 Generating not only lev-els but en-tire Puz-zle-Script games were at-tempted by [[]]
  []
 
+
+Overfull \hbox (1.31949pt too wide) in paragraph at lines 24--25
+\T1/ptm/m/n/12 [[]] and [[]] proved that many other puz-zle games and video games
+ []
+
 [6]
-<figures/cadvsinteractiveevol.png, id=300, 1509.64pt x 517.935pt>
+<figures/cadvsinteractiveevol.png, id=308, 1509.64pt x 517.935pt>
 File: figures/cadvsinteractiveevol.png Graphic file (type png)
 <use figures/cadvsinteractiveevol.png>
 Package pdftex.def Info: figures/cadvsinteractiveevol.png  used on input line 40.
 (pdftex.def)             Requested size: 455.30121pt x 156.2036pt.
 
-Overfull \hbox (25.30685pt too wide) in paragraph at lines 48--49
+Overfull \hbox (13.97893pt too wide) in paragraph at lines 48--49
 \T1/ptm/m/n/12 called Ro-pos-sum used for cre-at-ing Cut The Rope lev-els [[]] & [[]],
  []
 
@@ -889,13 +895,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7 <./figures/cadvsinteractiveevol.png>]) (./chapters/ch03-more-chapters.tex [8]
 chapter 3.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 14.
-(/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <12> not available
 (Font)              Font shape `T1/pcr/b/n' tried instead on input line 16.
-<figures/wallimg.png, id=344, 436.63126pt x 436.63126pt>
+<figures/wallimg.png, id=353, 436.63126pt x 436.63126pt>
 File: figures/wallimg.png Graphic file (type png)
 <use figures/wallimg.png>
 Package pdftex.def Info: figures/wallimg.png  used on input line 30.
@@ -911,7 +913,7 @@ Overfull \vbox (460.54948pt too high) has occurred while \output is active []
  [9
 
 ]
-<figures/collisionlayersboth.png, id=356, 1718.42pt x 859.21pt>
+<figures/collisionlayersboth.png, id=365, 1718.42pt x 859.21pt>
 File: figures/collisionlayersboth.png Graphic file (type png)
 <use figures/collisionlayersboth.png>
 Package pdftex.def Info: figures/collisionlayersboth.png  used on input line 69.
@@ -932,7 +934,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--87
  []
 
 [10 <./figures/wallimg.png> <./figures/collisionlayersboth.png>]
-<figures/level1.png, id=386, 359.84438pt x 421.575pt>
+<figures/level1.png, id=396, 359.84438pt x 421.575pt>
 File: figures/level1.png Graphic file (type png)
 <use figures/level1.png>
 Package pdftex.def Info: figures/level1.png  used on input line 124.
@@ -941,57 +943,57 @@ Package pdftex.def Info: figures/level1.png  used on input line 124.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11 <./figures/level1.png>]
-<figures/leveleditormode.png, id=404, 1686.3pt x 1053.9375pt>
+<figures/leveleditormode.png, id=414, 1686.3pt x 1053.9375pt>
 File: figures/leveleditormode.png Graphic file (type png)
 <use figures/leveleditormode.png>
 Package pdftex.def Info: figures/leveleditormode.png  used on input line 141.
 (pdftex.def)             Requested size: 455.30121pt x 284.55084pt.
-<figures/imageoftransformmode.png, id=405, 1686.3pt x 1053.9375pt>
+<figures/imageoftransformmode.png, id=415, 1686.3pt x 1053.9375pt>
 File: figures/imageoftransformmode.png Graphic file (type png)
 <use figures/imageoftransformmode.png>
 Package pdftex.def Info: figures/imageoftransformmode.png  used on input line 148.
 (pdftex.def)             Requested size: 455.30121pt x 284.55084pt.
-<figures/playtestmode.png, id=406, 1686.3pt x 1053.9375pt>
+<figures/playtestmode.png, id=416, 1686.3pt x 1053.9375pt>
 File: figures/playtestmode.png Graphic file (type png)
 <use figures/playtestmode.png>
 Package pdftex.def Info: figures/playtestmode.png  used on input line 155.
 (pdftex.def)             Requested size: 455.30121pt x 284.55084pt.
-<figures/shortestsolution.png, id=408, 247.92625pt x 32.12pt>
+<figures/shortestsolution.png, id=418, 247.92625pt x 32.12pt>
 File: figures/shortestsolution.png Graphic file (type png)
 <use figures/shortestsolution.png>
 Package pdftex.def Info: figures/shortestsolution.png  used on input line 168.
 (pdftex.def)             Requested size: 159.3582pt x 20.64542pt.
-<figures/shortestsolutionwithin.png, id=409, 394.47375pt x 35.13126pt>
+<figures/shortestsolutionwithin.png, id=419, 394.47375pt x 35.13126pt>
 File: figures/shortestsolutionwithin.png Graphic file (type png)
 <use figures/shortestsolutionwithin.png>
 Package pdftex.def Info: figures/shortestsolutionwithin.png  used on input line 169.
 (pdftex.def)             Requested size: 159.3582pt x 14.19215pt.
-<figures/nosolutionwithin.png, id=410, 367.3725pt x 40.15pt>
+<figures/nosolutionwithin.png, id=420, 367.3725pt x 40.15pt>
 File: figures/nosolutionwithin.png Graphic file (type png)
 <use figures/nosolutionwithin.png>
 Package pdftex.def Info: figures/nosolutionwithin.png  used on input line 170.
 (pdftex.def)             Requested size: 159.3582pt x 17.4167pt.
-<figures/difficultygreedy.png, id=411, 201.75375pt x 33.12375pt>
+<figures/difficultygreedy.png, id=421, 201.75375pt x 33.12375pt>
 File: figures/difficultygreedy.png Graphic file (type png)
 <use figures/difficultygreedy.png>
 Package pdftex.def Info: figures/difficultygreedy.png  used on input line 177.
 (pdftex.def)             Requested size: 113.8253pt x 18.68765pt.
-<figures/difficultyastar.png, id=412, 191.71625pt x 33.12375pt>
+<figures/difficultyastar.png, id=422, 191.71625pt x 33.12375pt>
 File: figures/difficultyastar.png Graphic file (type png)
 <use figures/difficultyastar.png>
 Package pdftex.def Info: figures/difficultyastar.png  used on input line 178.
 (pdftex.def)             Requested size: 113.8253pt x 19.66615pt.
-<figures/difficultybfs.png, id=413, 200.75pt x 30.1125pt>
+<figures/difficultybfs.png, id=423, 200.75pt x 30.1125pt>
 File: figures/difficultybfs.png Graphic file (type png)
 <use figures/difficultybfs.png>
 Package pdftex.def Info: figures/difficultybfs.png  used on input line 179.
 (pdftex.def)             Requested size: 113.8253pt x 17.07423pt.
-<figures/difficultycurveleft.png, id=414, 383.4325pt x 33.12375pt>
+<figures/difficultycurveleft.png, id=424, 383.4325pt x 33.12375pt>
 File: figures/difficultycurveleft.png Graphic file (type png)
 <use figures/difficultycurveleft.png>
 Package pdftex.def Info: figures/difficultycurveleft.png  used on input line 186.
 (pdftex.def)             Requested size: 159.3582pt x 13.76682pt.
-<figures/difficultycurveright.png, id=415, 386.44376pt x 30.1125pt>
+<figures/difficultycurveright.png, id=425, 386.44376pt x 30.1125pt>
 File: figures/difficultycurveright.png Graphic file (type png)
 <use figures/difficultycurveright.png>
 Package pdftex.def Info: figures/difficultycurveright.png  used on input line 187.
@@ -1039,20 +1041,6 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
 ]
 chapter 4.
 
-Package caption Warning: \label without proper reference on input line 127.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `tab:demography' on page 19 undefined on input line 333.
-
-
-Package caption Warning: \label without proper reference on input line 127.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `tab:demography' on page 19 undefined on input line 338.
-
-
 Overfull \hbox (2.28006pt too wide) has occurred while \output is active
 []|[] []
  []
@@ -1061,11 +1049,16 @@ Overfull \hbox (2.28006pt too wide) has occurred while \output is active
 Overfull \vbox (459.92477pt too high) has occurred while \output is active []
 
  [19]
-<figures/sokobaniteratelevel.png, id=489, 238.39063pt x 278.03876pt>
+<figures/sokobaniteratelevel.png, id=499, 238.39063pt x 278.03876pt>
 File: figures/sokobaniteratelevel.png Graphic file (type png)
 <use figures/sokobaniteratelevel.png>
 Package pdftex.def Info: figures/sokobaniteratelevel.png  used on input line 352.
 (pdftex.def)             Requested size: 227.6506pt x 265.52686pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
+[][][][][]$\T1/pcr/m/n/10 http : / / sokoban-[]jd . blogspot . com / 2015 / 02 / how-[]to-[]build-[]sokoban-[]level . html$[][] \T1/ptm/m/n/10 @
+ []
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1098,7 +1091,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 402--403
 
  []
 
-<figures/maxii0.png, id=500, 631.35875pt x 735.74875pt>
+<figures/maxii0.png, id=511, 631.35875pt x 735.74875pt>
 File: figures/maxii0.png Graphic file (type png)
 <use figures/maxii0.png>
 Package pdftex.def Info: figures/maxii0.png  used on input line 406.
@@ -1113,7 +1106,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 406--407
 
  []
 
-<figures/maxii1_green.png, id=501, 630.85687pt x 734.745pt>
+<figures/maxii1_green.png, id=512, 630.85687pt x 734.745pt>
 File: figures/maxii1_green.png Graphic file (type png)
 <use figures/maxii1_green.png>
 Package pdftex.def Info: figures/maxii1_green.png  used on input line 410.
@@ -1128,7 +1121,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 410--411
 
  []
 
-<figures/maxii2.png, id=502, 630.355pt x 736.25063pt>
+<figures/maxii2.png, id=513, 630.355pt x 736.25063pt>
 File: figures/maxii2.png Graphic file (type png)
 <use figures/maxii2.png>
 Package pdftex.def Info: figures/maxii2.png  used on input line 414.
@@ -1143,7 +1136,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 414--415
 
  []
 
-<figures/maxii3.png, id=503, 631.35875pt x 735.74875pt>
+<figures/maxii3.png, id=514, 631.35875pt x 735.74875pt>
 File: figures/maxii3.png Graphic file (type png)
 <use figures/maxii3.png>
 Package pdftex.def Info: figures/maxii3.png  used on input line 418.
@@ -1158,7 +1151,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 418--419
 
  []
 
-<figures/maxii4_green.png, id=504, 632.3625pt x 737.75626pt>
+<figures/maxii4_green.png, id=515, 632.3625pt x 737.75626pt>
 File: figures/maxii4_green.png Graphic file (type png)
 <use figures/maxii4_green.png>
 Package pdftex.def Info: figures/maxii4_green.png  used on input line 422.
@@ -1173,7 +1166,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 422--423
 
  []
 
-<figures/maxii5.png, id=505, 631.86063pt x 736.7525pt>
+<figures/maxii5.png, id=516, 631.86063pt x 736.7525pt>
 File: figures/maxii5.png Graphic file (type png)
 <use figures/maxii5.png>
 Package pdftex.def Info: figures/maxii5.png  used on input line 426.
@@ -1188,7 +1181,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 426--427
 
  []
 
-<figures/maxii6.png, id=506, 632.3625pt x 735.24687pt>
+<figures/maxii6.png, id=517, 632.3625pt x 735.24687pt>
 File: figures/maxii6.png Graphic file (type png)
 <use figures/maxii6.png>
 Package pdftex.def Info: figures/maxii6.png  used on input line 430.
@@ -1203,7 +1196,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 430--431
 
  []
 
-<figures/maxii7.png, id=507, 631.35875pt x 735.74875pt>
+<figures/maxii7.png, id=518, 631.35875pt x 735.74875pt>
 File: figures/maxii7.png Graphic file (type png)
 <use figures/maxii7.png>
 Package pdftex.def Info: figures/maxii7.png  used on input line 434.
@@ -1218,7 +1211,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 434--435
 
  []
 
-<figures/maxii8.png, id=508, 631.35875pt x 736.7525pt>
+<figures/maxii8.png, id=519, 631.35875pt x 736.7525pt>
 File: figures/maxii8.png Graphic file (type png)
 <use figures/maxii8.png>
 Package pdftex.def Info: figures/maxii8.png  used on input line 438.
@@ -1237,17 +1230,17 @@ File: figures/sokobaniteratelevel.png Graphic file (type png)
 <use figures/sokobaniteratelevel.png>
 Package pdftex.def Info: figures/sokobaniteratelevel.png  used on input line 448.
 (pdftex.def)             Requested size: 125.20853pt x 146.03616pt.
-<figures/firstmax_without.png, id=509, 642.90187pt x 751.80875pt>
+<figures/firstmax_without.png, id=520, 642.90187pt x 751.80875pt>
 File: figures/firstmax_without.png Graphic file (type png)
 <use figures/firstmax_without.png>
 Package pdftex.def Info: figures/firstmax_without.png  used on input line 452.
 (pdftex.def)             Requested size: 100.16528pt x 117.12567pt.
-<figures/secondmax_without.png, id=510, 644.4075pt x 751.30687pt>
+<figures/secondmax_without.png, id=521, 644.4075pt x 751.30687pt>
 File: figures/secondmax_without.png Graphic file (type png)
 <use figures/secondmax_without.png>
 Package pdftex.def Info: figures/secondmax_without.png  used on input line 453.
 (pdftex.def)             Requested size: 100.16528pt x 116.77234pt.
-<figures/thirdmax_without.png, id=511, 644.4075pt x 751.80875pt>
+<figures/thirdmax_without.png, id=522, 644.4075pt x 751.80875pt>
 File: figures/thirdmax_without.png Graphic file (type png)
 <use figures/thirdmax_without.png>
 Package pdftex.def Info: figures/thirdmax_without.png  used on input line 454.
@@ -1257,7 +1250,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 452--455
 
  []
 
-<figures/p8greena.png, id=512, 484.81125pt x 564.1075pt>
+<figures/p8greena.png, id=523, 484.81125pt x 564.1075pt>
 File: figures/p8greena.png Graphic file (type png)
 <use figures/p8greena.png>
 Package pdftex.def Info: figures/p8greena.png  used on input line 463.
@@ -1272,7 +1265,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 463--464
 
  []
 
-<figures/p8greenb.png, id=513, 482.80376pt x 564.1075pt>
+<figures/p8greenb.png, id=524, 482.80376pt x 564.1075pt>
 File: figures/p8greenb.png Graphic file (type png)
 <use figures/p8greenb.png>
 Package pdftex.def Info: figures/p8greenb.png  used on input line 467.
@@ -1287,7 +1280,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 467--468
 
  []
 
-<figures/p8greenc.png, id=514, 922.44624pt x 1080.035pt>
+<figures/p8greenc.png, id=525, 922.44624pt x 1080.035pt>
 File: figures/p8greenc.png Graphic file (type png)
 <use figures/p8greenc.png>
 Package pdftex.def Info: figures/p8greenc.png  used on input line 471.
@@ -1303,12 +1296,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 471--472
  []
 
 [21] [22 <./figures/maxii0.png> <./figures/maxii1_green.png> <./figures/maxii2.png> <./figures/maxii3.png> <./figures/maxii4_green.png> <./figures/maxii5.png> <./figures/maxii6.png> <./figures/maxii7.png> <./figures/maxii8.png>] [23 <./figures/firstmax_without.png> <./figures/secondmax_without.png> <./figures/thirdmax_without.png> <./figures/p8greena.png> <./figures/p8greenb.png> <./figures/p8greenc.png>]
-<figures/unsolvablepart4.png, id=546, 1549.79pt x 1108.14pt>
+<figures/unsolvablepart4.png, id=557, 1549.79pt x 1108.14pt>
 File: figures/unsolvablepart4.png Graphic file (type png)
 <use figures/unsolvablepart4.png>
 Package pdftex.def Info: figures/unsolvablepart4.png  used on input line 505.
 (pdftex.def)             Requested size: 227.6506pt x 162.76442pt.
-<figures/unsolvablepart72.png, id=547, 631.86063pt x 511.9125pt>
+<figures/unsolvablepart72.png, id=558, 631.86063pt x 511.9125pt>
 File: figures/unsolvablepart72.png Graphic file (type png)
 <use figures/unsolvablepart72.png>
 Package pdftex.def Info: figures/unsolvablepart72.png  used on input line 509.
@@ -1318,7 +1311,7 @@ Overfull \hbox (2.28003pt too wide) in paragraph at lines 503--511
 []$[]$  $[]$ 
  []
 
-<figures/windowdressingpart71.png, id=548, 450.68375pt x 526.96875pt>
+<figures/windowdressingpart71.png, id=559, 450.68375pt x 526.96875pt>
 File: figures/windowdressingpart71.png Graphic file (type png)
 <use figures/windowdressingpart71.png>
 Package pdftex.def Info: figures/windowdressingpart71.png  used on input line 522.
@@ -1333,7 +1326,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 522--523
 
  []
 
-<figures/windowdressingpart72.png, id=549, 402.00188pt x 468.24937pt>
+<figures/windowdressingpart72.png, id=560, 402.00188pt x 468.24937pt>
 File: figures/windowdressingpart72.png Graphic file (type png)
 <use figures/windowdressingpart72.png>
 Package pdftex.def Info: figures/windowdressingpart72.png  used on input line 526.
@@ -1348,7 +1341,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 526--527
 
  []
 
-<figures/windowdressingpart73.png, id=550, 450.68375pt x 526.96875pt>
+<figures/windowdressingpart73.png, id=561, 450.68375pt x 526.96875pt>
 File: figures/windowdressingpart73.png Graphic file (type png)
 <use figures/windowdressingpart73.png>
 Package pdftex.def Info: figures/windowdressingpart73.png  used on input line 530.
@@ -1367,12 +1360,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 530--531
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24] [25 <./figures/unsolvablepart4.png> <./figures/unsolvablepart72.png> <./figures/windowdressingpart71.png> <./figures/windowdressingpart72.png> <./figures/windowdressingpart73.png>]
-<figures/rulebasedimprovingfrom.png, id=565, 361.85187pt x 421.07312pt>
+<figures/rulebasedimprovingfrom.png, id=576, 361.85187pt x 421.07312pt>
 File: figures/rulebasedimprovingfrom.png Graphic file (type png)
 <use figures/rulebasedimprovingfrom.png>
 Package pdftex.def Info: figures/rulebasedimprovingfrom.png  used on input line 541.
 (pdftex.def)             Requested size: 159.35472pt x 185.43336pt.
-<figures/rulebasedimprovingto.png, id=566, 361.85187pt x 423.5825pt>
+<figures/rulebasedimprovingto.png, id=577, 361.85187pt x 423.5825pt>
 File: figures/rulebasedimprovingto.png Graphic file (type png)
 <use figures/rulebasedimprovingto.png>
 Package pdftex.def Info: figures/rulebasedimprovingto.png  used on input line 545.
@@ -1395,7 +1388,7 @@ Overfull \hbox (57.75429pt too wide) in paragraph at lines 583--585
 []\T1/ptm/m/n/12 These dif-fer-ent ways of adapt-ing to mixed-initiative tools have also been men-tioned by [[]],
  []
 
-<figures/part5i1_cropped.png, id=574, 555.07375pt x 552.0625pt>
+<figures/part5i1_cropped.png, id=585, 555.07375pt x 552.0625pt>
 File: figures/part5i1_cropped.png Graphic file (type png)
 <use figures/part5i1_cropped.png>
 Package pdftex.def Info: figures/part5i1_cropped.png  used on input line 589.
@@ -1410,7 +1403,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 589--590
 
  []
 
-<figures/part5i2_cropped.png, id=575, 276.03125pt x 277.035pt>
+<figures/part5i2_cropped.png, id=586, 276.03125pt x 277.035pt>
 File: figures/part5i2_cropped.png Graphic file (type png)
 <use figures/part5i2_cropped.png>
 Package pdftex.def Info: figures/part5i2_cropped.png  used on input line 593.
@@ -1425,7 +1418,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 593--594
 
  []
 
-<figures/part5i3_cropped.png, id=576, 277.53688pt x 278.03876pt>
+<figures/part5i3_cropped.png, id=587, 277.53688pt x 278.03876pt>
 File: figures/part5i3_cropped.png Graphic file (type png)
 <use figures/part5i3_cropped.png>
 Package pdftex.def Info: figures/part5i3_cropped.png  used on input line 597.
@@ -1440,7 +1433,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 597--598
 
  []
 
-<figures/part5i4_cropped.png, id=577, 277.035pt x 277.035pt>
+<figures/part5i4_cropped.png, id=588, 277.035pt x 277.035pt>
 File: figures/part5i4_cropped.png Graphic file (type png)
 <use figures/part5i4_cropped.png>
 Package pdftex.def Info: figures/part5i4_cropped.png  used on input line 601.
@@ -1455,7 +1448,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 601--602
 
  []
 
-<figures/part5i5.png, id=578, 589.20125pt x 589.70313pt>
+<figures/part5i5.png, id=589, 589.20125pt x 589.70313pt>
 File: figures/part5i5.png Graphic file (type png)
 <use figures/part5i5.png>
 Package pdftex.def Info: figures/part5i5.png  used on input line 605.
@@ -1478,7 +1471,7 @@ Overfull \hbox (40.96356pt too wide) detected at line 647
 [][] \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12 ^^A []
  []
 
-<figures/part3helpalittlefrom.png, id=584, 229.35687pt x 271.51437pt>
+<figures/part3helpalittlefrom.png, id=595, 229.35687pt x 271.51437pt>
 File: figures/part3helpalittlefrom.png Graphic file (type png)
 <use figures/part3helpalittlefrom.png>
 Package pdftex.def Info: figures/part3helpalittlefrom.png  used on input line 656.
@@ -1488,7 +1481,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 656--657
 
  []
 
-<figures/part3helpalittleto.png, id=585, 231.86626pt x 272.01625pt>
+<figures/part3helpalittleto.png, id=596, 231.86626pt x 272.01625pt>
 File: figures/part3helpalittleto.png Graphic file (type png)
 <use figures/part3helpalittleto.png>
 Package pdftex.def Info: figures/part3helpalittleto.png  used on input line 660.
@@ -1499,12 +1492,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 660--661
  []
 
 [28 <./figures/part5i1_cropped.png> <./figures/part5i2_cropped.png> <./figures/part5i3_cropped.png> <./figures/part5i4_cropped.png> <./figures/part5i5.png>]
-<figures/part1_smallsokobandesigns.png, id=604, 406.51875pt x 140.525pt>
+<figures/part1_smallsokobandesigns.png, id=617, 406.51875pt x 140.525pt>
 File: figures/part1_smallsokobandesigns.png Graphic file (type png)
 <use figures/part1_smallsokobandesigns.png>
 Package pdftex.def Info: figures/part1_smallsokobandesigns.png  used on input line 673.
 (pdftex.def)             Requested size: 455.30121pt x 157.39334pt.
-<figures/part1AllGreenToBlue.png, id=605, 578.66188pt x 462.22687pt>
+<figures/part1AllGreenToBlue.png, id=618, 578.66188pt x 462.22687pt>
 File: figures/part1AllGreenToBlue.png Graphic file (type png)
 <use figures/part1AllGreenToBlue.png>
 Package pdftex.def Info: figures/part1AllGreenToBlue.png  used on input line 681.
@@ -1514,7 +1507,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 681--682
 
  []
 
-<figures/part1allgreentoblueonyellow.png, id=606, 359.84438pt x 452.69125pt>
+<figures/part1allgreentoblueonyellow.png, id=619, 359.84438pt x 452.69125pt>
 File: figures/part1allgreentoblueonyellow.png Graphic file (type png)
 <use figures/part1allgreentoblueonyellow.png>
 Package pdftex.def Info: figures/part1allgreentoblueonyellow.png  used on input line 685.
@@ -1530,16 +1523,12 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                 on input line 694.
 
 [29 <./figures/part3helpalittlefrom.png> <./figures/part3helpalittleto.png> <./figures/part1_smallsokobandesigns.png>]
-<figures/backward_design_minotalen.png, id=616, 1253.68375pt x 587.19376pt>
+<figures/backward_design_minotalen.png, id=629, 1253.68375pt x 587.19376pt>
 File: figures/backward_design_minotalen.png Graphic file (type png)
 <use figures/backward_design_minotalen.png>
 Package pdftex.def Info: figures/backward_design_minotalen.png  used on input line 715.
 (pdftex.def)             Requested size: 387.0088pt x 181.26659pt.
- [30 <./figures/part1AllGreenToBlue.png> <./figures/part1allgreentoblueonyellow.png>]
-
-LaTeX Warning: Citation `apx:interview' on page 31 undefined on input line 754.
-
-[31 <./figures/backward_design_minotalen.png>]
+ [30 <./figures/part1AllGreenToBlue.png> <./figures/part1allgreentoblueonyellow.png>] [31 <./figures/backward_design_minotalen.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 768--769
 
  []
@@ -1564,7 +1553,7 @@ Overfull \hbox (18.52057pt too wide) in paragraph at lines 14--15
 []\T1/ptm/m/it/12 "Finding
  []
 
-<figures/whichtoolsemployduringleveldesign.png, id=667, 1174.3875pt x 596.2275pt>
+<figures/whichtoolsemployduringleveldesign.png, id=681, 1174.3875pt x 596.2275pt>
 File: figures/whichtoolsemployduringleveldesign.png Graphic file (type png)
 <use figures/whichtoolsemployduringleveldesign.png>
 Package pdftex.def Info: figures/whichtoolsemployduringleveldesign.png  used on input line 21.
@@ -1572,7 +1561,7 @@ Package pdftex.def Info: figures/whichtoolsemployduringleveldesign.png  used on 
 
 LaTeX Warning: Float too large for page by 59.76598pt on input line 97.
 
-<figures/RULE_EXPANDED.png, id=668, 1301.61281pt x 998.9822pt>
+<figures/RULE_EXPANDED.png, id=682, 1301.61281pt x 998.9822pt>
 File: figures/RULE_EXPANDED.png Graphic file (type png)
 <use figures/RULE_EXPANDED.png>
 Package pdftex.def Info: figures/RULE_EXPANDED.png  used on input line 101.
@@ -1593,8 +1582,8 @@ Overfull \vbox (459.92477pt too high) has occurred while \output is active []
 
 
 ] [36 <./figures/whichtoolsemployduringleveldesign.png>] [37] [38 <./figures/RULE_EXPANDED.png>]
-Overfull \hbox (26.74501pt too wide) in paragraph at lines 116--128
-[][]
+Overfull \hbox (26.74501pt too wide) in paragraph at lines 114--126
+[][] 
  []
 
 
@@ -1650,7 +1639,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 11.
+(scrbook)              `\normalfont \scshape ' on input line 12.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -1671,7 +1660,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 18.
+(scrbook)              `\normalfont \scshape ' on input line 21.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -1692,7 +1681,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 25.
+(scrbook)              `\normalfont \scshape ' on input line 31.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -1713,28 +1702,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 32.
-
-
-Class scrbook Warning: deprecated old font command `\sc' used.
-(scrbook)              You should note, that since 1994 LaTeX2e provides a
-(scrbook)              new font selection scheme called NFSS2 with several
-(scrbook)              new, combinable font commands. New KOMA-Script classes
-(scrbook)              defined the old font commands like `\sc' only for
-(scrbook)              compatibility with LaTeX 2.09 document styles of
-(scrbook)              Script 2.0. These commands are deprecated and
-(scrbook)              undocumented at least since 2003. Since 2013,
-(scrbook)              KOMA-Script classes warned about soon removement of
-(scrbook)              these deprecated commands. Now, after two decades of
-(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
-(scrbook)              not work any longer. If loading a package results in
-(scrbook)              this message you should contact the author of that
-(scrbook)              package and ask him to replace the depracted font
-(scrbook)              command `\sc', e.g., by `\normalfont \scshape '.
-(scrbook)              Otherwise you should reconfigure or replace the
-(scrbook)              package. If you have used the old font command
-(scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 40.
+(scrbook)              `\normalfont \scshape ' on input line 41.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -1776,7 +1744,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 54.
+(scrbook)              `\normalfont \scshape ' on input line 56.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -1797,7 +1765,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 62.
+(scrbook)              `\normalfont \scshape ' on input line 65.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -1818,7 +1786,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 70.
+(scrbook)              `\normalfont \scshape ' on input line 73.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -1839,33 +1807,9 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 79.
+(scrbook)              `\normalfont \scshape ' on input line 81.
 
-
-Class scrbook Warning: deprecated old font command `\sc' used.
-(scrbook)              You should note, that since 1994 LaTeX2e provides a
-(scrbook)              new font selection scheme called NFSS2 with several
-(scrbook)              new, combinable font commands. New KOMA-Script classes
-(scrbook)              defined the old font commands like `\sc' only for
-(scrbook)              compatibility with LaTeX 2.09 document styles of
-(scrbook)              Script 2.0. These commands are deprecated and
-(scrbook)              undocumented at least since 2003. Since 2013,
-(scrbook)              KOMA-Script classes warned about soon removement of
-(scrbook)              these deprecated commands. Now, after two decades of
-(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
-(scrbook)              not work any longer. If loading a package results in
-(scrbook)              this message you should contact the author of that
-(scrbook)              package and ask him to replace the depracted font
-(scrbook)              command `\sc', e.g., by `\normalfont \scshape '.
-(scrbook)              Otherwise you should reconfigure or replace the
-(scrbook)              package. If you have used the old font command
-(scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 88.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [45
+[45
 
 ]
 
@@ -1887,7 +1831,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 95.
+(scrbook)              `\normalfont \scshape ' on input line 92.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -1908,7 +1852,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 104.
+(scrbook)              `\normalfont \scshape ' on input line 102.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -1950,7 +1894,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 118.
+(scrbook)              `\normalfont \scshape ' on input line 121.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -1971,7 +1915,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 125.
+(scrbook)              `\normalfont \scshape ' on input line 129.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -1992,7 +1936,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 132.
+(scrbook)              `\normalfont \scshape ' on input line 137.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2013,7 +1957,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 139.
+(scrbook)              `\normalfont \scshape ' on input line 146.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2034,7 +1978,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 147.
+(scrbook)              `\normalfont \scshape ' on input line 153.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2055,7 +1999,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 156.
+(scrbook)              `\normalfont \scshape ' on input line 162.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2076,28 +2020,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 165.
-
-
-Class scrbook Warning: deprecated old font command `\sc' used.
-(scrbook)              You should note, that since 1994 LaTeX2e provides a
-(scrbook)              new font selection scheme called NFSS2 with several
-(scrbook)              new, combinable font commands. New KOMA-Script classes
-(scrbook)              defined the old font commands like `\sc' only for
-(scrbook)              compatibility with LaTeX 2.09 document styles of
-(scrbook)              Script 2.0. These commands are deprecated and
-(scrbook)              undocumented at least since 2003. Since 2013,
-(scrbook)              KOMA-Script classes warned about soon removement of
-(scrbook)              these deprecated commands. Now, after two decades of
-(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
-(scrbook)              not work any longer. If loading a package results in
-(scrbook)              this message you should contact the author of that
-(scrbook)              package and ask him to replace the depracted font
-(scrbook)              command `\sc', e.g., by `\normalfont \scshape '.
-(scrbook)              Otherwise you should reconfigure or replace the
-(scrbook)              package. If you have used the old font command
-(scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 173.
+(scrbook)              `\normalfont \scshape ' on input line 170.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2181,70 +2104,12 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 203.
+(scrbook)              `\normalfont \scshape ' on input line 205.
 
 
-Class scrbook Warning: deprecated old font command `\sc' used.
-(scrbook)              You should note, that since 1994 LaTeX2e provides a
-(scrbook)              new font selection scheme called NFSS2 with several
-(scrbook)              new, combinable font commands. New KOMA-Script classes
-(scrbook)              defined the old font commands like `\sc' only for
-(scrbook)              compatibility with LaTeX 2.09 document styles of
-(scrbook)              Script 2.0. These commands are deprecated and
-(scrbook)              undocumented at least since 2003. Since 2013,
-(scrbook)              KOMA-Script classes warned about soon removement of
-(scrbook)              these deprecated commands. Now, after two decades of
-(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
-(scrbook)              not work any longer. If loading a package results in
-(scrbook)              this message you should contact the author of that
-(scrbook)              package and ask him to replace the depracted font
-(scrbook)              command `\sc', e.g., by `\normalfont \scshape '.
-(scrbook)              Otherwise you should reconfigure or replace the
-(scrbook)              package. If you have used the old font command
-(scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 210.
-
-
-Class scrbook Warning: deprecated old font command `\sc' used.
-(scrbook)              You should note, that since 1994 LaTeX2e provides a
-(scrbook)              new font selection scheme called NFSS2 with several
-(scrbook)              new, combinable font commands. New KOMA-Script classes
-(scrbook)              defined the old font commands like `\sc' only for
-(scrbook)              compatibility with LaTeX 2.09 document styles of
-(scrbook)              Script 2.0. These commands are deprecated and
-(scrbook)              undocumented at least since 2003. Since 2013,
-(scrbook)              KOMA-Script classes warned about soon removement of
-(scrbook)              these deprecated commands. Now, after two decades of
-(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
-(scrbook)              not work any longer. If loading a package results in
-(scrbook)              this message you should contact the author of that
-(scrbook)              package and ask him to replace the depracted font
-(scrbook)              command `\sc', e.g., by `\normalfont \scshape '.
-(scrbook)              Otherwise you should reconfigure or replace the
-(scrbook)              package. If you have used the old font command
-(scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 219.
-
-
-Class scrbook Warning: deprecated old font command `\sc' used.
-(scrbook)              You should note, that since 1994 LaTeX2e provides a
-(scrbook)              new font selection scheme called NFSS2 with several
-(scrbook)              new, combinable font commands. New KOMA-Script classes
-(scrbook)              defined the old font commands like `\sc' only for
-(scrbook)              compatibility with LaTeX 2.09 document styles of
-(scrbook)              Script 2.0. These commands are deprecated and
-(scrbook)              undocumented at least since 2003. Since 2013,
-(scrbook)              KOMA-Script classes warned about soon removement of
-(scrbook)              these deprecated commands. Now, after two decades of
-(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
-(scrbook)              not work any longer. If loading a package results in
-(scrbook)              this message you should contact the author of that
-(scrbook)              package and ask him to replace the depracted font
-(scrbook)              command `\sc', e.g., by `\normalfont \scshape '.
-(scrbook)              Otherwise you should reconfigure or replace the
-(scrbook)              package. If you have used the old font command
-(scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 227.
+Underfull \hbox (badness 6893) in paragraph at lines 205--211
+[]\T1/ptm/m/sc/12 Mohammadi, D.\T1/ptm/m/n/12 , 2014.  [][]The Guardian : On-line gamers solv-ing sci-ences
+ []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2269,7 +2134,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 233.
+(scrbook)              `\normalfont \scshape ' on input line 213.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2290,7 +2155,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 240.
+(scrbook)              `\normalfont \scshape ' on input line 223.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2311,7 +2176,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 249.
+(scrbook)              `\normalfont \scshape ' on input line 232.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2332,7 +2197,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 258.
+(scrbook)              `\normalfont \scshape ' on input line 242.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2353,7 +2218,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 266.
+(scrbook)              `\normalfont \scshape ' on input line 252.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2374,7 +2239,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 276.
+(scrbook)              `\normalfont \scshape ' on input line 264.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2395,7 +2260,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 285.
+(scrbook)              `\normalfont \scshape ' on input line 273.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2416,7 +2281,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 293.
+(scrbook)              `\normalfont \scshape ' on input line 279.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2437,11 +2302,141 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 300.
+(scrbook)              `\normalfont \scshape ' on input line 288.
+
+
+Class scrbook Warning: deprecated old font command `\sc' used.
+(scrbook)              You should note, that since 1994 LaTeX2e provides a
+(scrbook)              new font selection scheme called NFSS2 with several
+(scrbook)              new, combinable font commands. New KOMA-Script classes
+(scrbook)              defined the old font commands like `\sc' only for
+(scrbook)              compatibility with LaTeX 2.09 document styles of
+(scrbook)              Script 2.0. These commands are deprecated and
+(scrbook)              undocumented at least since 2003. Since 2013,
+(scrbook)              KOMA-Script classes warned about soon removement of
+(scrbook)              these deprecated commands. Now, after two decades of
+(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrbook)              not work any longer. If loading a package results in
+(scrbook)              this message you should contact the author of that
+(scrbook)              package and ask him to replace the depracted font
+(scrbook)              command `\sc', e.g., by `\normalfont \scshape '.
+(scrbook)              Otherwise you should reconfigure or replace the
+(scrbook)              package. If you have used the old font command
+(scrbook)              `\sc' yourself you should replace it, e.g., by
+(scrbook)              `\normalfont \scshape ' on input line 299.
+
+
+Class scrbook Warning: deprecated old font command `\sc' used.
+(scrbook)              You should note, that since 1994 LaTeX2e provides a
+(scrbook)              new font selection scheme called NFSS2 with several
+(scrbook)              new, combinable font commands. New KOMA-Script classes
+(scrbook)              defined the old font commands like `\sc' only for
+(scrbook)              compatibility with LaTeX 2.09 document styles of
+(scrbook)              Script 2.0. These commands are deprecated and
+(scrbook)              undocumented at least since 2003. Since 2013,
+(scrbook)              KOMA-Script classes warned about soon removement of
+(scrbook)              these deprecated commands. Now, after two decades of
+(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrbook)              not work any longer. If loading a package results in
+(scrbook)              this message you should contact the author of that
+(scrbook)              package and ask him to replace the depracted font
+(scrbook)              command `\sc', e.g., by `\normalfont \scshape '.
+(scrbook)              Otherwise you should reconfigure or replace the
+(scrbook)              package. If you have used the old font command
+(scrbook)              `\sc' yourself you should replace it, e.g., by
+(scrbook)              `\normalfont \scshape ' on input line 309.
+
+
+Class scrbook Warning: deprecated old font command `\sc' used.
+(scrbook)              You should note, that since 1994 LaTeX2e provides a
+(scrbook)              new font selection scheme called NFSS2 with several
+(scrbook)              new, combinable font commands. New KOMA-Script classes
+(scrbook)              defined the old font commands like `\sc' only for
+(scrbook)              compatibility with LaTeX 2.09 document styles of
+(scrbook)              Script 2.0. These commands are deprecated and
+(scrbook)              undocumented at least since 2003. Since 2013,
+(scrbook)              KOMA-Script classes warned about soon removement of
+(scrbook)              these deprecated commands. Now, after two decades of
+(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrbook)              not work any longer. If loading a package results in
+(scrbook)              this message you should contact the author of that
+(scrbook)              package and ask him to replace the depracted font
+(scrbook)              command `\sc', e.g., by `\normalfont \scshape '.
+(scrbook)              Otherwise you should reconfigure or replace the
+(scrbook)              package. If you have used the old font command
+(scrbook)              `\sc' yourself you should replace it, e.g., by
+(scrbook)              `\normalfont \scshape ' on input line 317.
+
+
+Class scrbook Warning: deprecated old font command `\sc' used.
+(scrbook)              You should note, that since 1994 LaTeX2e provides a
+(scrbook)              new font selection scheme called NFSS2 with several
+(scrbook)              new, combinable font commands. New KOMA-Script classes
+(scrbook)              defined the old font commands like `\sc' only for
+(scrbook)              compatibility with LaTeX 2.09 document styles of
+(scrbook)              Script 2.0. These commands are deprecated and
+(scrbook)              undocumented at least since 2003. Since 2013,
+(scrbook)              KOMA-Script classes warned about soon removement of
+(scrbook)              these deprecated commands. Now, after two decades of
+(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrbook)              not work any longer. If loading a package results in
+(scrbook)              this message you should contact the author of that
+(scrbook)              package and ask him to replace the depracted font
+(scrbook)              command `\sc', e.g., by `\normalfont \scshape '.
+(scrbook)              Otherwise you should reconfigure or replace the
+(scrbook)              package. If you have used the old font command
+(scrbook)              `\sc' yourself you should replace it, e.g., by
+(scrbook)              `\normalfont \scshape ' on input line 326.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47]
+
+Class scrbook Warning: deprecated old font command `\sc' used.
+(scrbook)              You should note, that since 1994 LaTeX2e provides a
+(scrbook)              new font selection scheme called NFSS2 with several
+(scrbook)              new, combinable font commands. New KOMA-Script classes
+(scrbook)              defined the old font commands like `\sc' only for
+(scrbook)              compatibility with LaTeX 2.09 document styles of
+(scrbook)              Script 2.0. These commands are deprecated and
+(scrbook)              undocumented at least since 2003. Since 2013,
+(scrbook)              KOMA-Script classes warned about soon removement of
+(scrbook)              these deprecated commands. Now, after two decades of
+(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrbook)              not work any longer. If loading a package results in
+(scrbook)              this message you should contact the author of that
+(scrbook)              package and ask him to replace the depracted font
+(scrbook)              command `\sc', e.g., by `\normalfont \scshape '.
+(scrbook)              Otherwise you should reconfigure or replace the
+(scrbook)              package. If you have used the old font command
+(scrbook)              `\sc' yourself you should replace it, e.g., by
+(scrbook)              `\normalfont \scshape ' on input line 335.
+
+
+Class scrbook Warning: deprecated old font command `\sc' used.
+(scrbook)              You should note, that since 1994 LaTeX2e provides a
+(scrbook)              new font selection scheme called NFSS2 with several
+(scrbook)              new, combinable font commands. New KOMA-Script classes
+(scrbook)              defined the old font commands like `\sc' only for
+(scrbook)              compatibility with LaTeX 2.09 document styles of
+(scrbook)              Script 2.0. These commands are deprecated and
+(scrbook)              undocumented at least since 2003. Since 2013,
+(scrbook)              KOMA-Script classes warned about soon removement of
+(scrbook)              these deprecated commands. Now, after two decades of
+(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrbook)              not work any longer. If loading a package results in
+(scrbook)              this message you should contact the author of that
+(scrbook)              package and ask him to replace the depracted font
+(scrbook)              command `\sc', e.g., by `\normalfont \scshape '.
+(scrbook)              Otherwise you should reconfigure or replace the
+(scrbook)              package. If you have used the old font command
+(scrbook)              `\sc' yourself you should replace it, e.g., by
+(scrbook)              `\normalfont \scshape ' on input line 344.
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 267.
- [47]
+ [48]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 267.
  (/Users/kdkdk/Desktop/Supersync/of_v20190324_osx_release/apps/myApps/puzzleScriptMIS/bscwriteup3/.texpadtmp/main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 267.
@@ -2458,18 +2453,18 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 267.
  ) 
 Here is how much of TeX's memory you used:
- 14873 strings out of 492609
- 235335 string characters out of 6129048
+ 14875 strings out of 492609
+ 235346 string characters out of 6129048
  488761 words of memory out of 5000000
  18107 multiletter control sequences out of 15000+600000
  84834 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,28n,66p,9083b,1877s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/kdkdk/Desktop/Supersync/of_v20190324_osx_release/apps/myApps/puzzleScriptMIS/bscwriteup3/.texpadtmp/main.pdf (59 pages, 9085386 bytes).
+Output written on /Users/kdkdk/Desktop/Supersync/of_v20190324_osx_release/apps/myApps/puzzleScriptMIS/bscwriteup3/.texpadtmp/main.pdf (60 pages, 9088883 bytes).
 PDF statistics:
- 1064 PDF objects out of 1200 (max. 8388607)
- 863 compressed objects within 9 object streams
- 304 named destinations out of 1000 (max. 500000)
+ 1083 PDF objects out of 1200 (max. 8388607)
+ 881 compressed objects within 9 object streams
+ 306 named destinations out of 1000 (max. 500000)
  526 words of extra memory for PDF output out of 10000 (max. 10000000)
 

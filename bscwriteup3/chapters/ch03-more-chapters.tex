@@ -2,7 +2,7 @@
 
 \section{PuzzleScript}
 
-The programming language with which designers can implement puzzle games in MixedAim is \href{https://www.puzzlescript.net}{PuzzleScript}\footnote{https://www.puzzlescript.net @ PuzzleScript} developed by Stephen Lavelle (also known as increpare).
+The programming language with which designers can implement puzzle games in MixedAim is \href{https://www.puzzlescript.net}{PuzzleScript}\footnote{\url{https://www.puzzlescript.net} @ PuzzleScript} developed by Stephen Lavelle (also known as increpare).
 In the appendix \ref{fig:sokobaninpuzzlescript}, you can see a full Sokoban implementation in PuzzleScript for reference.
 
 PuzzleScript is grid-based, and each PuzzleScript game consists out of the following seven sections.
@@ -47,7 +47,7 @@ BROWN DARKBROWN
         It is worth mentioning that you cannot make aggregates from properties or vice-versa.
     
     
-    \item[Sounds] can be used to add chip-tunes generated with \href{https://www.bfxr.net}{Bfxr} \footnote{https://www.bfxr.net}.
+    \item[Sounds] can be used to add chip-tunes generated with \href{https://www.bfxr.net}{Bfxr} \footnote{\url{https://www.bfxr.net}}.
     
     \item[Collisionlayers] define on which layer which objects are stored. In PuzzleScript a level is rendered by multiple two-dimensional layers layered on top of each other.
      In this way you can specify that both a \textit{Player} and a \textit{Wall} cannot both occupy the same tile while a \textit{Crate} and a \textit{Target} can.
@@ -92,7 +92,7 @@ Player"Wall"Crate
         
         Additionally, you can use properties and aggregates when rule building, use the keyword \textit{No} to make sure no object/aggregate/property matches, use an ellipsis for arbitrary distances, build groups of rules, make these groups rigid \& a lot more.
         
-        For more details please consult the \href{https://www.puzzlescript.net}{PuzzleScript}\footnote{https://www.puzzlescript.net @ PuzzleScript} manual.
+        For more details please consult the \href{https://www.puzzlescript.net}{PuzzleScript}\footnote{\url{https://www.puzzlescript.net} @ PuzzleScript} manual.
         
         We also linked a BNF grammar for a single syntactically correct PuzzleScript rule (without rule grouping) \ref{fig:puzzlescriptrulebnf}.
     
@@ -311,7 +311,7 @@ choose 1 [No Obstacle or Target][No Obstacle or Target] -> [Crate][Target]
 \subsection{Suggestions} % Choosing difficult levels
 
 The transformer specifies valid possible level suggestions. However, the tool cannot show all these possible suggestions and needs a way to display the best levels to the user automatically.
-As mentioned in the introduction, we decided to use \textit{difficulty} as a discriminator and choose to passively show the four most difficult levels. More precisely, we use the notion of difficulty discussed in the previous section, namely, the minimum number of states any of the three solvers needs to explore before finding a solution.
+As mentioned in the introduction, we decided to use \textit{difficulty} as a discriminator and passively show the four most difficult levels. More precisely, we use the notion of difficulty discussed in the previous section, namely, the minimum number of states any of the three solvers needs to explore before finding a solution.
 
 Because solving a level takes time, we only ever use all three solvers on potential curated level candidates. We start by solving a level using only one solver and, if it turns out to be difficult enough to lie within the curated level candidates, we proceed by checking the difficulty with the other two solvers.
 
@@ -358,7 +358,7 @@ Since we are interested in seeing whether mixed-initiative systems can help desi
 
 \subsection{Iterative design}
 
-The iterative design approach was the primary way we intended users to design levels. We encountered this method in our need-finding survey and in blog posts of Sokoban designers \footnote{http://sokoban-jd.blogspot.com/2015/02/how-to-build-sokoban-level.html @ How to build a Sokoban level -- Serg Belyaev}. The design process roughly looks as follows:
+The iterative design approach was the primary way we intended users to design levels. We encountered this method in our need-finding survey and in blog posts of Sokoban designers \footnote{\url{http://sokoban-jd.blogspot.com/2015/02/how-to-build-sokoban-level.html} @ How to build a Sokoban level -- Serg Belyaev}. The design process roughly looks as follows:
 
 \begin{enumerate}
 \item Have a set of rules for the puzzle game.
@@ -663,7 +663,7 @@ $\Longrightarrow$
 \end{figure}
 
     
-    \item[Smaller levels] Participant 1 concluded that the transformer is well-suited to create small Sokoban levels, see figure \ref{fig:part1smallsokoban}. He also experimented with variations of Sokoban rules and created a few puzzle games with small levels using this method (\href{https://www.increpare.com/game/all-green-to-blue.html}{'All Green To Blue'}\footnote{https://www.increpare.com/game/all-green-to-blue.html} and \href{https://www.increpare.com/game/all-green-and-blue-on-yellow.html}{'All Green To Blue On Yellow'}\footnote{https://www.increpare.com/game/all-green-and-blue-on-yellow.html} which you can play online), see figure \ref{fig:part1smalllevelgames}.
+    \item[Smaller levels] Participant 1 concluded that the transformer is well-suited to create small Sokoban levels, see figure \ref{fig:part1smallsokoban}. He also experimented with variations of Sokoban rules and created a few puzzle games with small levels using this method (\href{https://www.increpare.com/game/all-green-to-blue.html}{'All Green To Blue'}\footnote{\url{https://www.increpare.com/game/all-green-to-blue.html}} and \href{https://www.increpare.com/game/all-green-and-blue-on-yellow.html}{'All Green To Blue On Yellow'}\footnote{\url{https://www.increpare.com/game/all-green-and-blue-on-yellow.html}} which you can play online), see figure \ref{fig:part1smalllevelgames}.
     
     This adaption increases the throughput by increasing the \textit{average time for solving a transformed level}.
     
@@ -716,7 +716,7 @@ We identified a few rules of thumb that happen to apply to all of our three solv
 \caption{Backward design of participant 4's puzzle game\label{fig:backwarddesign}}
 \end{figure}
 
-This method of designing levels with the mixed-initiative system was discovered and coined by participant 4 and was not foreseen in the original research question. In backward design, you start to design a level from a solved state and slowly turn it into a more complicated/interesting, but always solvable, level.
+This method of designing levels with the mixed-initiative system was discovered and coined by participant 4 and was not an approach of designing puzzles with MixedAim we had foreseen. In backward design, you start to design a level from a solved state and slowly turn it into a more complicated/interesting, but always solvable, level.
 Participant 4 used it specifically for their PuzzleScript game \ref{fig:backwarddesign} but this backward approach can also be used for Sokoban. 
 
 % Participant 4 used it on a block expanding level 
@@ -751,7 +751,7 @@ or [Player | Crate | No Obstacle] -> [ | Player | Crate]
 
 For most participants, we took the structured interview immediately after the think-aloud study, depending on the preference in writing or orally. Participants 1 and 4 did the structured interview after using the tool for a few days testing it not only on Sokoban but also on their games. Since the questions are quite open-ended, we would just skip a few of them if the participant had already answered them in a previous question. 
 
-We compiled a list of the most interesting answers to the questions in the appendix \cite{apx:interview} but believe that the most important insights from the interviews have either been mentioned or are elaborated in the next sections.
+We compiled a list of the most interesting answers to the questions in the appendix \autoref{apx:interview} but believe that the most important insights from the interviews have either been mentioned or are elaborated in the next sections.
 
 
 
@@ -819,7 +819,7 @@ Due to time constraints, we decided from the beginning to keep the curator very 
 
 \section{Conclusion}
 
-We developed the mixed-initiative system MixedAim for creating PuzzleScript games interactively with the computer. For this purpose we generalized the Sokoban heuristic of \cite{Jurgen} to solve levels more efficiently, we crafted a user interface which supported various forms of direct manipulation, like using the level editor and playtesting a game and added support for interactive suggestions. We hypothesized and later confirmed that giving more difficult suggestions is a feasible way to assist the designer. Specifically, we have identified that there is a threshold in difficulty starting from which levels become interesting.
+We developed the mixed-initiative system MixedAim for creating PuzzleScript games interactively with the computer. For this purpose we generalized the Sokoban heuristic of \cite{Jurgen} to solve levels more efficiently, we crafted a user interface which supported various forms of direct manipulation, like using a level editor and play-testing the level and added support for interactive suggestions. We hypothesized and later confirmed that giving more difficult suggestions is a feasible way to assist the designer. Specifically, we have identified that there is a threshold in difficulty starting from which levels become interesting.
 
 We identified various key interactions with those suggestions that designers and illustrated in which way designers could benefit from them. Interactions included \textit{Identifying and constraining mechanics and aesthetics in designs}, \textit{making unsolvable levels work again through transforming},  \textit{window dressing}, \textit{mechanic swapping}, \textit{gauging completeness} and \textit{backward designing}.
 

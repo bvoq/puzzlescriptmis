@@ -3,71 +3,67 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: /Users/kdkdk/Desktop/Supersync/of_v20190324_osx_release/apps/myApps/puzzleScriptMIS/bscwriteup3/.texpadtmp/main.aux
 The style file: ../acmsiggraph.bst
 Database file #1: ../graphics.bib
-Warning--I didn't find a database entry for "apx:interview"
+Warning--entry type for "TheGuardian" isn't style-file defined
+--line 332 of file ../graphics.bib
 Warning--I didn't find a database entry for "Jurgen"
-Warning--empty journal in Baldwin2017
-Warning--empty journal in Butler2013
-Warning--empty journal in Csikszentmihalyi
-Warning--empty journal in Culberson1997
+Warning--empty organization in Baldwin2017
+Warning--empty organization in Butler2013
+Warning--empty organization in Lim2014
 Warning--empty journal in Froleyks2016
-Warning--empty journal in Giaccardi2008
-Warning--empty journal in Guzdial
-Warning--empty journal in Hard2015
-Warning--empty journal in Pelanek2011
+Warning--empty organization in Guzdial
+Warning--empty organization in Horvitz1999
 Warning--empty journal in Junghanns1999
 Warning--empty journal in Kangas2017
-Warning--empty journal in Kartal2015
 Warning--empty journal in Khalifa2015
-Warning--empty journal in Koch
-Warning--empty journal in Lee2014
-Warning--empty journal in Lim2014
-Warning--empty journal in Science1996
-Warning--empty journal in Nelson2009
-Warning--empty journal in Perez2014
-Warning--empty journal in Schmidhuber
+Warning--empty organization in Koch
+Warning--empty organization in Lee2014
+Warning--empty organization in Science1996
+Warning--empty organization in Nelson2009
+Warning--empty organization in Osborn2011
+Warning--empty organization in Weber2017
 Warning--empty organization in Shaker2013Ropossum
+Warning--empty organization in Shaker2013
 Warning--empty journal in Smith2008
-Warning--empty journal in Weber2017
-Warning--empty journal in Williams2017
+Warning--empty organization in Viglietta2014
 You've used 39 entries,
             2873 wiz_defined-function locations,
-            835 strings with 10917 characters,
-and the built_in function-call counts, 98275 in all, are:
-= -- 10649
-> -- 701
+            896 strings with 13045 characters,
+and the built_in function-call counts, 96477 in all, are:
+= -- 10395
+> -- 798
 < -- 0
-+ -- 571
-- -- 251
-* -- 10322
-:= -- 12272
-add.period$ -- 133
++ -- 550
+- -- 289
+* -- 10145
+:= -- 12118
+add.period$ -- 156
 call.type$ -- 39
-change.case$ -- 267
-chr.to.int$ -- 37
-cite$ -- 63
-duplicate$ -- 839
-empty$ -- 10183
-format.name$ -- 279
-if$ -- 21219
-int.to.chr$ -- 3
+change.case$ -- 282
+chr.to.int$ -- 39
+cite$ -- 58
+duplicate$ -- 928
+empty$ -- 10001
+format.name$ -- 318
+if$ -- 20842
+int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 38
-newline$ -- 214
-num.names$ -- 117
-pop$ -- 366
+missing$ -- 40
+newline$ -- 237
+num.names$ -- 119
+pop$ -- 400
 preamble$ -- 1
-purify$ -- 228
+purify$ -- 245
 quote$ -- 0
-skip$ -- 332
+skip$ -- 345
 stack$ -- 0
-substring$ -- 27646
-swap$ -- 211
+substring$ -- 26536
+swap$ -- 223
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 312
-warning$ -- 24
-while$ -- 437
-width$ -- 45
-write$ -- 476
-(There were 26 warnings)
+type$ -- 304
+warning$ -- 19
+while$ -- 441
+width$ -- 44
+write$ -- 564
+(There were 21 warnings)

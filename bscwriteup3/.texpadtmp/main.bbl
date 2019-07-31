@@ -1,25 +1,47 @@
-\begin{thebibliography}{\protect\citename{Culberson and Culberson }1997}
+\begin{thebibliography}{\protect\citename{{Perez-Liebana} et~al\mbox{.} }2016}
 
-\bibitem[\protect\citename{Baldwin et~al\mbox{.} }2017]{Baldwin2017}
-{\sc Baldwin, A., Dahlskog, S., Font, J.~M., and Holmberg, J.}
+\bibitem[\protect\citename{Aloupis et~al\mbox{.} }2015]{Hard2015}
+{\sc Aloupis, G., Demaine, E.~D., Guo, A., and Viglietta, G.}
+\newblock 2015.
+\newblock
+  {\href{http://www.google.com/search?q=Classic+nintendo+games+are+(computationally)+hard}{Classic
+  nintendo games are (computationally) hard}}.
+\newblock {\em Theor. Comput. Sci. 586}, C (June), 135--160.
+
+\bibitem[\protect\citename{{Baldwin} et~al\mbox{.} }2017]{Baldwin2017}
+{\sc {Baldwin}, A., {Dahlskog}, S., {Font}, J.~M., and {Holmberg}, J.}
 \newblock 2017.
 \newblock
-  {\href{http://www.google.com/search?q=Mixed-Initiative+Procedural+Generation+of+Dungeons+using+Game+Design+Patterns}{{Mixed-Initiative
-  Procedural Generation of Dungeons using Game Design Patterns}}}.
+  {\href{http://www.google.com/search?q=Mixed-initiative+procedural+generation+of+dungeons+using+game+design+patterns}{Mixed-initiative
+  procedural generation of dungeons using game design patterns}}.
+\newblock In {\em 2017 IEEE Conference on Computational Intelligence and Games
+  (CIG)}, 25--32.
 
 \bibitem[\protect\citename{Butler et~al\mbox{.} }2013]{Butler2013}
-{\sc Butler, E., Smith, A.~M., Liu, Y.-e., and Popovi, Z.}
+{\sc Butler, E., Smith, A.~M., Liu, Y.-E., and Popovic, Z.}
 \newblock 2013.
 \newblock
-  {\href{http://www.google.com/search?q=A+Mixed-Initiative+Tool+for+Designing+Level+Progressions+in+Games}{{A
-  Mixed-Initiative Tool for Designing Level Progressions in Games}}}.
+  {\href{http://www.google.com/search?q=A+mixed-initiative+tool+for+designing+level+progressions+in+games}{A
+  mixed-initiative tool for designing level progressions in games}}.
+\newblock In {\em Proceedings of the 26th Annual ACM Symposium on User
+  Interface Software and Technology}, ACM, New York, NY, USA, UIST '13,
+  377--386.
+
+\bibitem[\protect\citename{{Chong-U Lim} and {Harrell} }2014]{Lim2014}
+{\sc {Chong-U Lim}, and {Harrell}, D.~F.}
+\newblock 2014.
+\newblock
+  {\href{http://www.google.com/search?q=An+approach+to+general+videogame+evaluation+and+automatic+generation+using+a+description+language}{An
+  approach to general videogame evaluation and automatic generation using a
+  description language}}.
+\newblock In {\em 2014 IEEE Conference on Computational Intelligence and
+  Games}, 1--8.
 
 \bibitem[\protect\citename{Csikszentmihalyi }1990]{Csikszentmihalyi}
 {\sc Csikszentmihalyi, M.}
 \newblock 1990.
-\newblock
-  {\href{http://www.google.com/search?q=Flow:+The+psychology+of+optimal+experience}{Flow:
-  The psychology of optimal experience}}.
+\newblock {\em Flow: The Psychology of Optimal Experience}.
+\newblock Harper \& Row.
 
 \bibitem[\protect\citename{Culberson and Culberson }1997]{Culberson1997}
 {\sc Culberson, J.~C., and Culberson, J.~C.}
@@ -27,14 +49,17 @@
 \newblock
   {\href{http://www.google.com/search?q=Sokoban+is+PSPACE-complete}{{Sokoban is
   PSPACE-complete}}}.
+\newblock {\em Proceedings of the International Conference on Fun with
+  Algorithms}, April, 65--76.
 
 \bibitem[\protect\citename{Demaine et~al\mbox{.} }2003]{Demaine2003}
 {\sc Demaine, E.~D., Demaine, M.~L., Hoffmann, M., and O'Rourke, J.}
 \newblock 2003.
-\newblock
-  {\href{http://www.google.com/search?q=Pushing+blocks+is+hard}{{Pushing blocks
-  is hard}}}.
-\newblock {\em Computational Geometry: Theory and Applications 26\/}, 21--36.
+\newblock {\href{http://www.google.com/search?q=Pushing+blocks+is+hard}{Pushing
+  blocks is hard}}.
+\newblock {\em Computational Geometry 26}, 1, 21 -- 36.
+\newblock The Thirteenth Canadian Conference on Computational Geometry -
+  CCCG'01.
 
 \bibitem[\protect\citename{Froleyks }2016]{Froleyks2016}
 {\sc Froleyks, N.}
@@ -42,70 +67,63 @@
 \newblock
   {\href{http://www.google.com/search?q=Using+an+Algorithm+Portfolio+to+Solve+Sokoban}{{Using
   an Algorithm Portfolio to Solve Sokoban}}}.
+\newblock AAAI Publications, Tenth Annual Symposium on Combinatorial Search.
 
 \bibitem[\protect\citename{Giaccardi and Fischer }2008]{Giaccardi2008}
 {\sc Giaccardi, E., and Fischer, G.}
 \newblock 2008.
 \newblock
-  {\href{http://www.google.com/search?q=Creativity+and+evolution+:+A+metadesign+perspective}{{Creativity
-  and evolution : A metadesign perspective}}}.
+  {\href{http://www.google.com/search?q=Creativity+and+evolution:+a+metadesign+perspective}{Creativity
+  and evolution: a metadesign perspective}}.
+\newblock {\em Digital Creativity 19}, 1, 19--32.
 
 \bibitem[\protect\citename{Guzdial et~al\mbox{.} }2019]{Guzdial}
-{\sc Guzdial, M., Chen, S.-y., Reno, J., and Liao, N.}
+{\sc Guzdial, M., Liao, N., Chen, J., Chen, S.-Y., Shah, S., Shah, V., Reno,
+  J., Smith, G., and Riedl, M.~O.}
 \newblock 2019.
 \newblock
-  {\href{http://www.google.com/search?q=Friend+,+Collaborator+,+Student+,+Manager+:+How+Design+of+an+AI-Driven+Game+Level+Editor+Affects+Creators}{{Friend
-  , Collaborator , Student , Manager : How Design of an AI-Driven Game Level
-  Editor Affects Creators}}}.
-
-\bibitem[\protect\citename{Hard et~al\mbox{.} }2015]{Hard2015}
-{\sc Hard, C., Demaine, E.~D., Guo, A., and Viglietta, G.}
-\newblock 2015.
-\newblock
-  {\href{http://www.google.com/search?q=Classic+Nintendo+Games+are+(Computationally)+Hard}{{Classic
-  Nintendo Games are (Computationally) Hard}}}.
-\newblock 1--36.
+  {\href{http://www.google.com/search?q=Friend,+collaborator,+student,+manager:+How+design+of+an+ai-driven+game+level+editor+affects+creators}{Friend,
+  collaborator, student, manager: How design of an ai-driven game level editor
+  affects creators}}.
+\newblock In {\em Proceedings of the 2019 CHI Conference on Human Factors in
+  Computing Systems}, ACM, New York, NY, USA, CHI '19, 624:1--624:13.
 
 \bibitem[\protect\citename{Hearn and Demaine }2005]{Hearn2005}
 {\sc Hearn, R.~A., and Demaine, E.~D.}
 \newblock 2005.
 \newblock
-  {\href{http://www.google.com/search?q=PSPACE-completeness+of+sliding-block+puzzles+and+other+problems+through+the+nondeterministic+constraint+logic+model+of+computation}{{PSPACE-completeness
+  {\href{http://www.google.com/search?q=PSPACE-completeness+of+sliding-block+puzzles+and+other+problems+through+the+nondeterministic+constraint+logic+model+of+computation}{{PSPACE}-completeness
   of sliding-block puzzles and other problems through the nondeterministic
-  constraint logic model of computation}}}.
-\newblock {\em Theoretical Computer Science 343\/}, 72--96.
+  constraint logic model of computation}}.
+\newblock {\em Theoretical Computer Science 343}, 1, 72 -- 96.
+\newblock Game Theory Meets Theoretical Computer Science.
 
 \bibitem[\protect\citename{Horvitz }1999]{Horvitz1999}
 {\sc Horvitz, E.}
 \newblock 1999.
 \newblock
-  {\href{http://www.google.com/search?q=Principles+of+mixed-initiative+user+interfaces}{{Principles
-  of mixed-initiative user interfaces}}}.
-\newblock {\em Proceedings of the SIGCHI conference on Human factors in
-  computing systems the CHI is the limit - CHI '99\/}, 159--166.
+  {\href{http://www.google.com/search?q=Principles+of+mixed-initiative+user+interfaces}{Principles
+  of mixed-initiative user interfaces}}.
+\newblock In {\em Proceedings of CHI '99, ACM SIGCHI Conference on Human
+  Factors in Computing Systems, Pittsburgh, PA, ACM Press.}, 159--166.
 
-\bibitem[\protect\citename{Jaru{\v{s}}ek~Petr }2011a]{Pelanek2011}
-{\sc Jaru{\v{s}}ek~Petr, P.~R.}
-\newblock 2011.
-\newblock
-  {\href{http://www.google.com/search?q=Human+Problem+Solving:+Sudoku+Case+Study}{{Human
-  Problem Solving: Sudoku Case Study}}}.
-
-\bibitem[\protect\citename{Jaru{\v{s}}ek~Petr }2011b]{Jaru}
+\bibitem[\protect\citename{Jaru{\v{s}}ek~Petr }2011]{Jaru}
 {\sc Jaru{\v{s}}ek~Petr, P.~R.}
 \newblock 2011.
 \newblock
   {\href{http://www.google.com/search?q=What+Determines+Difficulty+of+Transport+Puzzles?+Experiments+with+Human+Problem+Solving}{{What
   Determines Difficulty of Transport Puzzles? Experiments with Human Problem
   Solving}}}.
-\newblock {\em Artificial Intelligence\/}, 428--433.
+\newblock {\em Proceedings of the 24th International Florida Artificial
+  Intelligence Research Society, FLAIRS - 24\/}, 428--433.
 
 \bibitem[\protect\citename{Junghanns and Schaeffer }1999]{Junghanns1999}
 {\sc Junghanns, A., and Schaeffer, J.}
 \newblock 1999.
 \newblock
-  {\href{http://www.google.com/search?q=Pushing+the+limits:+new+developments+in+single-agent+search}{{Pushing
-  the limits: new developments in single-agent search}}}.
+  {\href{http://www.google.com/search?q=Pushing+the+limits:+New+developments+in+single-agent+search}{Pushing
+  the limits: New developments in single-agent search}}.
+\newblock AAINQ46861 PhD thesis.
 
 \bibitem[\protect\citename{Kangas }2017]{Kangas2017}
 {\sc Kangas, P.}
@@ -113,13 +131,16 @@
 \newblock
   {\href{http://www.google.com/search?q=The+pleasures+of+puzzle-solving+in+adventure+games}{{The
   pleasures of puzzle-solving in adventure games}}}.
+\newblock MSc thesis.
 
-\bibitem[\protect\citename{Kartal et~al\mbox{.} }2015]{Kartal2015}
-{\sc Kartal, B., Sohre, N., and Guy, S.~J.}
-\newblock 2015.
+\bibitem[\protect\citename{Kartal et~al\mbox{.} }2016]{Kartal2015}
+{\sc Kartal, B., Sohre, N., and Guy, S.}
+\newblock 2016.
 \newblock
-  {\href{http://www.google.com/search?q=Data-Driven+Sokoban+Puzzle+Generation+with+Monte+Carlo+Tree+Search}{{Data-Driven
-  Sokoban Puzzle Generation with Monte Carlo Tree Search}}}.
+  {\href{http://www.google.com/search?q=Data+driven+sokoban+puzzle+generation+with+monte+carlo+tree+search}{Data
+  driven sokoban puzzle generation with monte carlo tree search}}.
+\newblock {\em AAAI Conference on Artificial Intelligence and Interactive
+  Digital Entertainment\/}.
 
 \bibitem[\protect\citename{Khalifa and Fayek }2015]{Khalifa2015}
 {\sc Khalifa, A., and Fayek, M.}
@@ -132,25 +153,29 @@
 {\sc Koch, J., Lucero, A., Hegemann, L., and Oulasvirta, A.}
 \newblock 2019.
 \newblock
-  {\href{http://www.google.com/search?q=May+AI+?+Design+Ideation+with+Cooperative+Contextual+Bandits}{{May
-  AI ? Design Ideation with Cooperative Contextual Bandits}}}.
+  {\href{http://www.google.com/search?q=May+ai?:+Design+ideation+with+cooperative+contextual+bandits}{May
+  ai?: Design ideation with cooperative contextual bandits}}.
+\newblock In {\em Proceedings of the 2019 CHI Conference on Human Factors in
+  Computing Systems}, ACM, New York, NY, USA, CHI '19, 633:1--633:12.
 
-\bibitem[\protect\citename{Lawson and Ming~Loke }1997]{Lawson1997}
-{\sc Lawson, B., and Ming~Loke, S.}
+\bibitem[\protect\citename{Lawson and Loke }1997]{Lawson1997}
+{\sc Lawson, B., and Loke, S.~M.}
 \newblock 1997.
 \newblock
   {\href{http://www.google.com/search?q=Computers,+words+and+pictures}{Computers,
   words and pictures}}.
-\newblock {\em Design Studies 18\/} (04), 171--183.
+\newblock {\em Design Studies 18}, 2, 171 -- 183.
 
-\bibitem[\protect\citename{Lee et~al\mbox{.} }2014]{Lee2014}
-{\sc Lee, M.~J., Bahmani, F., Kwan, I., Laferte, J., Charters, P., Horvath, A.,
-  Luor, F., Cao, J., Law, C., Beswetherick, M., Long, S., Burnett, M., and Ko,
-  A.~J.}
+\bibitem[\protect\citename{{Lee} et~al\mbox{.} }2014]{Lee2014}
+{\sc {Lee}, M.~J., {Bahmani}, F., {Kwan}, I., {LaFerte}, J., {Charters}, P.,
+  {Horvath}, A., {Luor}, F., {Cao}, J., {Law}, C., {Beswetherick}, M., {Long},
+  S., {Burnett}, M., and {Ko}, A.~J.}
 \newblock 2014.
 \newblock
-  {\href{http://www.google.com/search?q=Principles+of+a+Debugging-First+Puzzle+Game+for+Computing+Education}{{Principles
-  of a Debugging-First Puzzle Game for Computing Education}}}.
+  {\href{http://www.google.com/search?q=Principles+of+a+debugging-first+puzzle+game+for+computing+education}{Principles
+  of a debugging-first puzzle game for computing education}}.
+\newblock In {\em 2014 IEEE Symposium on Visual Languages and Human-Centric
+  Computing (VL/HCC)}, 57--64.
 
 \bibitem[\protect\citename{Liapis et~al\mbox{.} }2013]{Liapis2013}
 {\sc Liapis, A., Yannakakis, G.~N., and Togelius, J.}
@@ -164,18 +189,8 @@
 \bibitem[\protect\citename{Liapis et~al\mbox{.} }2016]{Liapis2016}
 {\sc Liapis, A., Smith, G., and Shaker, N.}
 \newblock 2016.
-\newblock
-  {\href{http://www.google.com/search?q=Mixed-initiative+content+creation}{{Mixed-initiative
-  content creation}}}.
-\newblock {\em Procedural Content Generation in Games}, Firaxis 2014, 195--214.
-
-\bibitem[\protect\citename{Lim and Harrell }2014]{Lim2014}
-{\sc Lim, C.-u., and Harrell, D.~F.}
-\newblock 2014.
-\newblock
-  {\href{http://www.google.com/search?q=An+Approach+to+General+Videogame+Evaluation+and+Automatic+Generation+using+a+Description+Language}{{An
-  Approach to General Videogame Evaluation and Automatic Generation using a
-  Description Language}}}.
+\newblock {\em Mixed-initiative content creation}.
+\newblock Springer International Publishing, Cham, 195--214.
 
 \bibitem[\protect\citename{MacHado et~al\mbox{.} }2018]{MacHado2018}
 {\sc MacHado, T., Gopstein, D., Nealen, A., Nov, O., and Togelius, J.}
@@ -189,39 +204,70 @@
 \bibitem[\protect\citename{Mohammadi }2014]{TheGuardian}
 {\sc Mohammadi, D.}, 2014.
 \newblock
-  {\href{http://www.google.com/search?q=The+guardian+:+Online+gamers+solving+sciences+biggest+problems}{The
-  guardian : Online gamers solving sciences biggest problems}}.
+  {\href{http://www.google.com/search?q=The+Guardian+:+Online+gamers+solving+sciences+biggest+problems}{{The
+  Guardian : Online gamers solving sciences biggest problems}}}.
+\newblock
+  \url{https://www.theguardian.com/technology/2014/jan/25/online-gamers-solving-sciences-biggest-problems}.
 
 \bibitem[\protect\citename{Murase et~al\mbox{.} }1996]{Science1996}
-{\sc Murase, Y., Matsubara, H., and Yuzuru, H.}
+{\sc Murase, Y., Matsubara, H., and Hiraga, Y.}
 \newblock 1996.
 \newblock
-  {\href{http://www.google.com/search?q=Automatic+Making+of+Sokoban+Problems+Sokoban}{{Automatic
-  Making of Sokoban Problems Sokoban}}}.
+  {\href{http://www.google.com/search?q=Automatic+making+of+sokoban+problems}{Automatic
+  making of sokoban problems}}.
+\newblock In {\em Proceedings of the 4th Pacific Rim International Conference
+  on Artificial Intelligence: Topics in Artificial Intelligence},
+  Springer-Verlag, London, UK, UK, PRICAI '96, 592--600.
 
-\bibitem[\protect\citename{Nelson }2009]{Nelson2009}
-{\sc Nelson, M.~J.}
+\bibitem[\protect\citename{Nelson and Mateas }2009]{Nelson2009}
+{\sc Nelson, M.~J., and Mateas, M.}
 \newblock 2009.
 \newblock
-  {\href{http://www.google.com/search?q=A+Requirements+Analysis+for+Videogame+Design+Support+Tools}{{A
-  Requirements Analysis for Videogame Design Support Tools}}}.
+  {\href{http://www.google.com/search?q=A+requirements+analysis+for+videogame+design+support+tools}{A
+  requirements analysis for videogame design support tools}}.
+\newblock In {\em Proceedings of the 4th International Conference on
+  Foundations of Digital Games}, ACM, New York, NY, USA, FDG '09, 137--144.
 
-\bibitem[\protect\citename{Osborn et~al\mbox{.} }2011]{Osborn2011}
+\bibitem[\protect\citename{Osborn et~al\mbox{.} }2013]{Osborn2011}
 {\sc Osborn, J.~C., Grow, A., and Mateas, M.}
+\newblock 2013.
+\newblock
+  {\href{http://www.google.com/search?q=Modular+computational+critics+for+games}{Modular
+  computational critics for games}}.
+\newblock In {\em Proceedings of the Ninth AAAI Conference on Artificial
+  Intelligence and Interactive Digital Entertainment}, AAAI Press, AIIDE'13,
+  163--169.
+
+\bibitem[\protect\citename{{Perez-Liebana} et~al\mbox{.} }2016]{Perez2014}
+{\sc {Perez-Liebana}, D., {Samothrakis}, S., {Togelius}, J., {Schaul}, T.,
+  {Lucas}, S.~M., {Couetoux}, A., {Lee}, J., {Lim}, C., and {Thompson}, T.}
+\newblock 2016.
+\newblock
+  {\href{http://www.google.com/search?q=The+2014+general+video+game+playing+competition}{The
+  2014 general video game playing competition}}.
+\newblock {\em IEEE Transactions on Computational Intelligence and AI in Games
+  8}, 3 (Sep.), 229--243.
+
+\bibitem[\protect\citename{Racani\`{e}re et~al\mbox{.} }2017]{Weber2017}
+{\sc Racani\`{e}re, S., Weber, T., Reichert, D.~P., Buesing, L., Guez, A.,
+  Rezende, D., Badia, A.~P., Vinyals, O., Heess, N., Li, Y., Pascanu, R.,
+  Battaglia, P., Hassabis, D., Silver, D., and Wierstra, D.}
+\newblock 2017.
+\newblock
+  {\href{http://www.google.com/search?q=Imagination-augmented+agents+for+deep+reinforcement+learning}{Imagination-augmented
+  agents for deep reinforcement learning}}.
+\newblock In {\em Proceedings of the 31st International Conference on Neural
+  Information Processing Systems}, Curran Associates Inc., USA, NIPS'17,
+  5694--5705.
+
+\bibitem[\protect\citename{Radek }2011]{Pelanek2011}
+{\sc Radek, P.}
 \newblock 2011.
 \newblock
-  {\href{http://www.google.com/search?q=Modular+Computational+Critics+for+Games}{{Modular
-  Computational Critics for Games}}}.
-\newblock {\em Proceedings of the Ninth AAAI Conference on Artificial
-  Intelligence and Interactive Digital Entertainment\/}, 163--169.
-
-\bibitem[\protect\citename{Perez et~al\mbox{.} }2014]{Perez2014}
-{\sc Perez, D., Samothrakis, S., Togelius, J., Schaul, T., Lucas, S.~M., Cou,
-  A., Lee, J., Lim, C.-u., and Thompson, T.}
-\newblock 2014.
-\newblock
-  {\href{http://www.google.com/search?q=The+2014+General+Video+Game+Playing+Competition}{{The
-  2014 General Video Game Playing Competition}}}.
+  {\href{http://www.google.com/search?q=Human+Problem+Solving:+Sudoku+Case+Study}{{Human
+  Problem Solving: Sudoku Case Study}}}.
+\newblock {\em Proc. of the Fifth Starting AI Researchers Symposium (STAIRS
+  2010)}, January.
 
 \bibitem[\protect\citename{Salen and Zimmerman }2004]{RulesOfPlay}
 {\sc Salen, K., and Zimmerman, E.}
@@ -229,30 +275,35 @@
 \newblock {\href{http://www.google.com/search?q=Rules+of+play}{Rules of play}}.
 \newblock {\em MIT Press\/}.
 
-\bibitem[\protect\citename{Schmidhuber }1990--2010]{Schmidhuber}
-{\sc Schmidhuber, J.}
-\newblock 1990--2010.
+\bibitem[\protect\citename{{Schmidhuber} }2010]{Schmidhuber}
+{\sc {Schmidhuber}, J.}
+\newblock 2010.
 \newblock
-  {\href{http://www.google.com/search?q=Formal+Theory+of+Creativity,+Fun,+and+Intrinsic+Motivation}{{Formal
-  Theory of Creativity, Fun, and Intrinsic Motivation}}}.
+  {\href{http://www.google.com/search?q=Formal+theory+of+creativity,+fun,+and+intrinsic+motivation+(1990-2010)}{Formal
+  theory of creativity, fun, and intrinsic motivation (1990-2010)}}.
+\newblock {\em IEEE Transactions on Autonomous Mental Development 2}, 3 (Sep.),
+  230--247.
 
-\bibitem[\protect\citename{Shaker et~al\mbox{.} }2013a]{Shaker2013}
+\bibitem[\protect\citename{Shaker et~al\mbox{.} }2013]{Shaker2013Ropossum}
 {\sc Shaker, M., Shaker, N., and Togelius, J.}
 \newblock 2013.
 \newblock
-  {\href{http://www.google.com/search?q=Evolving+playable+content+for+cut+the+rope+through+a+simulation-based+approach}{{Evolving
-  playable content for cut the rope through a simulation-based approach}}}.
-\newblock {\em Artificial Intelligence and Interactive Digital
-  Entertainment\/}, 72--78.
+  {\href{http://www.google.com/search?q=Ropossum:+An+authoring+tool+for+designing,+optimizing+and+solving+cut+the+rope+levels}{Ropossum:
+  An authoring tool for designing, optimizing and solving cut the rope
+  levels}}.
+\newblock In {\em Proceedings of the 9th AAAI Conference on Artificial
+  Intelligence and Interactive Digital Entertainment, AIIDE 2013}, AAAI press,
+  215--216.
 
-\bibitem[\protect\citename{Shaker et~al\mbox{.} }2013b]{Shaker2013Ropossum}
-{\sc Shaker, N., Shaker, M., and Togelius, J.}
-\newblock 2013.
+\bibitem[\protect\citename{Shaker et~al\mbox{.} }2014]{Shaker2013}
+{\sc Shaker, M., Shaker, N., and Togelius, J.}
+\newblock 2014.
 \newblock
-  {\href{http://www.google.com/search?q=Ropossum:+An+Authoring+Tool+for+Designing,+Optimizing+and+Solving+Cut+the+Rope+Levels}{{Ropossum:
-  An Authoring Tool for Designing, Optimizing and Solving Cut the Rope
-  Levels}}}.
-\newblock In {\em AIIDE}.
+  {\href{http://www.google.com/search?q=Evolving+playable+content+for+cut+the+rope+through+a+simulation-based+approach}{Evolving
+  playable content for cut the rope through a simulation-based approach}}.
+\newblock In {\em Proceedings of the Ninth AAAI Conference on Artificial
+  Intelligence and Interactive Digital Entertainment}, AAAI Press, AIIDE'13,
+  72--78.
 
 \bibitem[\protect\citename{Smith et~al\mbox{.} }2008]{Smith2008}
 {\sc Smith, A.~M., Nelson, M.~J., and Mateas, M.}
@@ -262,15 +313,14 @@
   Games with BIPED}}}.
 \newblock 193--194.
 
-\bibitem[\protect\citename{Smith et~al\mbox{.} }2011]{Smith2011}
-{\sc Smith, G., Whitehead, J., and Mateas, M.}
+\bibitem[\protect\citename{{Smith} et~al\mbox{.} }2011]{Smith2011}
+{\sc {Smith}, G., {Whitehead}, J., and {Mateas}, M.}
 \newblock 2011.
 \newblock
-  {\href{http://www.google.com/search?q=Tanagra:+Reactive+planning+and+constraint+solving+for+mixed-initiative+level+design}{{Tanagra:
-  Reactive planning and constraint solving for mixed-initiative level
-  design}}}.
+  {\href{http://www.google.com/search?q=Tanagra:+Reactive+planning+and+constraint+solving+for+mixed-initiative+level+design}{Tanagra:
+  Reactive planning and constraint solving for mixed-initiative level design}}.
 \newblock {\em IEEE Transactions on Computational Intelligence and AI in Games
-  3}, 3, 201--215.
+  3}, 3 (Sep.), 201--215.
 
 \bibitem[\protect\citename{Taylor and Parberry }2011]{Taylor2011}
 {\sc Taylor, J., and Parberry, I.}
@@ -281,26 +331,22 @@
 \newblock {\em Proceedings of the 6th Annual North American Conference on AI
   and Simulation in Games\/}, 5--12.
 
-\bibitem[\protect\citename{Viglietta }2014]{Viglietta2014}
+\bibitem[\protect\citename{Viglietta }2012]{Viglietta2014}
 {\sc Viglietta, G.}
-\newblock 2014.
+\newblock 2012.
 \newblock
-  {\href{http://www.google.com/search?q=Gaming+is+a+hard+job,+but+someone+has+to+do+it!}{{Gaming
-  is a hard job, but someone has to do it!}}}
-\newblock {\em Theory of Computing Systems 54\/}, 595--621.
-
-\bibitem[\protect\citename{Weber et~al\mbox{.} }2017]{Weber2017}
-{\sc Weber, T., Racani{\`{e}}re, S., Reichert, D.~P., and Buesing, L.}
-\newblock 2017.
-\newblock
-  {\href{http://www.google.com/search?q=Imagination-Augmented+Agents+for+Deep+Reinforcement+Learning}{{Imagination-Augmented
-  Agents for Deep Reinforcement Learning}}}.
+  {\href{http://www.google.com/search?q=Gaming+is+a+hard+job,+but+someone+has+to+do+it!}{Gaming
+  is a hard job, but someone has to do it!}}
+\newblock In {\em Fun with Algorithms}, Springer Berlin Heidelberg, Berlin,
+  Heidelberg, E.~Kranakis, D.~Krizanc, and F.~Luccio, Eds., 357--367.
 
 \bibitem[\protect\citename{Williams }2017]{Williams2017}
 {\sc Williams, A.}
 \newblock 2017.
 \newblock
-  {\href{http://www.google.com/search?q=MazezaM+Levels+with+Exponentially+Long+Solutions+(+Extended+Abstract+)}{{MazezaM
-  Levels with Exponentially Long Solutions ( Extended Abstract )}}}.
+  {\href{http://www.google.com/search?q=MazezaM+Levels+with+Exponentially+Long+Solutions}{{MazezaM
+  Levels with Exponentially Long Solutions}}}.
+\newblock {\em 20th Japan Conference on Discrete and Computational Geometry,
+  Graphs, and Games (JCDCG\^3 2017)}, August.
 
 \end{thebibliography}
