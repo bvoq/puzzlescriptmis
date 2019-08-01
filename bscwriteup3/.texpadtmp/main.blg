@@ -4,7 +4,7 @@ The top-level auxiliary file: /Users/kdkdk/Desktop/Supersync/of_v20190324_osx_re
 The style file: ../acmsiggraph.bst
 Database file #1: ../graphics.bib
 Warning--entry type for "TheGuardian" isn't style-file defined
---line 332 of file ../graphics.bib
+--line 343 of file ../graphics.bib
 Warning--I didn't find a database entry for "Jurgen"
 Warning--empty organization in Baldwin2017
 Warning--empty organization in Butler2013
@@ -25,45 +25,45 @@ Warning--empty organization in Shaker2013Ropossum
 Warning--empty organization in Shaker2013
 Warning--empty journal in Smith2008
 Warning--empty organization in Viglietta2014
-You've used 39 entries,
+You've used 40 entries,
             2873 wiz_defined-function locations,
-            896 strings with 13045 characters,
-and the built_in function-call counts, 96477 in all, are:
-= -- 10395
-> -- 798
+            902 strings with 13210 characters,
+and the built_in function-call counts, 98693 in all, are:
+= -- 10638
+> -- 807
 < -- 0
-+ -- 550
-- -- 289
-* -- 10145
-:= -- 12118
-add.period$ -- 156
-call.type$ -- 39
-change.case$ -- 282
-chr.to.int$ -- 39
-cite$ -- 58
-duplicate$ -- 928
-empty$ -- 10001
-format.name$ -- 318
-if$ -- 20842
++ -- 558
+- -- 292
+* -- 10373
+:= -- 12395
+add.period$ -- 160
+call.type$ -- 40
+change.case$ -- 287
+chr.to.int$ -- 40
+cite$ -- 59
+duplicate$ -- 950
+empty$ -- 10235
+format.name$ -- 321
+if$ -- 21322
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 40
-newline$ -- 237
-num.names$ -- 119
-pop$ -- 400
+missing$ -- 41
+newline$ -- 243
+num.names$ -- 122
+pop$ -- 406
 preamble$ -- 1
-purify$ -- 245
+purify$ -- 249
 quote$ -- 0
-skip$ -- 345
+skip$ -- 355
 stack$ -- 0
-substring$ -- 26536
-swap$ -- 223
+substring$ -- 27161
+swap$ -- 229
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 304
+type$ -- 312
 warning$ -- 19
-while$ -- 441
-width$ -- 44
-write$ -- 564
+while$ -- 454
+width$ -- 45
+write$ -- 578
 (There were 21 warnings)

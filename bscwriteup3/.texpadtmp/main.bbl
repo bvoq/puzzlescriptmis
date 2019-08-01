@@ -98,6 +98,15 @@
 \newblock {\em Theoretical Computer Science 343}, 1, 72 -- 96.
 \newblock Game Theory Meets Theoretical Computer Science.
 
+\bibitem[\protect\citename{Holte }2010]{Holte2010}
+{\sc Holte, R.~C.}
+\newblock 2010.
+\newblock
+  {\href{http://www.google.com/search?q=Common+Misconceptions+Concerning+Heuristic+Search}{{Common
+  Misconceptions Concerning Heuristic Search}}}.
+\newblock {\em Proceedings of the Third Annual Symposium on Combinatorial
+  Search (SOCS-10)\/}, 46--51.
+
 \bibitem[\protect\citename{Horvitz }1999]{Horvitz1999}
 {\sc Horvitz, E.}
 \newblock 1999.
