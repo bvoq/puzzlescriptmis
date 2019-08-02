@@ -89,20 +89,19 @@ Player"Wall"Crate
         To match multiple rows/columns at once, one can use multiple boxes. Take the following rule as an example. If the player is on top of a key and there is a door on the map, then remove the key and the door.
     \lstinline{[Player Key] [Door] -> [Player] []}
     
-        Lastly, every command can execute \textit{commands} if the rule is executed, such as playing a tune defined in the sound section, stopping the current moves (\textit{cancel}), replaying the rules another time (\textit{again}) \& more.
+        Lastly, every rule can execute \textit{commands} if the rule is executed, such as playing a tune defined in the sound section, stopping the current moves (\textit{cancel}), replaying the rules another time (\textit{again}) \& more.
         
         Additionally, one can use properties and aggregates within rules, use the keyword \textit{No} to make sure no object/aggregate/property matches, use an ellipsis for arbitrary distances, build groups of rules, make these groups rigid \& a lot more.
-        
         For more details please consult the \href{https://www.puzzlescript.net}{PuzzleScript manual}\footnote{\url{https://www.puzzlescript.net} @ PuzzleScript}.
         
-        We also linked a BNF grammar for a single syntactically correct PuzzleScript rule (without rule grouping) \ref{fig:puzzlescriptrulebnf}.
+        We also published a BNF grammar for a single syntactically correct PuzzleScript rule (without rule grouping) in the appendix \autoref{fig:puzzlescriptrulebnf}.
     
     \item [Winconditions] In this section, one can add multiple win-conditions which all need to be satisfied in the level state simultaneously to `win' a level.
     
     The rules can be any of the following: \textit{No X, Some X, No X on Y, Some X on Y, All X on Y} where X and Y can be objects or properties and do what one would expect them to do.
     
     \item[Levels] is the section where one can specify the puzzle problems, also referred to as levels.
-    The previously defined objects/synonyms/aggregates with a single letter can be used to create the level.
+    The previously defined objects/synonyms/aggregates with a single letter can be used to create a level.
             \begin{figure}[!htbp]
     \begin{minipage}{0.4\textwidth}
         \centering
@@ -476,7 +475,7 @@ $\Longrightarrow$
 
 In this section, we list design patterns for the iterative design approach which we obtained from the think-aloud study and see in which way participants profit from mixed-initiative methods.
 
-
+\newpage
 \begin{description}
 \item[Identifying aesthetics/mechanics] After using the tool for a while, many our participants have found \textit{aesthetically} pleasing sections or \textit{mechanically} interesting sections upon which they liked to expand on. For example, participant 6 liked the two targets and crates in the design mentioned above.
 
@@ -508,10 +507,10 @@ This was also mentioned directly by participant 3 during the think-aloud study: 
 \caption{Participant 4 \& 7: Unsolvable to solvable}
 \end{figure}
 
-\item[Window dressing] This happens when an interesting level is found (through the transformer or the designer) that contains a lot of unnecessary states. The designer then tries to eliminate all these unnecessary states (without making the problem trivial) to find the `canonical form', the `kernel' of the problem. It was mentioned by participant 1, 6 \& 7.
+\item[Window dressing] This happens when an interesting level is found (through the transformer or the designer) that contains a lot of unnecessary states. The designer then tries to eliminate all these unnecessary states (without making the problem trivial) to find the `canonical form', the `kernel' of the problem. If the level becomes too easy the designer can again add redundant pathways and see in which ways the level can be made more interesting again. It was mentioned by participant 1, 6 \& 7, and clearly noticeable in participant 7's design process, see \autoref{fig:windowdressing}.
 %definitely mentioned by participant 1, participant 6, thatscar, and participant 7.
 
-Our mixed-initiative tools only help to address this problem in so far that they help the designer to edit the level quickly. Passive information about solvability can tell the designer whether or not his simplifications suddenly made the level easier, for example. Participant 7 added a figure.
+Our mixed-initiative tools only help to address this problem in so far that they help the designer to edit the level quickly. Passive information about solvability can tell the designer whether or not his simplifications suddenly made the level easier, for example.
 
 \begin{figure}[!htbp]
 \centering
@@ -526,7 +525,7 @@ $\Longrightarrow$
 \begin{minipage}[t]{0.25\textwidth}
 \includegraphics[width=\textwidth]{figures/windowdressingpart73.png} \hfill \\
 \end{minipage}
-\caption{Participant 7: Window dressing}
+\caption{Participant 7: Window dressing\label{fig:windowdressing}}
 \end{figure}
     
 
@@ -548,7 +547,7 @@ $\Longrightarrow$
 
 \item[Gauging completeness] During the iterative design process participant 6 mentioned that he found the suggestions to be a useful stopping criterion. As soon as the suggestions did not improve the level in surprising ways, he would feel confident enough to stop iterating on the level further.
 
-\textit{\say{Yes, especially as a level of confidence, so I was sure that the current design was pretty solid when the suggestions seemed worse.}}
+\textit{\say{Yes, especially as a level of confidence, so I was sure that the current design was pretty solid when the suggestions seemed worse.} -- Participant 6}
 \end{description}
 
 \subsection{Adapting to the transformer}
@@ -630,7 +629,7 @@ The other participants, though not stating this explicitly, acted similarly, swi
 
     This threshold is entirely dependent on the level as the difficulty does not always correlate well with the perceived difficulty of the designer, something which was frequently mentioned (see negative feedback section). Sometimes this threshold is not reached due to it being difficult to solve the levels in time or because no interesting levels exist in the transformations but as soon as the threshold is reached practically all the levels are interesting.    
 
-    With this insight we can model the usefulness of a transformation as the throughput of levels above this difficulty threshold.
+    With this insight we can model the usefulness of a transformation as the throughput of levels above this difficulty threshold and might give more insight as to why the other adaptions worked / did not work.
 \begin{equation}
 \text{usefulness of transformation} = \frac{1}{\text{avg. time for interesting level}}
 \label{eq:transformationusefulness}
@@ -641,7 +640,7 @@ The other participants, though not stating this explicitly, acted similarly, swi
 \label{eq:transformationusefulness}
 \end{equation}
 
-    \item[Freezing sections] Participant 3 and 5 (among others) have chosen to freeze a few sections in the level, not because they necessarily thought they found these sections interesting, but to skew the search space to contain more interesting levels. For example participant 3 said quote \textit{\say{let me help it a little}} when he froze parts of the transformer section, see figure \ref{fig:part3shelp}.
+    \item[Freezing sections] Participant 3 and 5 (among others) have chosen to freeze a few sections in the level, not because they necessarily thought they found these sections interesting, but to skew the search space to contain more interesting levels. For example participant 3 said quote \textit{\say{let me help it a little}} when he froze parts of the transformer section, see \autoref{fig:part3shelp}.
     
     This adaption increases the throughput by increasing $\frac{\text{\# interesting difficult transformed levels}}{\text{\# total transformed levels}}$.
         
@@ -682,7 +681,7 @@ $\Longrightarrow$
 \caption{Participant 1's custom games \label{fig:part1smalllevelgames}}
 \end{figure}
 
-    \item[Larger levels] Participant 5 decided that larger levels would be better for the transformer because it would allow for a larger quantity of interesting levels. However, this approach also allows for more uninteresting levels and significantly decreased the \textit{average time for solving a transformed level}, which made choosing larger levels a bad adaption to the system.
+    \item[Larger levels] Participant 5 decided that larger levels would be better for the transformer because it would allow for a larger quantity of interesting levels. However, this approach equally allows for more uninteresting levels and significantly decreased the \textit{average time for solving a transformed level}, which made choosing larger levels a bad adaption to the system.
     
     \item[More variation] Lastly, we observed that some games are better suited for identifying interesting mechanics than others. Both we and participant 2 have had such success with puzzle games that feature polyominoes.
 
@@ -702,7 +701,7 @@ This leads us to believe that Sokoban-like puzzle games with a lot of possible v
 \end{figure}
 
 This method of designing levels with the mixed-initiative system was discovered and coined by participant 4 and was not an approach of designing puzzles with MixedAim we had foreseen. In backward design, one starts to design a level from a solved state and slowly turns it into a more complicated/interesting, but always solvable, level.
-Participant 4 used it specifically for their PuzzleScript game \ref{fig:backwarddesign} but this backward approach can also be used for Sokoban. 
+Participant 4 used it specifically for their PuzzleScript game, see \autoref{fig:backwarddesign}, but this backward approach can also be used for Sokoban. 
 
 % Participant 4 used it on a block expanding level 
 
@@ -748,7 +747,7 @@ He also admitted that while making levels with the tool can be more efficient, p
 
 Participant 6 addressed the same concern mentioning that there is a `Google effect' that makes him stop thinking about solvability (Google effect meaning that people do not attempt to remember a fact but instead remember how to look it up instead). He did not see this in a negative light though, and enjoyed that it made the process faster.
 
-\begin{figure}
+\begin{figure}[!htb]
 \begin{minipage}[t]{\textwidth}
 \textit{\say{Part of designing a puzzle is trying to make the best puzzle you can make, but part of it is also the fun of solving intermediate states yourself. So that's one thing that I would miss with the software (you might be able to work around it) but one thing I like about designing puzzles, is to constantly be thinking about solutions in my head, so this is kind of giving this up a little bit, and I'm not actively thinking about solutions when I'm designing.}} \hfill \\
 
@@ -809,4 +808,4 @@ Furthermore, we analyzed how participants adapted to the MixedAim suggestions, i
 
 Through the user interviews, we identified that some designers experienced a `Google effect' that made users delegate the responsibility of solving the level to the MixedAim system. Some view this as taking out the fun, while others think this is efficient. Lastly, we also received concerns that the tool can make it easy to create difficult and bad levels which give additional responsibility to the designer planning to incorporate such tools in their workflow.
 
-Overall, we believe that mixed-initiative methods add value to the design process if they are approached as just another tool in the toolset for creating puzzle games and not as the de facto replacement of one's usual design process.
+Overall, we believe that mixed-initiative methods add value to the design process if they are approached as another tool in the toolset for creating puzzle games and not as the de facto replacement of one's usual design process.

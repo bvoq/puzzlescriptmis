@@ -9,15 +9,15 @@ In creative tasks, such as puzzle design, designers do not always know from the 
 \subsubsection{Generating Sokoban Levels}
 %This has not stopped people from trying though with various degrees of success. 
 
-Arguably the first group to have written on Sokoban generation is \cite{Science1996}. Here they generate the puzzle game from a preset prototype level which is modified using templates ($2 \times 2$ or larger sequence of blocks) into levels. They then check the solvability of the level using a breadth-first-search and evaluate them based on a few criteria: length of solution, number of changes in directions of pushing \& number of detours in a solution sequence.
-
-\cite{Pelanek2011} did a human case study on Sokoban problem solving and suggest their own measurement of difficulty, a state-space bottleneck. They also show that humans make use of problem decomposition and that decomposability is a useful difficulty metric and generalize their results to other games \cite{Jaru}. This approach of generating, solving, and then curating is at the heart of most other puzzle generation we encountered in the literature and is also our method for approaching the problem.
+Arguably the first group to have written on Sokoban generation is \cite{Science1996}. Here they generate the puzzle game from a preset prototype level which is modified using templates ($2 \times 2$ or larger sequence of blocks) into levels. They then check the solvability of the level using a breadth-first-search and evaluate them based on a few criteria: length of solution, number of changes in directions of pushing \& number of detours in a solution sequence. This approach of generating, solving, and then curating is at the heart of most other puzzle generation we encountered in the literature and is also reflected in our method for designing puzzle games interactively.
+\cite{Pelanek2011} did a human case study on Sokoban problem solving and suggest their own measurement of difficulty, a state-space bottleneck. They also show that humans make use of problem decomposition and that decomposability is a useful difficulty metric and generalize their results to other games \cite{Jaru}.
 
 Another approach for automatically creating Sokoban levels is from \cite{Taylor2011}. Here they use a reverse search method and try to find the state farthest away from the goal position of a random solved level. This is elegant because it does not require more time than it would take to solve the level using breadth-first-search. \cite{Kartal2015} use a very similar approach but start from a Sokoban level filled only with crates and walls (without the targets for the crates) and then start to let the player move the crates to find a difficult starting position and put the targets at the place where they moved the crates. Instead of finding the state farthest away, they use a Monte Carlo Tree Search method to find such a level. Both of these methods are quite domain-specific and do not necessarily generalize well to other types of games without some effort.
 
-Generating not only levels but entire PuzzleScript games were attempted by \cite{Khalifa2015} and \cite{Lim2014}. 
+Generating Puzzlescript games was successfully attempted by \cite{Khalifa2015} using a genetic approach. \cite{Lim2014} took this a step further to not only generate levels but entire PuzzleScript rules for the games. They also use a genetic approach but apply the mutations on the ruleset starting from an initial population of empty rules. 
 
-It is worth mentioning that a more complicated approach by 
+
+% It is worth mentioning that a more complicated approach by 
 
 \subsubsection{Solving Sokoban Levels}
 
@@ -32,7 +32,7 @@ Solvers based on Monte Carlo Tree Search (MCTS) have not performed very well on 
 \subsubsection{Mixed-initiative systems}
 The term 'mixed-initiative interaction' is an umbrella term for works where a human interacts together with an agent to achieve some goal. In \cite{Horvitz1999}, Horvitz lies down principles on how one should approach designing such a system. Mixed-initiative methods have been employed to address such problems with uncertain objectives (like Puzzle design) by presenting multiple solutions to the user and prompting the user for a decision during optimizing (see below for examples specific to game design). % In a way it p \cite{Giaccardi2008}
 
-\cite{Liapis2016} provide a good overview of various systems which have been employed in research/practice to generate game content in a mixed-initiative setting. They make a useful distinction based on the agency of the tool [Figure \ref{fig:mixedinitiativeimg}]: Either the human takes the design lead, in which case the computer tries to help shape the idea, or the computer takes the design lead, in which case the human guides the system towards solutions. Mixed-initiative tools can land anywhere on this scale.
+\cite{Liapis2016} provide a good overview of various systems which have been employed in research/practice to generate game content in a mixed-initiative setting. They make a useful distinction based on the agency of the tool [\autoref{fig:mixedinitiativeimg}]: Either the human takes the design lead, in which case the computer tries to help shape the idea, or the computer takes the design lead, in which case the human guides the system towards solutions. Mixed-initiative tools can land anywhere on this scale. Our tool can be used in both ways as we will see in the user study.
 
 \begin{figure}
     \centering

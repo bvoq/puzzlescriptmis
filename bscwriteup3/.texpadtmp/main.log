@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.7.10)  1 AUG 2019 20:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.7.10)  2 AUG 2019 03:24
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -865,7 +865,7 @@ Overfull \vbox (459.92477pt too high) has occurred while \output is active []
  [5
 
 ] [6]
-<figures/cadvsinteractiveevol.png, id=310, 1509.64pt x 517.935pt>
+<figures/cadvsinteractiveevol.png, id=309, 1509.64pt x 517.935pt>
 File: figures/cadvsinteractiveevol.png Graphic file (type png)
 <use figures/cadvsinteractiveevol.png>
 Package pdftex.def Info: figures/cadvsinteractiveevol.png  used on input line 40.
@@ -874,7 +874,7 @@ Package pdftex.def Info: figures/cadvsinteractiveevol.png  used on input line 40
 chapter 3.
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <12> not available
 (Font)              Font shape `T1/pcr/b/n' tried instead on input line 18.
-<figures/wallimg.png, id=358, 436.63126pt x 436.63126pt>
+<figures/wallimg.png, id=357, 436.63126pt x 436.63126pt>
 File: figures/wallimg.png Graphic file (type png)
 <use figures/wallimg.png>
 Package pdftex.def Info: figures/wallimg.png  used on input line 32.
@@ -890,7 +890,7 @@ Overfull \vbox (460.54948pt too high) has occurred while \output is active []
  [9
 
 ]
-<figures/collisionlayersboth.png, id=370, 1718.42pt x 859.21pt>
+<figures/collisionlayersboth.png, id=369, 1718.42pt x 859.21pt>
 File: figures/collisionlayersboth.png Graphic file (type png)
 <use figures/collisionlayersboth.png>
 Package pdftex.def Info: figures/collisionlayersboth.png  used on input line 71.
@@ -910,69 +910,72 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--88
 
  []
 
-<figures/level1.png, id=402, 359.84438pt x 421.575pt>
+<figures/level1.png, id=401, 359.84438pt x 421.575pt>
 File: figures/level1.png Graphic file (type png)
 <use figures/level1.png>
-Package pdftex.def Info: figures/level1.png  used on input line 125.
+Package pdftex.def Info: figures/level1.png  used on input line 124.
 (pdftex.def)             Requested size: 100.16528pt x 117.34546pt.
-[11 <./figures/level1.png>]
-<figures/leveleditormode.png, id=423, 1686.3pt x 1053.9375pt>
+
+Underfull \vbox (badness 1107) has occurred while \output is active []
+
+ [11 <./figures/level1.png>]
+<figures/leveleditormode.png, id=422, 1686.3pt x 1053.9375pt>
 File: figures/leveleditormode.png Graphic file (type png)
 <use figures/leveleditormode.png>
-Package pdftex.def Info: figures/leveleditormode.png  used on input line 142.
+Package pdftex.def Info: figures/leveleditormode.png  used on input line 141.
 (pdftex.def)             Requested size: 455.30121pt x 284.55084pt.
-<figures/playtestmode.png, id=424, 1686.3pt x 1053.9375pt>
+<figures/playtestmode.png, id=423, 1686.3pt x 1053.9375pt>
 File: figures/playtestmode.png Graphic file (type png)
 <use figures/playtestmode.png>
-Package pdftex.def Info: figures/playtestmode.png  used on input line 149.
+Package pdftex.def Info: figures/playtestmode.png  used on input line 148.
 (pdftex.def)             Requested size: 455.30121pt x 284.55084pt.
-<figures/imageoftransformmode.png, id=425, 1686.3pt x 1053.9375pt>
+<figures/imageoftransformmode.png, id=424, 1686.3pt x 1053.9375pt>
 File: figures/imageoftransformmode.png Graphic file (type png)
 <use figures/imageoftransformmode.png>
-Package pdftex.def Info: figures/imageoftransformmode.png  used on input line 155.
+Package pdftex.def Info: figures/imageoftransformmode.png  used on input line 154.
 (pdftex.def)             Requested size: 455.30121pt x 284.55084pt.
-<figures/shortestsolution.png, id=427, 247.92625pt x 32.12pt>
+<figures/shortestsolution.png, id=426, 247.92625pt x 32.12pt>
 File: figures/shortestsolution.png Graphic file (type png)
 <use figures/shortestsolution.png>
-Package pdftex.def Info: figures/shortestsolution.png  used on input line 168.
+Package pdftex.def Info: figures/shortestsolution.png  used on input line 167.
 (pdftex.def)             Requested size: 159.3582pt x 20.64542pt.
-<figures/shortestsolutionwithin.png, id=428, 394.47375pt x 35.13126pt>
+<figures/shortestsolutionwithin.png, id=427, 394.47375pt x 35.13126pt>
 File: figures/shortestsolutionwithin.png Graphic file (type png)
 <use figures/shortestsolutionwithin.png>
-Package pdftex.def Info: figures/shortestsolutionwithin.png  used on input line 169.
+Package pdftex.def Info: figures/shortestsolutionwithin.png  used on input line 168.
 (pdftex.def)             Requested size: 159.3582pt x 14.19215pt.
-<figures/nosolutionwithin.png, id=429, 367.3725pt x 40.15pt>
+<figures/nosolutionwithin.png, id=428, 367.3725pt x 40.15pt>
 File: figures/nosolutionwithin.png Graphic file (type png)
 <use figures/nosolutionwithin.png>
-Package pdftex.def Info: figures/nosolutionwithin.png  used on input line 170.
+Package pdftex.def Info: figures/nosolutionwithin.png  used on input line 169.
 (pdftex.def)             Requested size: 159.3582pt x 17.4167pt.
-<figures/difficultygreedy.png, id=430, 201.75375pt x 33.12375pt>
+<figures/difficultygreedy.png, id=429, 201.75375pt x 33.12375pt>
 File: figures/difficultygreedy.png Graphic file (type png)
 <use figures/difficultygreedy.png>
-Package pdftex.def Info: figures/difficultygreedy.png  used on input line 177.
+Package pdftex.def Info: figures/difficultygreedy.png  used on input line 176.
 (pdftex.def)             Requested size: 113.8253pt x 18.68765pt.
-<figures/difficultyastar.png, id=431, 191.71625pt x 33.12375pt>
+<figures/difficultyastar.png, id=430, 191.71625pt x 33.12375pt>
 File: figures/difficultyastar.png Graphic file (type png)
 <use figures/difficultyastar.png>
-Package pdftex.def Info: figures/difficultyastar.png  used on input line 178.
+Package pdftex.def Info: figures/difficultyastar.png  used on input line 177.
 (pdftex.def)             Requested size: 113.8253pt x 19.66615pt.
-<figures/difficultybfs.png, id=432, 200.75pt x 30.1125pt>
+<figures/difficultybfs.png, id=431, 200.75pt x 30.1125pt>
 File: figures/difficultybfs.png Graphic file (type png)
 <use figures/difficultybfs.png>
-Package pdftex.def Info: figures/difficultybfs.png  used on input line 179.
+Package pdftex.def Info: figures/difficultybfs.png  used on input line 178.
 (pdftex.def)             Requested size: 113.8253pt x 17.07423pt.
-<figures/difficultycurveleft.png, id=433, 383.4325pt x 33.12375pt>
+<figures/difficultycurveleft.png, id=432, 383.4325pt x 33.12375pt>
 File: figures/difficultycurveleft.png Graphic file (type png)
 <use figures/difficultycurveleft.png>
-Package pdftex.def Info: figures/difficultycurveleft.png  used on input line 186.
+Package pdftex.def Info: figures/difficultycurveleft.png  used on input line 185.
 (pdftex.def)             Requested size: 159.3582pt x 13.76682pt.
-<figures/difficultycurveright.png, id=434, 386.44376pt x 30.1125pt>
+<figures/difficultycurveright.png, id=433, 386.44376pt x 30.1125pt>
 File: figures/difficultycurveright.png Graphic file (type png)
 <use figures/difficultycurveright.png>
-Package pdftex.def Info: figures/difficultycurveright.png  used on input line 187.
+Package pdftex.def Info: figures/difficultycurveright.png  used on input line 186.
 (pdftex.def)             Requested size: 159.3582pt x 12.4174pt.
  [12 <./figures/leveleditormode.png>] [13 <./figures/playtestmode.png> <./figures/imageoftransformmode.png>] [14 <./figures/shortestsolution.png> <./figures/shortestsolutionwithin.png> <./figures/nosolutionwithin.png> <./figures/difficultygreedy.png> <./figures/difficultyastar.png> <./figures/difficultybfs.png> <./figures/difficultycurveleft.png> <./figures/difficultycurveright.png>]
-Overfull \hbox (3.4pt too wide) in paragraph at lines 225--237
+Overfull \hbox (3.4pt too wide) in paragraph at lines 224--236
 [] [] 
  []
 
@@ -980,30 +983,30 @@ Overfull \hbox (3.4pt too wide) in paragraph at lines 225--237
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [15]
-Underfull \hbox (badness 10000) in paragraph at lines 270--270
+Underfull \hbox (badness 10000) in paragraph at lines 269--269
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--270
+Underfull \hbox (badness 10000) in paragraph at lines 269--269
 
  []
 
 
-Overfull \hbox (9.79999pt too wide) in paragraph at lines 257--271
+Overfull \hbox (9.79999pt too wide) in paragraph at lines 256--270
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 275--278
+Underfull \hbox (badness 10000) in paragraph at lines 274--277
 
  []
 
 [16]
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 301.
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 300.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 308.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 307.
  [17] [18
 
 ]
@@ -1017,13 +1020,13 @@ Overfull \hbox (2.28006pt too wide) has occurred while \output is active
 Overfull \vbox (459.92477pt too high) has occurred while \output is active []
 
  [19]
-<figures/sokobaniteratelevel.png, id=511, 238.39063pt x 278.03876pt>
+<figures/sokobaniteratelevel.png, id=510, 238.39063pt x 278.03876pt>
 File: figures/sokobaniteratelevel.png Graphic file (type png)
 <use figures/sokobaniteratelevel.png>
-Package pdftex.def Info: figures/sokobaniteratelevel.png  used on input line 349.
+Package pdftex.def Info: figures/sokobaniteratelevel.png  used on input line 348.
 (pdftex.def)             Requested size: 227.6506pt x 265.52686pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--358
+Underfull \hbox (badness 10000) in paragraph at lines 357--357
 [][][][][]$\T1/pcr/m/n/10 http : / / sokoban-[]jd . blogspot . com / 2015 / 02 / how-[]to-[]build-[]sokoban-[]level . html$[][] \T1/ptm/m/n/10 @
  []
 
@@ -1031,301 +1034,300 @@ Underfull \hbox (badness 10000) in paragraph at lines 358--358
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20 <./figures/sokobaniteratelevel.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 378--378
+Underfull \hbox (badness 10000) in paragraph at lines 377--377
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 378--378
+Underfull \hbox (badness 10000) in paragraph at lines 377--377
 
  []
 
 
-Overfull \hbox (6.4pt too wide) in paragraph at lines 370--379
+Overfull \hbox (6.4pt too wide) in paragraph at lines 369--378
 [] [] 
  []
 
 File: figures/sokobaniteratelevel.png Graphic file (type png)
 <use figures/sokobaniteratelevel.png>
-Package pdftex.def Info: figures/sokobaniteratelevel.png  used on input line 399.
+Package pdftex.def Info: figures/sokobaniteratelevel.png  used on input line 398.
 (pdftex.def)             Requested size: 91.05884pt x 106.20311pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 399--400
+Underfull \hbox (badness 10000) in paragraph at lines 398--399
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 399--400
+Underfull \hbox (badness 10000) in paragraph at lines 398--399
 
  []
 
-<figures/maxii0.png, id=523, 631.35875pt x 735.74875pt>
+<figures/maxii0.png, id=522, 631.35875pt x 735.74875pt>
 File: figures/maxii0.png Graphic file (type png)
 <use figures/maxii0.png>
-Package pdftex.def Info: figures/maxii0.png  used on input line 403.
+Package pdftex.def Info: figures/maxii0.png  used on input line 402.
 (pdftex.def)             Requested size: 91.05884pt x 106.11389pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--404
+Underfull \hbox (badness 10000) in paragraph at lines 402--403
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--404
+Underfull \hbox (badness 10000) in paragraph at lines 402--403
 
  []
 
-<figures/maxii1_green.png, id=524, 630.85687pt x 734.745pt>
+<figures/maxii1_green.png, id=523, 630.85687pt x 734.745pt>
 File: figures/maxii1_green.png Graphic file (type png)
 <use figures/maxii1_green.png>
-Package pdftex.def Info: figures/maxii1_green.png  used on input line 407.
+Package pdftex.def Info: figures/maxii1_green.png  used on input line 406.
 (pdftex.def)             Requested size: 91.05884pt x 106.04759pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 407--408
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 407--408
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
 
  []
 
-<figures/maxii2.png, id=525, 630.355pt x 736.25063pt>
+<figures/maxii2.png, id=524, 630.355pt x 736.25063pt>
 File: figures/maxii2.png Graphic file (type png)
 <use figures/maxii2.png>
-Package pdftex.def Info: figures/maxii2.png  used on input line 411.
+Package pdftex.def Info: figures/maxii2.png  used on input line 410.
 (pdftex.def)             Requested size: 91.05884pt x 106.35478pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--412
+Underfull \hbox (badness 10000) in paragraph at lines 410--411
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--412
+Underfull \hbox (badness 10000) in paragraph at lines 410--411
 
  []
 
-<figures/maxii3.png, id=526, 631.35875pt x 735.74875pt>
+<figures/maxii3.png, id=525, 631.35875pt x 735.74875pt>
 File: figures/maxii3.png Graphic file (type png)
 <use figures/maxii3.png>
-Package pdftex.def Info: figures/maxii3.png  used on input line 415.
+Package pdftex.def Info: figures/maxii3.png  used on input line 414.
 (pdftex.def)             Requested size: 91.05884pt x 106.11389pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 415--416
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 415--416
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
 
  []
 
-<figures/maxii4_green.png, id=527, 632.3625pt x 737.75626pt>
+<figures/maxii4_green.png, id=526, 632.3625pt x 737.75626pt>
 File: figures/maxii4_green.png Graphic file (type png)
 <use figures/maxii4_green.png>
-Package pdftex.def Info: figures/maxii4_green.png  used on input line 419.
+Package pdftex.def Info: figures/maxii4_green.png  used on input line 418.
 (pdftex.def)             Requested size: 91.05884pt x 106.23456pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 419--420
+Underfull \hbox (badness 10000) in paragraph at lines 418--419
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 419--420
+Underfull \hbox (badness 10000) in paragraph at lines 418--419
 
  []
 
-<figures/maxii5.png, id=528, 631.86063pt x 736.7525pt>
+<figures/maxii5.png, id=527, 631.86063pt x 736.7525pt>
 File: figures/maxii5.png Graphic file (type png)
 <use figures/maxii5.png>
-Package pdftex.def Info: figures/maxii5.png  used on input line 423.
+Package pdftex.def Info: figures/maxii5.png  used on input line 422.
 (pdftex.def)             Requested size: 91.05884pt x 106.16872pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 423--424
+Underfull \hbox (badness 10000) in paragraph at lines 422--423
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 423--424
+Underfull \hbox (badness 10000) in paragraph at lines 422--423
 
  []
 
-<figures/maxii6.png, id=529, 632.3625pt x 735.24687pt>
+<figures/maxii6.png, id=528, 632.3625pt x 735.24687pt>
 File: figures/maxii6.png Graphic file (type png)
 <use figures/maxii6.png>
-Package pdftex.def Info: figures/maxii6.png  used on input line 427.
+Package pdftex.def Info: figures/maxii6.png  used on input line 426.
 (pdftex.def)             Requested size: 91.05884pt x 105.87321pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 427--428
+Underfull \hbox (badness 10000) in paragraph at lines 426--427
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 427--428
+Underfull \hbox (badness 10000) in paragraph at lines 426--427
 
  []
 
-<figures/maxii7.png, id=530, 631.35875pt x 735.74875pt>
+<figures/maxii7.png, id=529, 631.35875pt x 735.74875pt>
 File: figures/maxii7.png Graphic file (type png)
 <use figures/maxii7.png>
-Package pdftex.def Info: figures/maxii7.png  used on input line 431.
+Package pdftex.def Info: figures/maxii7.png  used on input line 430.
 (pdftex.def)             Requested size: 91.05884pt x 106.11389pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 431--432
+Underfull \hbox (badness 10000) in paragraph at lines 430--431
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 431--432
+Underfull \hbox (badness 10000) in paragraph at lines 430--431
 
  []
 
-<figures/maxii8.png, id=531, 631.35875pt x 736.7525pt>
+<figures/maxii8.png, id=530, 631.35875pt x 736.7525pt>
 File: figures/maxii8.png Graphic file (type png)
 <use figures/maxii8.png>
-Package pdftex.def Info: figures/maxii8.png  used on input line 435.
+Package pdftex.def Info: figures/maxii8.png  used on input line 434.
 (pdftex.def)             Requested size: 91.05884pt x 106.25865pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--436
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--436
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
 
  []
 
 File: figures/sokobaniteratelevel.png Graphic file (type png)
 <use figures/sokobaniteratelevel.png>
-Package pdftex.def Info: figures/sokobaniteratelevel.png  used on input line 445.
+Package pdftex.def Info: figures/sokobaniteratelevel.png  used on input line 444.
 (pdftex.def)             Requested size: 125.20853pt x 146.03616pt.
-<figures/firstmax_without.png, id=532, 642.90187pt x 751.80875pt>
+<figures/firstmax_without.png, id=531, 642.90187pt x 751.80875pt>
 File: figures/firstmax_without.png Graphic file (type png)
 <use figures/firstmax_without.png>
-Package pdftex.def Info: figures/firstmax_without.png  used on input line 449.
+Package pdftex.def Info: figures/firstmax_without.png  used on input line 448.
 (pdftex.def)             Requested size: 100.16528pt x 117.12567pt.
-<figures/secondmax_without.png, id=533, 644.4075pt x 751.30687pt>
+<figures/secondmax_without.png, id=532, 644.4075pt x 751.30687pt>
 File: figures/secondmax_without.png Graphic file (type png)
 <use figures/secondmax_without.png>
-Package pdftex.def Info: figures/secondmax_without.png  used on input line 450.
+Package pdftex.def Info: figures/secondmax_without.png  used on input line 449.
 (pdftex.def)             Requested size: 100.16528pt x 116.77234pt.
-<figures/thirdmax_without.png, id=534, 644.4075pt x 751.80875pt>
+<figures/thirdmax_without.png, id=533, 644.4075pt x 751.80875pt>
 File: figures/thirdmax_without.png Graphic file (type png)
 <use figures/thirdmax_without.png>
-Package pdftex.def Info: figures/thirdmax_without.png  used on input line 451.
+Package pdftex.def Info: figures/thirdmax_without.png  used on input line 450.
 (pdftex.def)             Requested size: 100.16528pt x 116.85036pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 449--452
+Underfull \hbox (badness 10000) in paragraph at lines 448--451
 
  []
 
-<figures/p8greena.png, id=535, 484.81125pt x 564.1075pt>
+<figures/p8greena.png, id=534, 484.81125pt x 564.1075pt>
 File: figures/p8greena.png Graphic file (type png)
 <use figures/p8greena.png>
-Package pdftex.def Info: figures/p8greena.png  used on input line 460.
+Package pdftex.def Info: figures/p8greena.png  used on input line 459.
 (pdftex.def)             Requested size: 91.05884pt x 105.95065pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--461
+Underfull \hbox (badness 10000) in paragraph at lines 459--460
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--461
+Underfull \hbox (badness 10000) in paragraph at lines 459--460
 
  []
 
-<figures/p8greenb.png, id=536, 482.80376pt x 564.1075pt>
+<figures/p8greenb.png, id=535, 482.80376pt x 564.1075pt>
 File: figures/p8greenb.png Graphic file (type png)
 <use figures/p8greenb.png>
-Package pdftex.def Info: figures/p8greenb.png  used on input line 464.
+Package pdftex.def Info: figures/p8greenb.png  used on input line 463.
 (pdftex.def)             Requested size: 91.05884pt x 106.38963pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 464--465
+Underfull \hbox (badness 10000) in paragraph at lines 463--464
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 464--465
+Underfull \hbox (badness 10000) in paragraph at lines 463--464
 
  []
 
-<figures/p8greenc.png, id=537, 922.44624pt x 1080.035pt>
+<figures/p8greenc.png, id=536, 922.44624pt x 1080.035pt>
 File: figures/p8greenc.png Graphic file (type png)
 <use figures/p8greenc.png>
-Package pdftex.def Info: figures/p8greenc.png  used on input line 468.
+Package pdftex.def Info: figures/p8greenc.png  used on input line 467.
 (pdftex.def)             Requested size: 91.05884pt x 106.60902pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 468--469
+Underfull \hbox (badness 10000) in paragraph at lines 467--468
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 468--469
+Underfull \hbox (badness 10000) in paragraph at lines 467--468
 
- []
-
-
-Overfull \hbox (2.87724pt too wide) in paragraph at lines 481--482
-\T1/ptm/m/n/12 have found \T1/ptm/m/it/12 aes-thet-i-cally \T1/ptm/m/n/12 pleas-ing sec-tions or \T1/ptm/m/it/12 me-chan-i-cally \T1/ptm/m/n/12 in-ter-est-ing sec-tions upon which
  []
 
 [21] [22 <./figures/maxii0.png> <./figures/maxii1_green.png> <./figures/maxii2.png> <./figures/maxii3.png> <./figures/maxii4_green.png> <./figures/maxii5.png> <./figures/maxii6.png> <./figures/maxii7.png> <./figures/maxii8.png>] [23 <./figures/firstmax_without.png> <./figures/secondmax_without.png> <./figures/thirdmax_without.png> <./figures/p8greena.png> <./figures/p8greenb.png> <./figures/p8greenc.png>]
-<figures/unsolvablepart4.png, id=569, 1549.79pt x 1108.14pt>
+Overfull \hbox (2.87724pt too wide) in paragraph at lines 480--481
+\T1/ptm/m/n/12 have found \T1/ptm/m/it/12 aes-thet-i-cally \T1/ptm/m/n/12 pleas-ing sec-tions or \T1/ptm/m/it/12 me-chan-i-cally \T1/ptm/m/n/12 in-ter-est-ing sec-tions upon which
+ []
+
+<figures/unsolvablepart4.png, id=568, 1549.79pt x 1108.14pt>
 File: figures/unsolvablepart4.png Graphic file (type png)
 <use figures/unsolvablepart4.png>
-Package pdftex.def Info: figures/unsolvablepart4.png  used on input line 502.
+Package pdftex.def Info: figures/unsolvablepart4.png  used on input line 501.
 (pdftex.def)             Requested size: 227.6506pt x 162.76442pt.
-<figures/unsolvablepart72.png, id=570, 631.86063pt x 511.9125pt>
+<figures/unsolvablepart72.png, id=569, 631.86063pt x 511.9125pt>
 File: figures/unsolvablepart72.png Graphic file (type png)
 <use figures/unsolvablepart72.png>
-Package pdftex.def Info: figures/unsolvablepart72.png  used on input line 506.
+Package pdftex.def Info: figures/unsolvablepart72.png  used on input line 505.
 (pdftex.def)             Requested size: 227.6506pt x 184.43677pt.
 
-Overfull \hbox (2.28003pt too wide) in paragraph at lines 500--508
+Overfull \hbox (2.28003pt too wide) in paragraph at lines 499--507
 []$[]$  $[]$ 
  []
 
 <figures/windowdressingpart71.png, id=571, 450.68375pt x 526.96875pt>
 File: figures/windowdressingpart71.png Graphic file (type png)
 <use figures/windowdressingpart71.png>
-Package pdftex.def Info: figures/windowdressingpart71.png  used on input line 519.
+Package pdftex.def Info: figures/windowdressingpart71.png  used on input line 518.
 (pdftex.def)             Requested size: 113.8253pt x 133.09273pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 519--520
+Underfull \hbox (badness 10000) in paragraph at lines 518--519
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 519--520
+Underfull \hbox (badness 10000) in paragraph at lines 518--519
 
  []
 
 <figures/windowdressingpart72.png, id=572, 402.00188pt x 468.24937pt>
 File: figures/windowdressingpart72.png Graphic file (type png)
 <use figures/windowdressingpart72.png>
-Package pdftex.def Info: figures/windowdressingpart72.png  used on input line 523.
+Package pdftex.def Info: figures/windowdressingpart72.png  used on input line 522.
 (pdftex.def)             Requested size: 113.8253pt x 132.58076pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 523--524
+Underfull \hbox (badness 10000) in paragraph at lines 522--523
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 523--524
+Underfull \hbox (badness 10000) in paragraph at lines 522--523
 
  []
 
 <figures/windowdressingpart73.png, id=573, 450.68375pt x 526.96875pt>
 File: figures/windowdressingpart73.png Graphic file (type png)
 <use figures/windowdressingpart73.png>
-Package pdftex.def Info: figures/windowdressingpart73.png  used on input line 527.
+Package pdftex.def Info: figures/windowdressingpart73.png  used on input line 526.
 (pdftex.def)             Requested size: 113.8253pt x 133.09273pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 527--528
+Underfull \hbox (badness 10000) in paragraph at lines 526--527
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 527--528
+Underfull \hbox (badness 10000) in paragraph at lines 526--527
 
  []
 
@@ -1336,20 +1338,20 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <figures/rulebasedimprovingfrom.png, id=588, 361.85187pt x 421.07312pt>
 File: figures/rulebasedimprovingfrom.png Graphic file (type png)
 <use figures/rulebasedimprovingfrom.png>
-Package pdftex.def Info: figures/rulebasedimprovingfrom.png  used on input line 538.
+Package pdftex.def Info: figures/rulebasedimprovingfrom.png  used on input line 537.
 (pdftex.def)             Requested size: 159.35472pt x 185.43336pt.
 <figures/rulebasedimprovingto.png, id=589, 361.85187pt x 423.5825pt>
 File: figures/rulebasedimprovingto.png Graphic file (type png)
 <use figures/rulebasedimprovingto.png>
-Package pdftex.def Info: figures/rulebasedimprovingto.png  used on input line 542.
+Package pdftex.def Info: figures/rulebasedimprovingto.png  used on input line 541.
 (pdftex.def)             Requested size: 159.35472pt x 186.53845pt.
 
-Overfull \hbox (23.69891pt too wide) in paragraph at lines 536--544
+Overfull \hbox (23.69891pt too wide) in paragraph at lines 535--543
 []$[]$ $\OT1/cmr/m/n/12 =[]\OMS/cmsy/m/n/12 )$  $[]$ 
  []
 
 
-Overfull \hbox (9.79999pt too wide) in paragraph at lines 560--572
+Overfull \hbox (9.79999pt too wide) in paragraph at lines 559--571
 [] 
  []
 
@@ -1360,75 +1362,75 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <figures/part5i1_cropped.png, id=597, 555.07375pt x 552.0625pt>
 File: figures/part5i1_cropped.png Graphic file (type png)
 <use figures/part5i1_cropped.png>
-Package pdftex.def Info: figures/part5i1_cropped.png  used on input line 586.
+Package pdftex.def Info: figures/part5i1_cropped.png  used on input line 585.
 (pdftex.def)             Requested size: 113.8253pt x 113.20723pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 586--587
+Underfull \hbox (badness 10000) in paragraph at lines 585--586
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 586--587
+Underfull \hbox (badness 10000) in paragraph at lines 585--586
 
  []
 
 <figures/part5i2_cropped.png, id=598, 276.03125pt x 277.035pt>
 File: figures/part5i2_cropped.png Graphic file (type png)
 <use figures/part5i2_cropped.png>
-Package pdftex.def Info: figures/part5i2_cropped.png  used on input line 590.
+Package pdftex.def Info: figures/part5i2_cropped.png  used on input line 589.
 (pdftex.def)             Requested size: 113.8253pt x 114.2403pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 590--591
+Underfull \hbox (badness 10000) in paragraph at lines 589--590
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 590--591
+Underfull \hbox (badness 10000) in paragraph at lines 589--590
 
  []
 
 <figures/part5i3_cropped.png, id=599, 277.53688pt x 278.03876pt>
 File: figures/part5i3_cropped.png Graphic file (type png)
 <use figures/part5i3_cropped.png>
-Package pdftex.def Info: figures/part5i3_cropped.png  used on input line 594.
+Package pdftex.def Info: figures/part5i3_cropped.png  used on input line 593.
 (pdftex.def)             Requested size: 113.8253pt x 114.03056pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 594--595
+Underfull \hbox (badness 10000) in paragraph at lines 593--594
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 594--595
+Underfull \hbox (badness 10000) in paragraph at lines 593--594
 
  []
 
 <figures/part5i4_cropped.png, id=600, 277.035pt x 277.035pt>
 File: figures/part5i4_cropped.png Graphic file (type png)
 <use figures/part5i4_cropped.png>
-Package pdftex.def Info: figures/part5i4_cropped.png  used on input line 598.
+Package pdftex.def Info: figures/part5i4_cropped.png  used on input line 597.
 (pdftex.def)             Requested size: 113.8253pt x 113.82603pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 598--599
+Underfull \hbox (badness 10000) in paragraph at lines 597--598
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 598--599
+Underfull \hbox (badness 10000) in paragraph at lines 597--598
 
  []
 
 <figures/part5i5.png, id=601, 589.20125pt x 589.70313pt>
 File: figures/part5i5.png Graphic file (type png)
 <use figures/part5i5.png>
-Package pdftex.def Info: figures/part5i5.png  used on input line 602.
+Package pdftex.def Info: figures/part5i5.png  used on input line 601.
 (pdftex.def)             Requested size: 113.8253pt x 113.91637pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 602--603
+Underfull \hbox (badness 10000) in paragraph at lines 601--602
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 602--603
+Underfull \hbox (badness 10000) in paragraph at lines 601--602
 
  []
 
@@ -1436,27 +1438,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 602--603
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27]
-Overfull \hbox (40.96356pt too wide) detected at line 642
+Overfull \hbox (40.96356pt too wide) detected at line 641
 [][] \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12 ^^A []
  []
 
 <figures/part3helpalittlefrom.png, id=608, 229.35687pt x 271.51437pt>
 File: figures/part3helpalittlefrom.png Graphic file (type png)
 <use figures/part3helpalittlefrom.png>
-Package pdftex.def Info: figures/part3helpalittlefrom.png  used on input line 651.
+Package pdftex.def Info: figures/part3helpalittlefrom.png  used on input line 650.
 (pdftex.def)             Requested size: 136.59175pt x 161.70425pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 651--652
+Underfull \hbox (badness 10000) in paragraph at lines 650--651
 
  []
 
 <figures/part3helpalittleto.png, id=609, 231.86626pt x 272.01625pt>
 File: figures/part3helpalittleto.png Graphic file (type png)
 <use figures/part3helpalittleto.png>
-Package pdftex.def Info: figures/part3helpalittleto.png  used on input line 655.
+Package pdftex.def Info: figures/part3helpalittleto.png  used on input line 654.
 (pdftex.def)             Requested size: 136.59175pt x 160.24745pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 655--656
+Underfull \hbox (badness 10000) in paragraph at lines 654--655
 
  []
 
@@ -1464,56 +1466,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 655--656
 <figures/part1_smallsokobandesigns.png, id=630, 406.51875pt x 140.525pt>
 File: figures/part1_smallsokobandesigns.png Graphic file (type png)
 <use figures/part1_smallsokobandesigns.png>
-Package pdftex.def Info: figures/part1_smallsokobandesigns.png  used on input line 668.
+Package pdftex.def Info: figures/part1_smallsokobandesigns.png  used on input line 667.
 (pdftex.def)             Requested size: 455.30121pt x 157.39334pt.
 <figures/part1AllGreenToBlue.png, id=631, 578.66188pt x 462.22687pt>
 File: figures/part1AllGreenToBlue.png Graphic file (type png)
 <use figures/part1AllGreenToBlue.png>
-Package pdftex.def Info: figures/part1AllGreenToBlue.png  used on input line 676.
+Package pdftex.def Info: figures/part1AllGreenToBlue.png  used on input line 675.
 (pdftex.def)             Requested size: 136.59175pt x 109.10292pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 676--677
+Underfull \hbox (badness 10000) in paragraph at lines 675--676
 
  []
 
 <figures/part1allgreentoblueonyellow.png, id=632, 359.84438pt x 452.69125pt>
 File: figures/part1allgreentoblueonyellow.png Graphic file (type png)
 <use figures/part1allgreentoblueonyellow.png>
-Package pdftex.def Info: figures/part1allgreentoblueonyellow.png  used on input line 680.
+Package pdftex.def Info: figures/part1allgreentoblueonyellow.png  used on input line 679.
 (pdftex.def)             Requested size: 136.59175pt x 171.83795pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 680--681
+Underfull \hbox (badness 10000) in paragraph at lines 679--680
 
  []
 
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 689.
+(amsmath)                 on input line 688.
 
 [29 <./figures/part3helpalittlefrom.png> <./figures/part3helpalittleto.png> <./figures/part1_smallsokobandesigns.png>]
 <figures/backward_design_minotalen.png, id=643, 1253.68375pt x 587.19376pt>
 File: figures/backward_design_minotalen.png Graphic file (type png)
 <use figures/backward_design_minotalen.png>
-Package pdftex.def Info: figures/backward_design_minotalen.png  used on input line 700.
+Package pdftex.def Info: figures/backward_design_minotalen.png  used on input line 699.
 (pdftex.def)             Requested size: 387.0088pt x 181.26659pt.
  [30 <./figures/part1AllGreenToBlue.png> <./figures/part1allgreentoblueonyellow.png>] [31 <./figures/backward_design_minotalen.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 753--754
+Underfull \hbox (badness 10000) in paragraph at lines 752--753
 
  []
 
-[32]
-Overfull \hbox (28.81285pt too wide) in paragraph at lines 782--784
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32]
+Overfull \hbox (28.81285pt too wide) in paragraph at lines 781--783
 []\T1/ptm/m/n/12 For ex-am-ple: [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 782--784
+Underfull \hbox (badness 10000) in paragraph at lines 781--783
 
  []
 
 
-LaTeX Warning: Citation `Jurgen' on page 33 undefined on input line 804.
+LaTeX Warning: Citation `Jurgen' on page 33 undefined on input line 803.
 
 [33]) (./chapters/ch04-conclusion.tex) [34] (./chapters/apx-sample-appendix.tex
 chapter A.
@@ -2443,15 +2448,15 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 268.
  ) 
 Here is how much of TeX's memory you used:
- 14886 strings out of 492609
- 235678 string characters out of 6129048
+ 14887 strings out of 492609
+ 235698 string characters out of 6129048
  488773 words of memory out of 5000000
- 18113 multiletter control sequences out of 15000+600000
+ 18114 multiletter control sequences out of 15000+600000
  84834 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,28n,66p,9083b,1418s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/kdkdk/Desktop/Supersync/of_v20190324_osx_release/apps/myApps/puzzleScriptMIS/bscwriteup3/.texpadtmp/main.pdf (60 pages, 9090516 bytes).
+Output written on /Users/kdkdk/Desktop/Supersync/of_v20190324_osx_release/apps/myApps/puzzleScriptMIS/bscwriteup3/.texpadtmp/main.pdf (60 pages, 9091075 bytes).
 PDF statistics:
  1102 PDF objects out of 1200 (max. 8388607)
  900 compressed objects within 9 object streams
