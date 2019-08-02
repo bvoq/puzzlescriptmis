@@ -776,10 +776,11 @@ A very common complaint (every participant except for 1, 5 and 6 mentioned it) w
 
 \textit{\say{The limitations are [the systems] judging abilities.} -- Participant 3}
 
-Due to time constraints, we decided from the beginning to keep the curator very simple. However, after interviewing participant 1 \& 4 we have a suggestion for future work to improve upon the curator. We suggest adding an optional `cost' modifier to operational rules. 
+Due to time constraints, we decided from the beginning to keep the curator very simple. However, after interviewing participant 1 \& 4 we have a suggestion how users can manually modify the difficulty heuristic. We suggest adding an optional `cost' modifier to the operational rules. 
 
  For example: \lstinline{[ > Player | Crate ] -> [ > Player | > Crate ] COST 10} \hfill \\
- This way, levels that require more costly rules in order to be solved are given a higher difficulty score. The rule above would discourage levels that need a lot of moving around without pushing blocks.
+ The following rule would make pushing crates 11 times as expensive as a normal push and would discourage levels that need a lot of moving around without pushing blocks from appearing in the suggestions.
+ This way, levels that require more costly rules in order to be solved are given a higher difficulty score.
 
 % more pushing of blocks are weighted more and gives control to the designer and lets him implement their subjective experience of what makes a difficult puzzle game.
  
@@ -787,7 +788,7 @@ Due to time constraints, we decided from the beginning to keep the curator very 
     \item[Feedback for adapting to the transformer]
     Participant 4 suggested showing how many levels have already been transformed to get an estimate of the effectiveness of the transformer.
     
-    We suggest to take this a step further and also show the throughput of curated levels and also show how many levels are solvable/unsolvable/timed-out, respectively. These changes would allow the user to better adapt their actions towards the transformer. 
+    We suggest to take this a step further and also show the throughput of curated levels and also show how many levels are solvable/unsolvable/time-out, respectively. These changes would allow the user to better adapt their actions towards the transformer. 
     
     \item[Unresponsiveness]
     Many participants felt like the transformer was unresponsive at times, due to there being no visual feedback when MixedAim found no suitable suggestions. Participant 4 \& 7 both suggested adding a button to explicitly generate the levels instead of automatically transforming them, while Participant 1 suggested labeling more clearly that the transformer was doing its work.
@@ -800,7 +801,7 @@ Due to time constraints, we decided from the beginning to keep the curator very 
 
 \section{Conclusion}
 
-We developed the mixed-initiative system MixedAim for creating PuzzleScript games interactively with the computer. For this purpose we generalized the Sokoban heuristic of \cite{Jurgen} to solve levels more efficiently, we crafted a user interface which supported various forms of direct manipulation, like using a level editor and play-testing the level and added support for interactive suggestions. We hypothesized and later confirmed that giving more difficult suggestions is a feasible way to assist the designer. Specifically, we have identified that there is a threshold in difficulty starting from which levels become interesting.
+We developed the mixed-initiative system MixedAim for creating PuzzleScript games interactively with the computer. For this purpose we generalized the Sokoban heuristic of \cite{Junghanns1999} to solve levels more efficiently, we crafted a user interface which supported various forms of direct manipulation, like using a level editor and play-testing the level and added support for interactive suggestions. We hypothesized and later confirmed that giving more difficult suggestions is a feasible way to assist the designer. Specifically, we have identified that there is a threshold in difficulty starting from which levels become interesting.
 
 We identified various key interactions with those suggestions that designers and illustrated in which way designers could benefit from them. Interactions included \textit{Identifying and constraining mechanics and aesthetics in designs}, \textit{making unsolvable levels work again through transforming},  \textit{window dressing}, \textit{mechanic swapping}, \textit{gauging completeness} and \textit{backward designing}.
 

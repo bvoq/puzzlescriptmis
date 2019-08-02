@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.7.10)  2 AUG 2019 03:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.7.10)  2 AUG 2019 03:37
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1508,17 +1508,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 752--753
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [32]
-Overfull \hbox (28.81285pt too wide) in paragraph at lines 781--783
+Overfull \hbox (28.81285pt too wide) in paragraph at lines 781--784
 []\T1/ptm/m/n/12 For ex-am-ple: [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 781--783
+Underfull \hbox (badness 10000) in paragraph at lines 781--784
 
  []
-
-
-LaTeX Warning: Citation `Jurgen' on page 33 undefined on input line 803.
 
 [33]) (./chapters/ch04-conclusion.tex) [34] (./chapters/apx-sample-appendix.tex
 chapter A.
@@ -1527,7 +1524,7 @@ Overfull \hbox (18.52057pt too wide) in paragraph at lines 14--15
 []\T1/ptm/m/it/12 "Finding
  []
 
-<figures/whichtoolsemployduringleveldesign.png, id=694, 1174.3875pt x 596.2275pt>
+<figures/whichtoolsemployduringleveldesign.png, id=700, 1174.3875pt x 596.2275pt>
 File: figures/whichtoolsemployduringleveldesign.png Graphic file (type png)
 <use figures/whichtoolsemployduringleveldesign.png>
 Package pdftex.def Info: figures/whichtoolsemployduringleveldesign.png  used on input line 21.
@@ -1535,7 +1532,7 @@ Package pdftex.def Info: figures/whichtoolsemployduringleveldesign.png  used on 
 
 LaTeX Warning: Float too large for page by 59.76598pt on input line 97.
 
-<figures/RULE_EXPANDED.png, id=695, 1301.61281pt x 998.9822pt>
+<figures/RULE_EXPANDED.png, id=701, 1301.61281pt x 998.9822pt>
 File: figures/RULE_EXPANDED.png Graphic file (type png)
 <use figures/RULE_EXPANDED.png>
 Package pdftex.def Info: figures/RULE_EXPANDED.png  used on input line 101.
@@ -2440,9 +2437,6 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 268.
@@ -2456,10 +2450,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  47i,28n,66p,9083b,1418s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/kdkdk/Desktop/Supersync/of_v20190324_osx_release/apps/myApps/puzzleScriptMIS/bscwriteup3/.texpadtmp/main.pdf (60 pages, 9091075 bytes).
+Output written on /Users/kdkdk/Desktop/Supersync/of_v20190324_osx_release/apps/myApps/puzzleScriptMIS/bscwriteup3/.texpadtmp/main.pdf (60 pages, 9091525 bytes).
 PDF statistics:
- 1102 PDF objects out of 1200 (max. 8388607)
- 900 compressed objects within 9 object streams
+ 1109 PDF objects out of 1200 (max. 8388607)
+ 906 compressed objects within 10 object streams
  307 named destinations out of 1000 (max. 500000)
  526 words of extra memory for PDF output out of 10000 (max. 10000000)
 

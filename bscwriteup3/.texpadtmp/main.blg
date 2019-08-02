@@ -5,7 +5,6 @@ The style file: ../acmsiggraph.bst
 Database file #1: ../graphics.bib
 Warning--entry type for "TheGuardian" isn't style-file defined
 --line 343 of file ../graphics.bib
-Warning--I didn't find a database entry for "Jurgen"
 Warning--empty organization in Baldwin2017
 Warning--empty organization in Butler2013
 Warning--empty organization in Lim2014
@@ -27,7 +26,7 @@ Warning--empty journal in Smith2008
 Warning--empty organization in Viglietta2014
 You've used 40 entries,
             2873 wiz_defined-function locations,
-            902 strings with 13210 characters,
+            900 strings with 13198 characters,
 and the built_in function-call counts, 98693 in all, are:
 = -- 10638
 > -- 807
@@ -66,4 +65,4 @@ warning$ -- 19
 while$ -- 454
 width$ -- 45
 write$ -- 578
-(There were 21 warnings)
+(There were 20 warnings)
