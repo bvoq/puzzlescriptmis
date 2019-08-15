@@ -18,15 +18,15 @@
 \contentsline {section}{\numberline {4.1}Think-aloud study results}{20}{section.4.1}% 
 \contentsline {subsection}{\numberline {4.1.1}Iterative design}{21}{subsection.4.1.1}% 
 \contentsline {subsection}{\numberline {4.1.2}Design patterns}{21}{subsection.4.1.2}% 
-\contentsline {subsection}{\numberline {4.1.3}Adapting to the transformer}{26}{subsection.4.1.3}% 
-\contentsline {subsection}{\numberline {4.1.4}Backward designing}{30}{subsection.4.1.4}% 
-\contentsline {section}{\numberline {4.2}Structured Interview Responses}{31}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Negative feedback}{32}{section.4.3}% 
-\contentsline {section}{\numberline {4.4}Suggestions}{32}{section.4.4}% 
-\contentsline {section}{\numberline {4.5}Conclusion}{33}{section.4.5}% 
+\contentsline {subsection}{\numberline {4.1.3}Adapting to the transformer}{25}{subsection.4.1.3}% 
+\contentsline {subsection}{\numberline {4.1.4}Backward designing}{29}{subsection.4.1.4}% 
+\contentsline {section}{\numberline {4.2}Structured Interview Responses}{30}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Negative feedback}{31}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}Suggestions}{31}{section.4.4}% 
+\contentsline {section}{\numberline {4.5}Conclusion}{32}{section.4.5}% 
 \contentsline {chapter}{\numberline {A}Information For The Few (Appendix)}{35}{appendix.A}% 
 \contentsline {section}{\numberline {A.1}Needfinding survey}{35}{section.A.1}% 
 \contentsline {section}{\numberline {A.2}PuzzleScript}{36}{section.A.2}% 
 \contentsline {section}{\numberline {A.3}User study}{39}{section.A.3}% 
-\contentsline {section}{\numberline {A.4}Structured interview questions}{39}{section.A.4}% 
+\contentsline {section}{\numberline {A.4}Structured interview questions}{41}{section.A.4}% 
 \contentsline {chapter}{Bibliography}{45}{section*.38}% 
