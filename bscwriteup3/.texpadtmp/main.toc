@@ -25,7 +25,7 @@
 \contentsline {section}{\numberline {4.4}Suggestions}{31}{section.4.4}% 
 \contentsline {section}{\numberline {4.5}Conclusion}{32}{section.4.5}% 
 \contentsline {chapter}{\numberline {A}Information For The Few (Appendix)}{35}{appendix.A}% 
-\contentsline {section}{\numberline {A.1}Needfinding survey}{35}{section.A.1}% 
+\contentsline {section}{\numberline {A.1}Need-finding survey}{35}{section.A.1}% 
 \contentsline {section}{\numberline {A.2}PuzzleScript}{36}{section.A.2}% 
 \contentsline {section}{\numberline {A.3}User study}{39}{section.A.3}% 
 \contentsline {section}{\numberline {A.4}Structured interview questions}{41}{section.A.4}% 

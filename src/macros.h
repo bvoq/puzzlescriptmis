@@ -48,15 +48,16 @@ const short RE_MOVE               = (short) 0b0100000;
 const short NO_OR_ORTHOGONAL_MOVE = (short) 0b1000000;
 
 
-// HASHING MACROS
-#define FNV64(data,start) ((start^data)*((uint64_t)1099511628211ULL))
-const uint64_t INITIAL_HASH = 14695981039346656037ULL;
 
 // DEBUG MACRO, can remove all debug statements by commenting out the other line:
 #define DEB(x) cerr << x << endl;
 //#define DEB(x) while(0) cerr << x << endl;
 //#define MIN(a,b) (((a)<(b))?(a):(b))
 //#define MAX(a,b) (((a)>(b))?(a):(b))
+
+// HASHING MACROS
+#define FNV64(data,start) ((start^data)*((uint64_t)1099511628211ULL))
+const uint64_t INITIAL_HASH = 14695981039346656037ULL;
 
 #define HashVVV(vvvarr,chash)\
 for(const auto & x : vvvarr) { \
@@ -68,7 +69,7 @@ for(const auto & x : vvvarr) { \
 }
 
 
-#define cout if(false) cout
+//#define cout if(false) cout
 
 
 // Forward declare all structs (which are used in multiple header files) in C++ fashion

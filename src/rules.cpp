@@ -661,6 +661,7 @@ static bool toCompiledRule(vector<RuleUncompiled> rulesUncompiled, vector<Rule> 
             crule.groupNumber = rulesUncompiled[i].groupNumber;
             crule.commands = rulesUncompiled[i].commands;
             crule.msgString = rulesUncompiled[i].msgString;
+            
             //crule.commands = inrules[i].commands;
             
             static map<pair<string,string>, string> relativeMap =
@@ -902,6 +903,11 @@ static bool toCompiledRule(vector<RuleUncompiled> rulesUncompiled, vector<Rule> 
                 crule.rhsLayers.push_back(outrulescellLayer);
 
             }
+            /*
+            if(crule.late) {
+                cout << "contains late rule!!" << endl;
+                printRule(cout, crule, game);
+            }*/
             
             rules.push_back(crule);
         }
@@ -1029,6 +1035,12 @@ void printRule(ostream & o, const Rule & r, const Game & game) {
             if(t+1!=r.rhsObjects[s].size()) o << "|";
         }
         o << "]";
+    }
+    for(Commands cmd : r.commands) {
+        if(cmd == CMD_CANCEL) o << " CANCEL";
+        else if(cmd == CMD_AGAIN) o << " AGAIN";
+        else if(cmd == CMD_WIN) o << " WIN";
+        else o << " OTHER_CMD";
     }
     o << endl;
 }

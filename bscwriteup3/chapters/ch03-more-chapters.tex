@@ -268,10 +268,10 @@ will choose 5 walls uniformly at random and remove these with a probability of 0
 \end{minipage}
 }
 
-From these fundamental rules, the designer can create more elaborate transformations. For the user-study we provided four such transformations: \textit{Moving Player/Crates, Add/Removing Walls, Removing/adding a target/crate pair} and finally \textit{`do a bit of everything'} which is a combination of the other three methods.
+From these fundamental rules, the designer can create more elaborate transformations. For the user-study we provided four such transformations: \textit{Moving Player/Crates, Add/Remove Walls, Removing/adding a target/crate pair} and finally \textit{`do a bit of everything'} which is a combination of the other three methods.
 
 \begin{description}
-    \item[Add/Removing Walls/Crates] \hfill \\
+    \item[Add/Remove Walls/Crates] \hfill \\
     Here we remove and add walls (on average we tend to add more walls instead of removing more walls as that seemed to provide better suggestions).
     \hfill \\
         
@@ -298,7 +298,7 @@ or [Crate | No Obstacle] -> [ | Crate]
     \begin{lstlisting}
 (remove one crate/target pair if it exists and add one)
 choose 1 [Crate][Target] -> [][]
-choose 1 [No Obstacle or Target][No Obstacle or Target] -> [Crate][Target]    
+choose 1 [No Obstacle or Target][No Obstacle or Crate] -> [Crate][Target]    
     \end{lstlisting}
     \end{figure}
 
@@ -318,7 +318,7 @@ Initially, the timeout for each new level is set to a tenth of the time it alrea
 
 \chapter{User Study and Results}
 
-We did two user-studies: One need-finding survey, which we discussed in the introduction, and one study to evaluate MixedAim based on a think-aloud session followed by a structured interview. 
+We did two user-studies: A need-finding survey, which we discussed in the introduction, and a study to evaluate MixedAim based on a think-aloud session followed by a structured interview. 
 
 Both user-studies are qualitative rather than quantitative and have the purpose of informing, i.e., obtaining compelling research questions and finding interactions that provide `genuine value' to the designer. 
 
@@ -333,14 +333,14 @@ The user-study was carried out remotely via a video call and a screen capture of
 \begin{enumerate}
 \item  First, we asked the participants some questions related to their experience as a (puzzle) game designer (see \ref{tab:demography}).
 \item Second, we asked the participants to design one or more Sokoban-levels for ~60 minutes and asked them to think-aloud their thoughts during the design process.
-\item Third, we optionally gave the participant time to explore the tool further and use their PuzzleScript games to design levels. In particular, participant 1 \& 4 have worked multiple days with the tool and have found interesting use-cases which we did not anticipate before proceeding with the final interview.
+\item Third, we optionally gave the participant time to explore the tool further and use their PuzzleScript games to design levels. In particular, participants 1 \& 4 have worked multiple days with the tool and have found interesting use-cases which we did not anticipate before proceeding with the final interview.
 \item Lastly, we concluded with a structured interview.
 \end{enumerate}
 
 
 \section{Think-aloud study results}
 For the think-aloud study, we asked participants to design one or more Sokoban-levels. 
-Since we are interested in seeing whether mixed-initiative systems can help designers iterate upon their design, we suggested to try turning the following Sokoban level \ref{fig:sokobaniterate} into a more challenging level. Some designers then used our mixed-initiative system the way we anticipated, while some participants found other surprising ways of utilizing the tool. For this reason, we decided to divide this section into the different styles in which the participants used the tool to design levels. The finals designs can be seen in the appendix \autoref{fig:alldesigns}.
+Since we are interested in seeing whether mixed-initiative systems can help designers iterate upon their design, we suggested to try turning the following Sokoban level \ref{fig:sokobaniterate} into a more challenging level. Some designers then used our mixed-initiative system the way we anticipated, while others found different surprising ways of utilizing the tool. For this reason, we decided to divide this section into the different styles in which the participants used the tool to design levels. The final designs can be seen in the appendix \autoref{fig:alldesigns}.
 
 
 \begin{figure}
@@ -353,7 +353,7 @@ Since we are interested in seeing whether mixed-initiative systems can help desi
 
 \subsection{Iterative design}
 
-The iterative design approach was the primary way we intended users to design levels. We encountered this method in our need-finding survey and in blog posts of Sokoban designers \footnote{\url{http://sokoban-jd.blogspot.com/2015/02/how-to-build-sokoban-level.html} @ How to build a Sokoban level -- Serg Belyaev}. The design process roughly looks as follows:
+The iterative design approach was the primary way we intended users to design levels. We encountered this method in our need-finding survey and in blog posts of Sokoban designers\footnote{\url{http://sokoban-jd.blogspot.com/2015/02/how-to-build-sokoban-level.html} @ How to build a Sokoban level -- Serg Belyaev}. The design process roughly looks as follows:
 
 \begin{enumerate}
 \item Have a set of rules for the puzzle game.
@@ -458,17 +458,17 @@ In this section, we list design patterns for the iterative design approach which
 
 \newpage
 \begin{description}
-\item[Identifying aesthetics/mechanics] After using the tool for a while, many our participants have found \textit{aesthetically} pleasing sections or \textit{mechanically} interesting sections upon which they liked to expand on. For example, participant 6 liked the two targets and crates in the design mentioned above.
+\item[Identifying aesthetics/mechanics] After using the tool for a while, many of our participants have found \textit{aesthetically} pleasing sections or \textit{mechanically} interesting sections upon which they liked to expand on. For example, participant 6 liked the two targets and crates in the design mentioned above.
 
 %Especially participant 1, 2 \& 4 have used the tool mostly for this purpose considerable time with the other aspect of the mixed-initiative tool: Finding it for inspiration.
 
 % They then continue to expand on it with creative constraints, window dress the solution or try to transform a given design using the generator.
 
-MixedAim helped the designer identify some interesting designs by passively suggesting levels during the design phase (5 participants claimed they got inspired by a level without clicking on it) or by the designer explicitly looking for them with the transformer. Especially participants 1, 2 \& 4 focused on using the transformer to come up with original designs upon which they then were able to improve, see also the section 5.1.3. 
+MixedAim helped the designer identify some interesting designs by passively suggesting levels during the design phase (5 participants claimed they got inspired by a level without clicking on it) or by the designer explicitly looking for them with the transformer. Especially participants 1, 2 \& 4 focused on using the transformer to come up with original designs upon which they then were able to improve, see also \autoref{adapting}. 
 
 \item[Creative constraints] These are situations where designers constrain themselves only to the use of a previously identified aesthetic or mechanic. Every participant worked with creative constraints in one way or the other.
 
-Mixed-initiative tools helped the designer to satisfy \textit{aesthetic constraints} by allowing them to \textit{freeze} certain sections that the transformer would not be able to change. For example, participant 6 decided he would keep the two crates and the two walls and constrained the transformer to only change the level around the crate target pairs. Further suggestions for \textit{aesthetic constraints} followed from the structured interview included adding tools for \textit{symmetry} and being able to \textit{combine} two levels in interesting ways.
+Mixed-initiative tools helped the designer to satisfy \textit{aesthetic constraints} by allowing them to \textit{freeze} certain sections that the transformer would not be able to change. For example, participant 6 decided he would keep the two crates and the two walls and constrained the transformer to only change the level around the crate target pairs. Further suggestions for \textit{aesthetic constraints} followed from the structured interview and included adding tools for \textit{symmetry} and being able to \textit{combine} two levels in interesting ways.
 
 For \textit{mechanical constraints}, the transformer rules have to be employed to create interesting mechanics. These are for example the preset buttons like only moving the crates or removing/adding some walls and keeping the rest intact. Suggestions included not only \textit{specifying} ways of transforming but also specifying means of constraining allowed transformations. 
 
@@ -488,7 +488,7 @@ This was also mentioned directly by participant 3 during the think-aloud study: 
 \caption{Participant 4 \& 7: Unsolvable to solvable}
 \end{figure}
 
-\item[Window dressing] This happens when an interesting level is found (through the transformer or the designer) that contains a lot of unnecessary states. The designer then tries to eliminate all these unnecessary states (without making the problem trivial) to find the `canonical form', the `kernel' of the problem. If the level becomes too easy the designer can again add redundant pathways and see in which ways the level can be made more interesting again. It was mentioned by participant 1, 6 \& 7, and clearly noticeable in participant 7's design process, see \autoref{fig:windowdressing}. % stephen at 16:57
+\item[Window dressing] This happens when an interesting level is found (through the transformer or the designer) that contains a lot of unnecessary states. The designer then tries to eliminate all these unnecessary states (without making the problem trivial) to find the `canonical form', the `kernel' of the problem. If the level becomes too easy the designer can again add redundant pathways and see in which ways the level can be made more interesting again. It was mentioned by participants 1, 6 \& 7, and clearly noticeable in participant 7's design process, see \autoref{fig:windowdressing}. % stephen at 16:57
 %definitely mentioned by participant 1, participant 6, thatscar, and participant 7.
 
 Our mixed-initiative tools only help to address this problem in so far that they help the designer to edit the level quickly. Passive information about solvability can tell the designer whether or not his simplifications suddenly made the level easier, for example.
@@ -531,7 +531,7 @@ $\Longrightarrow$
 \textit{\say{Yes, especially as a level of confidence, so I was sure that the current design was pretty solid when the suggestions seemed worse.} -- Participant 6}
 \end{description}
 
-\subsection{Adapting to the transformer}
+\subsection{Adapting to the transformer} \label{adapting}
 % why that is good, why there is not 'one-design method', only one of many such tools 
 Every participant did, to some degree, modify their approach towards designing puzzle levels to incorporate the transformer. While our main focus was on how we can support the user in their design process of designing puzzle levels, some participants changed their approach towards designing puzzle levels significantly in order to exploit the strengths of the transformer.
 
@@ -615,13 +615,13 @@ The other participants, though not stating this explicitly, acted similarly, swi
 \end{equation}
     
 \begin{equation}
-\text{avg. time for interesting level} = \left(1 - \frac{\text{\# interesting/difficult transformed levels}}{\text{\# total transformed levels}} \right) \cdot \text{avg. solve time}
+\text{avg. time for interesting level} = \frac{\text{\# total transformed levels}}{\text{\# interesting/difficult transformed levels}} \cdot \text{avg. solve time}
 \label{eq:transformationusefulness}
 \end{equation}
 
-    \item[Freezing sections] Participant 3 and 5 (among others) have chosen to freeze a few sections in the level, not because they necessarily thought they found these sections interesting, but to skew the search space to contain more interesting levels. For example participant 3 said quote \textit{\say{let me help it a little}} when he froze parts of the transformer section, see \autoref{fig:part3shelp}.
+    \item[Freezing sections] Participant 3 and 5 (among others) have chosen to freeze a few sections in the level, not because they necessarily thought they found these sections interesting, but to skew the search space to contain more interesting levels. For example participant 3 said \textit{\say{let me help it a little}} when he froze parts of the transformer section, see \autoref{fig:part3shelp}.
     
-    This adaption increases the throughput by increasing $\frac{\text{\# interesting difficult transformed levels}}{\text{\# total transformed levels}}$.
+    This adaption increases the throughput by decreasing $\frac{\text{\# total transformed levels}}{\text{\# interesting difficult transformed levels}}$.
         
 \begin{figure}
 \centering
@@ -636,9 +636,9 @@ $\Longrightarrow$
 \end{figure}
 
     
-    \item[Smaller levels] Participant 1 concluded that the transformer is well-suited to create small Sokoban levels, see figure \ref{fig:part1smallsokoban}. He also experimented with variations of Sokoban rules and created a few puzzle games with small levels using this method (\href{https://www.increpare.com/game/all-green-to-blue.html}{'All Green To Blue'}\footnote{\url{https://www.increpare.com/game/all-green-to-blue.html}} and \href{https://www.increpare.com/game/all-green-and-blue-on-yellow.html}{'All Green To Blue On Yellow'}\footnote{\url{https://www.increpare.com/game/all-green-and-blue-on-yellow.html}} which are playable online), see  \autoref{fig:part1smalllevelgames}.
+    \item[Smaller levels] Participant 1 concluded that the transformer is well-suited to create small Sokoban levels, see figure \ref{fig:part1smallsokoban}. He also experimented with variations of Sokoban rules and created a few puzzle games with small levels using this method (\href{https://www.increpare.com/game/all-green-to-blue.html}{`All Green To Blue'}\footnote{\url{https://www.increpare.com/game/all-green-to-blue.html}} and \href{https://www.increpare.com/game/all-green-and-blue-on-yellow.html}{`All Green To Blue On Yellow'}\footnote{\url{https://www.increpare.com/game/all-green-and-blue-on-yellow.html}} which are playable online), see  \autoref{fig:part1smalllevelgames}.
     
-    This adaption increases the throughput by increasing the \textit{average time for solving a transformed level}.
+    This adaption increases the throughput by decreasing the \textit{average time for solving a transformed level}.
     
     
     \begin{figure}
@@ -660,9 +660,9 @@ $\Longrightarrow$
 \caption{Participant 1's custom games \label{fig:part1smalllevelgames}}
 \end{figure}
 
-    \item[Larger levels] Participant 5 decided that larger levels would be better for the transformer because it would allow for a larger quantity of interesting levels. However, this approach equally allows for more uninteresting levels and significantly decreased the \textit{average time for solving a transformed level}, which made choosing larger levels a bad adaption to the system.
+    \item[Larger levels] Participant 5 decided that larger levels would be better for the transformer because it would allow for a larger quantity of interesting levels. However, this approach equally allows for more uninteresting levels and significantly increased the \textit{average time for solving a transformed level}, which made choosing larger levels a bad adaption to the system.
     
-    \item[More variation] Lastly, we observed that some games are better suited for identifying interesting mechanics than others. Both we and participant 2 have had such success with puzzle games that feature polyominoes.
+    \item[More variation] Lastly, we observed that some games are better suited for identifying interesting mechanics than others. Both we and participant 2 have had success with puzzle games that feature polyominoes.
 
 This leads us to believe that Sokoban-like puzzle games with a lot of possible variations in a small space are especially well-suited for identifying interesting mechanics. When focusing on small levels it does not take a lot of time to find a solution or prove that no solution exists and would take at most in the order of $\mathcal{O}\left( {n^2 \choose a} \right)$ computational steps, where $a$ are the number of blocks in the generated level and $n^2$ are the possible places the blocks can be placed. Notice that using a variety of different objects (for example differently shaped polyominoes) does not change the value of $a$. Thus one can build more interesting small levels with puzzle games that have a lot of different types and shapes of objects, as opposed to games with only three types of $1 \times 1$ objects. 
 
@@ -722,7 +722,7 @@ We compiled a list of the most interesting answers to the questions in the appen
 
 Unfortunately, not all participants had a very smooth experience with the tool. Especially participant 5 immediately decided that interesting Sokoban levels were large and would contain many crates which unfortunately the transformer did not handle very well. The designer then had to limit himself to designs which the transformer handled better.
 
-He also admitted that while making levels with the tool can be more efficient, passively showing information can take the fun out of solving the level and one might be easily tempted to look at the solution instead of working it out in the head \ref{fig:part5comments}.
+He also admitted that while making levels with the tool can be more efficient, passively showing information can take the fun out of solving the level and one might be easily tempted to look at the solution instead of working it out in my head \ref{fig:part5comments}.
 
 Participant 6 addressed the same concern mentioning that there is a `Google effect' that makes him stop thinking about solvability (Google effect meaning that people do not attempt to remember a fact but instead remember how to look it up instead). He did not see this in a negative light though, and enjoyed that it made the process faster.
 
@@ -750,12 +750,12 @@ Participant 1's quote sums it up nicely:
 \section{Suggestions}
 
 \begin{description}
-    \item[Use more sophisticated curators / more accurate difficulty measure]
+    \item[Use more sophisticated curators / a more accurate difficulty measure]
 A very common complaint (every participant except for 1, 5 and 6 mentioned it) was that we curated levels based only on the difficulty of the solver and that the difficulty of the solver also does not always match the perceived difficulty.
 
-\textit{\say{The limitations are [the systems] judging abilities.} -- Participant 3}
+\textit{\say{The limitations are [the system's] judging abilities.} -- Participant 3}
 
-Due to time constraints, we decided from the beginning to keep the curator very simple. However, after interviewing participant 1 \& 4 we have a suggestion how users can manually modify the difficulty heuristic. We suggest adding an optional `cost' modifier to the operational rules. 
+Due to time constraints, we decided from the beginning to keep the curator very simple. However, after interviewing participants 1 \& 4 we have a suggestion how users can manually modify the difficulty heuristic. We suggest adding an optional `cost' modifier to the operational rules. 
 
  For example: \lstinline{[ > Player | Crate ] -> [ > Player | > Crate ] COST 10} \hfill \\
  The following rule would make pushing crates 11 times as expensive as a normal push and would discourage levels that need a lot of moving around without pushing blocks from appearing in the suggestions.
@@ -782,7 +782,7 @@ Due to time constraints, we decided from the beginning to keep the curator very 
 
 We developed the mixed-initiative system MixedAim for creating PuzzleScript games interactively with the computer. For this purpose we generalized the Sokoban heuristic of \cite{Junghanns1999} to solve levels more efficiently, we crafted a user interface which supported various forms of direct manipulation, like using a level editor and play-testing the level and added support for interactive suggestions. We hypothesized and later confirmed that giving more difficult suggestions is a feasible way to assist the designer. Specifically, we have identified that there is a threshold in difficulty starting from which levels become interesting.
 
-We identified various key interactions with those suggestions that designers and illustrated in which way designers could benefit from them. Interactions included \textit{Identifying and constraining mechanics and aesthetics in designs}, \textit{making unsolvable levels work again through transforming},  \textit{window dressing}, \textit{mechanic swapping}, \textit{gauging completeness} and \textit{backward designing}.
+We identified various key interactions with those suggestions that designers and illustrated in which way designers could benefit from them. Interactions included \textit{identifying and constraining mechanics and aesthetics in designs}, \textit{making unsolvable levels work again through transforming},  \textit{window dressing}, \textit{mechanic swapping}, \textit{gauging completeness} and \textit{backward designing}.
 
 Furthermore, we analyzed how participants adapted to the MixedAim suggestions, identified that the perceived usefulness is dependent on the role of MixedAim in the design process and noticed that it was particularly good at identifying interesting mechanics in small levels with a lot of possible variations.
 

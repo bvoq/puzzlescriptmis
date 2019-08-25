@@ -100,6 +100,14 @@ static inline void moveCollisions(vvvs & currentState, vvvc & currentMoveState, 
                 }
             }
         }
+        
+        
+        for(int y=0;y<game.currentLevelHeight;++y) {
+            for(int x=0;x<game.currentLevelWidth;++x) {
+                if(currentState[l][y][x] == 0) assert(currentMoveState[l][y][x] == RE_MOVE);
+                else assert(currentMoveState[l][y][x] == STATIONARY_MOVE);
+            }
+        }
     }
 }
 
@@ -110,7 +118,7 @@ static inline bool matchesLayer(const Rule & r, const int s, const int x, const 
         for(int u=0;u<r.lhsObjects[s][t].size();++u) {
             short layer = r.lhsLayers[s][t][u];
             if(currentState[layer][cy][cx] == r.lhsObjects[s][t][u]) {
-                //r.lhsDirs[s][t][u] != 
+                //r.lhsDirs[s][t][u] !=
                 if(r.lhsDirs[s][t][u] == RE_MOVE || (r.lhsDirs[s][t][u] < RE_MOVE && (currentMoveState[layer][cy][cx] & r.lhsDirs[s][t][u]) == 0 && !(r.lhsDirs[s][t][u] == STATIONARY_MOVE && currentMoveState[layer][cy][cx] == STATIONARY_MOVE) ) ) return false;
                 
                 //make sure the following example works: https://www.puzzlescript.net/editor.html?hack=7f58161c8759c377a9af4280e9e0dfad
@@ -361,10 +369,18 @@ static void engineStep(vvvs & currentState, vvvc & currentMoveState, const Game 
             inLatePhase = true;
         }
         
+        //cout << "Exec" << endl;
+        //printRule(cout, r, game);
+        //cout << "try " << inLatePhase << ": ";
+        //printRule(cout, r, game);
+        
         bool hadMatch = executeRuleNonOption(r, currentState, currentMoveState, game);
         if(hadMatch) { //execute additional commands after executing the rule
+            //cout << "OK!" << endl;
+            //printRule(cout, r, game);
             for(Commands cmd : r.commands) {
                 if(cmd == CMD_CANCEL) {
+                    //cout << "CANCEL CANCEL" << endl;
                     currentState = oldCurrentState;
                     return;
                 } else if(cmd == CMD_AGAIN) {
@@ -384,8 +400,10 @@ static void engineStep(vvvs & currentState, vvvc & currentMoveState, const Game 
                 loopCount = 0;
             }
             loopCount++;
-            if(loopCount > 20) {
-                cout << "Warning: Rule group " << r.groupNumber << " has been looped " << loopCount << " times!" << endl;
+            if(loopCount > 200) {
+                cerr << "Warning: Rule group " << r.groupNumber << " has been looped " << loopCount << " times!" << endl;
+                currentState = oldCurrentState;
+                return;
             }
             continue;
         }

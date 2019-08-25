@@ -247,7 +247,7 @@ static void generating() {
                     }
                 }*/
                 //unknownStack.push_back(newStates[0]);
-                cerr << "ended with timeout " << info.success << " " << hasFoundAnyTransform << " " << timeToSolve << endl;
+                //cerr << "ended with timeout " << info.success << " " << hasFoundAnyTransform << " " << timeToSolve << endl;
             }
         }
         

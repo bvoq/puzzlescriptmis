@@ -1107,7 +1107,7 @@ void ideKeyPressed(int key, bool isSuperKey) {
         switch(key) {
             case 13: // enter macOS
             {
-				cerr << "pressed enter" << endl;
+				//cerr << "pressed enter" << endl;
                 if(selectPos != cursorPos)
                     ideKeyPressed(8, false);
                 string str1 = ideString[cursorPos.first].substr(0,cursorPos.second);
