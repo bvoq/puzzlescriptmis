@@ -1038,7 +1038,7 @@ static void solveThread2(int ind, volatile std::atomic_bool & keepTryingToSolve,
 //only thread safe under the assumption that startSolving/stopSolving get called by the main thread
 //static if from D could be used nicely here
 void startSolving(int ind, const vvvs & state, const Game & game, const deque<short> & initialMoves ) {
-    //return;
+    return;
     if(ind < sthreads.size() && sthreads[ind].keepTryingToSolve && sthreads[ind].game.getHash() == game.getHash() && sthreads[ind].state == state && sthreads[ind].initialMoves == initialMoves) return; //can continue as it's still running normally
     
     //FUTURE TODO: Currently only works if startSolving gets called with ind in order (0,1,...)

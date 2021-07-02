@@ -238,6 +238,7 @@ static inline bool executeRuleNonOption(const Rule & r, vvvs & currentState, vvv
     vector<pair<int,int> > pointers (r.lhsObjects.size(), make_pair(0,0));
     
     bool hasMatch = false;
+    bool hasOneMatch = false;
     
     if(r.direction == DIR_RIGHT) {
         for(;;) {
@@ -249,10 +250,14 @@ static inline bool executeRuleNonOption(const Rule & r, vvvs & currentState, vvv
                         for(int sl=0;sl<r.lhsObjects.size(); ++sl)
                             pointers[sl].first += 1;
                         hasMatch = true;
+                        hasOneMatch = true;
+                        //check from s=-1 again after match??
+                        //s=-1;
                     }
                 }
                 else return hasMatch;
             }
+            
         }
     } else { //r.direction == DIR_DOWN
         for(;;) {
@@ -264,6 +269,9 @@ static inline bool executeRuleNonOption(const Rule & r, vvvs & currentState, vvv
                         for(size_t sl=0;sl<r.lhsObjects.size(); ++sl)
                             pointers[sl].second += 1;
                         hasMatch = true;
+                        hasOneMatch = true;
+                        //check from s=-1 again after match??
+                        //s=-1;
                     }
                 }
                 else return hasMatch;
@@ -348,10 +356,11 @@ static inline pair<vector<vvvs>, vector<vvvs> > executeRuleSingleMatch(const Rul
 
 static void engineStep(vvvs & currentState, vvvc & currentMoveState, const Game & game) {
     vvvc oldCurrentState = currentState;
+    vvvc oldCurrentMoveState = currentMoveState;
     
     bool again = false;
     bool inLatePhase = false;
-    vvvc groupState;
+    vvvc groupState, groupMoveState;
     int loopedRule = -1, loopCount = 0;
     bool singleRule = true;
     for(int ri=0;ri<game.rules.size();++ri) {
@@ -362,6 +371,7 @@ static void engineStep(vvvs & currentState, vvvc & currentMoveState, const Game 
         
         if(r.groupNumber == ri && ri+1!= game.rules.size() && game.rules[ri].groupNumber == ri) {
             groupState = currentState; // deep copy the current state.
+            groupMoveState = currentMoveState;
         }
         
         if(r.late && !inLatePhase) {
@@ -382,6 +392,7 @@ static void engineStep(vvvs & currentState, vvvc & currentMoveState, const Game 
                 if(cmd == CMD_CANCEL) {
                     //cout << "CANCEL CANCEL" << endl;
                     currentState = oldCurrentState;
+                    currentMoveState = oldCurrentMoveState;
                     return;
                 } else if(cmd == CMD_AGAIN) {
                     again = true;
@@ -393,7 +404,7 @@ static void engineStep(vvvs & currentState, vvvc & currentMoveState, const Game 
         }
         
 
-        if(r.groupNumber != ri && (ri+1 == game.rules.size() || r.groupNumber != game.rules[ri+1].groupNumber) && groupState != currentState) {
+        if(r.groupNumber != ri && (ri+1 == game.rules.size() || r.groupNumber != game.rules[ri+1].groupNumber) && (groupState != currentState || groupMoveState != currentMoveState)) {
             ri = r.groupNumber-1; // restart the iteration
             if(loopedRule != ri+1) {
                 loopedRule = ri+1;
@@ -403,6 +414,7 @@ static void engineStep(vvvs & currentState, vvvc & currentMoveState, const Game 
             if(loopCount > 200) {
                 cerr << "Warning: Rule group " << r.groupNumber << " has been looped " << loopCount << " times!" << endl;
                 currentState = oldCurrentState;
+                currentMoveState = oldCurrentMoveState;
                 return;
             }
             continue;
@@ -414,7 +426,7 @@ static void engineStep(vvvs & currentState, vvvc & currentMoveState, const Game 
         inLatePhase = true;
     }
     
-    if(again && oldCurrentState != currentState) {
+    if(again && (oldCurrentState != currentState || oldCurrentMoveState != currentMoveState)) {
         engineStep(currentState, currentMoveState, game);
     }
 }
@@ -430,7 +442,7 @@ vector<vvvs> generateStep(const vvvs & prevState, int maxStates, const Game & ga
     
     bool again = false;
     bool inLatePhase = false;
-    vector<vvvc> groupStates;
+    vector<vvvc> groupStates, groupMoveState;
     int loopedRule = -1, loopCount = 0;
     bool singleRule = true;
     
@@ -442,6 +454,7 @@ vector<vvvs> generateStep(const vvvs & prevState, int maxStates, const Game & ga
         
         if(r.groupNumber == ri && ri != game.rules.size() && game.generatorRules[ri].groupNumber == ri) {
             groupStates = currentStates; // deep copy the current state.
+            groupMoveState = currentMoveStates;
         }
         
         if(r.late && !inLatePhase) {
@@ -487,7 +500,7 @@ vector<vvvs> generateStep(const vvvs & prevState, int maxStates, const Game & ga
         
         
         //In generate mode groups get handled differently.
-        if(!r.choose && r.groupNumber != ri && (ri+1 == game.rules.size() || r.groupNumber != game.rules[ri+1].groupNumber) && groupStates != currentStates) {
+        if(!r.choose && r.groupNumber != ri && (ri+1 == game.rules.size() || r.groupNumber != game.rules[ri+1].groupNumber) && (groupStates != currentStates || groupMoveState != currentMoveStates)) {
             ri = r.groupNumber-1; // restart the iteration
             if(loopedRule != ri+1) {
                 loopedRule = ri+1;

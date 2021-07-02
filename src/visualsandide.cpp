@@ -1385,7 +1385,7 @@ else assert(false);
 	int x2 = MAX(heightButton / 3. + playFont.stringWidth(displayStrBot + "_"), heightButton / 3. + playFont.stringWidth(displayStrTop + "_"));
 	ofSetColor(0, 0, 0xff);
 
-#ifdef _WIN32
+//#ifdef _WIN32
 	playFont.drawString(matchedStrASCII, x2, ofGetHeight() - (0 + 2. / 3) * heightButton + heightButton / 12.);
 	int x3 = x2 + playFont.stringWidth(matchedStrASCII + "_");
 	ofSetColor(0);
@@ -1394,6 +1394,7 @@ else assert(false);
 	ofSetColor(0, 0, 0xff);
 	playFont.drawString(playerMoveStrASCII, x2, ofGetHeight() - (1 + 2. / 3) * heightButton + heightButton / 12.);
 	int xtop = x2 + playFont.stringWidth(playerMoveStrASCII + "_");
+/*
 #else
 	int x3 = x2 + arrowFont.stringWidth(matchedStr+"_");
 	int xbot = x3 + arrowFont.stringWidth(unmatchedStr+"_");
@@ -1416,6 +1417,7 @@ else assert(false);
         arrowFont.drawString(playerMoveStr, x2, ofGetHeight() - (1 + 2. / 3) * heightButton + heightButton / 12.);
     }
 #endif
+    */
     
     if(info.success == 1) { //Success
         int widthButtonShowSolution = playFont.stringWidth("_Show solution_");
