@@ -238,7 +238,6 @@ static inline bool executeRuleNonOption(const Rule & r, vvvs & currentState, vvv
     vector<pair<int,int> > pointers (r.lhsObjects.size(), make_pair(0,0));
     
     bool hasMatch = false;
-    bool hasOneMatch = false;
     
     if(r.direction == DIR_RIGHT) {
         for(;;) {
@@ -247,12 +246,9 @@ static inline bool executeRuleNonOption(const Rule & r, vvvs & currentState, vvv
                     if(s+1==r.lhsObjects.size()) {
                         for(int sr=0;sr<r.rhsObjects.size();++sr)
                             replacesLayer(r, game, sr, pointers[sr].first, pointers[sr].second, true, currentState, currentMoveState);
-                        for(int sl=0;sl<r.lhsObjects.size(); ++sl)
-                            pointers[sl].first += 1;
+                        
+                        pointers.back().first += 1;
                         hasMatch = true;
-                        hasOneMatch = true;
-                        //check from s=-1 again after match??
-                        //s=-1;
                     }
                 }
                 else return hasMatch;
@@ -266,12 +262,8 @@ static inline bool executeRuleNonOption(const Rule & r, vvvs & currentState, vvv
                     if(s+1 == r.lhsObjects.size()) {
                         for(size_t sr=0;sr<r.rhsObjects.size();++sr)
                             replacesLayer(r, game, sr, pointers[sr].first, pointers[sr].second, false, currentState, currentMoveState);
-                        for(size_t sl=0;sl<r.lhsObjects.size(); ++sl)
-                            pointers[sl].second += 1;
+                        pointers.back().second += 1;
                         hasMatch = true;
-                        hasOneMatch = true;
-                        //check from s=-1 again after match??
-                        //s=-1;
                     }
                 }
                 else return hasMatch;
