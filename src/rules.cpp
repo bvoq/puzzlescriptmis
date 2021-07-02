@@ -750,8 +750,7 @@ static bool toCompiledRule(vector<RuleUncompiled> rulesUncompiled, vector<Rule> 
                         }
                         if(adir == "...") {
                             outrulescellType.back() = TYPE_ELLIPSIS;
-                            logger.logError("Ellipsis '...' are currently not supportedss.", rulesUncompiled[i].lineNumber);
-
+                            
                             if(rulesUncompiled[i].lhs[j][k][1] != "...") {
                                 logger.logError("An ellipsis on the left must be matched by one in the corresponding place on the right.", rulesUncompiled[i].lineNumber);
                                 return false;

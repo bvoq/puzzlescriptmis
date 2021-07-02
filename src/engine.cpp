@@ -136,6 +136,41 @@ static inline bool matchesLayer(const Rule & r, const int s, const int x, const 
 }
 
 
+//returns -2 if it doesn't match, else returns 0 (or the ellipsis offset in [-1,..+oo))
+static inline int matchesLayerEllipsis(const Rule & r, const int s, const int x, const int y, const bool isrightrule, const vvvs & currentState, const vvvc & currentMoveState) {
+    int ellipsisoffset = 0;
+    bool ellipsis = false;
+    for(int t=0;t<r.lhsObjects[s].size();++t) {
+        if(r.lhsTypes[s][t] == TYPE_ELLIPSIS) {
+            ellipsis = true;
+            ellipsisoffset = -1; //since we use t+=1
+            t+=1;
+        }
+        do {
+            int cx = isrightrule ? x+t+ellipsisoffset : x;
+            int cy = isrightrule ? y : y+t+ellipsisoffset; //if not right rule, it is a down rule
+            if(cx >= currentState[0][0].size() || cy >= currentState[0].size()) return -2;
+            
+            for(int u=0;u<r.lhsObjects[s][t].size();++u) {
+                short layer = r.lhsLayers[s][t][u];
+                if(currentState[layer][cy][cx] == r.lhsObjects[s][t][u]) {
+                    //r.lhsDirs[s][t][u] !=
+                    if(r.lhsDirs[s][t][u] == RE_MOVE || (r.lhsDirs[s][t][u] < RE_MOVE &&    (currentMoveState[layer][cy][cx] & r.lhsDirs[s][t][u]) == 0 && !(r.lhsDirs[s][t][u]     == STATIONARY_MOVE && currentMoveState[layer][cy][cx] == STATIONARY_MOVE) ) ) {
+                        if(!ellipsis) return -2;
+                    }
+                    else ellipsis = false; // found match
+                    //make sure the following example works:    https://www.puzzlescript.net/editor.html?hack=7f58161c8759c377a9af4280e9e0dfad
+                } else {
+                    if(r.lhsDirs[s][t][u] != RE_MOVE) if(!ellipsis) return -2;
+                }
+            }
+            if(ellipsis) ellipsisoffset += 1;
+        } while(ellipsis);
+    }
+    return ellipsisoffset;
+}
+
+//unused, no ellipsis
 static inline void replacesLayer(const Rule & r, const Game & game, const int s, const int x, const int y, const bool isrightrule, vvvs & currentState, vvvc & currentMoveState) {
     for(int t=0;t<r.rhsObjects[s].size();++t) {
         int cx = isrightrule ? x+t : x;
@@ -169,6 +204,46 @@ static inline void replacesLayer(const Rule & r, const Game & game, const int s,
     }
 }
 
+
+static inline void replacesLayerEllipsis(const Rule & r, const Game & game, const int s, const int x, const int y, const bool isrightrule, vvvs & currentState, vvvc & currentMoveState, int ellipsisoffset) {
+    bool ellipsis = false;
+    for(int t=0;t<r.rhsObjects[s].size();++t) {
+        if(r.lhsTypes[s][t] == TYPE_ELLIPSIS) {
+            ellipsis = true;
+            t += 1;
+        }
+        int cx = isrightrule ? x+t+(ellipsis?ellipsisoffset:0) : x;
+        int cy = isrightrule ? y : y+t+(ellipsis?ellipsisoffset:0); //if not right rule, it is a down rule
+        //first remove lhs blocks
+        int sl = r.lhsObjects[s][t].size(), sr = r.rhsObjects[s][t].size();
+        for(int u=0;u<sl;++u) {
+            if(r.lhsDirs[s][t][u] != RE_MOVE) {
+                short layer = r.lhsLayers[s][t][u];
+                //cout << "removing " << game.objPrimaryName[currentState[layer][cy][cx]] << " at " << cy << " " << cx << " on layer " << layer << endl;
+                currentState[layer][cy][cx] = 0;
+                currentMoveState[layer][cy][cx] = RE_MOVE;
+            }
+        }
+        
+        for(int u=0;u<sr;++u) {
+            short layer = r.rhsLayers[s][t][u];
+            //then update accordingly
+            if(r.rhsDirs[s][t][u] == RE_MOVE) { //no
+                if(currentState[layer][cy][cx] == r.rhsObjects[s][t][u]) {
+                    currentState[layer][cy][cx] = 0;
+                    currentMoveState[layer][cy][cx] = RE_MOVE;
+                }
+            } else {
+                //set block
+                currentState[layer][cy][cx] = r.rhsObjects[s][t][u];
+                currentMoveState[layer][cy][cx] = r.rhsDirs[s][t][u];
+            }
+            
+        }
+    }
+}
+
+//unused
 static inline vector<vector<pair<int,int> > > findMatches(const Rule & r, const vvvs & currentState, const vvvc & currentMoveState, bool & again, const Game & game) {
     vector<vector<pair<int,int> > > matches (r.lhsObjects.size());
     if(r.direction == DIR_RIGHT) {
@@ -196,6 +271,7 @@ static inline vector<vector<pair<int,int> > > findMatches(const Rule & r, const 
     return matches;
 }
 
+//unused, no ellipsis
 static inline bool advanceMatchRight(pair<int,int> & pointer, const int & s, const Rule & r, const vvvs & currentState, const vvvc & currentMoveState, const Game & game) {
     for(int y=pointer.second;y<game.currentLevelHeight;++y) {
         for(int x=(y==pointer.second?pointer.first:0);x<game.currentLevelWidth;++x) {
@@ -207,11 +283,11 @@ static inline bool advanceMatchRight(pair<int,int> & pointer, const int & s, con
                 return true;
             }
         }
-        pointer.first = 0;
+        //pointer.first = 0;
     }
     return false;
 }
-
+//unused, no ellipsis
 static inline bool advanceMatchDown(pair<int,int> & pointer, const int & s, const Rule & r, const vvvs & currentState, const vvvc & currentMoveState, const Game & game) {
     for(int x=pointer.first;x<game.currentLevelWidth;++x) {
         for(int y=(x==pointer.first?pointer.second:0);y<game.currentLevelHeight;++y) {
@@ -225,6 +301,37 @@ static inline bool advanceMatchDown(pair<int,int> & pointer, const int & s, cons
         }
     }
     return false;
+}
+
+static inline int advanceMatchRightEllipsis(pair<int,int> & pointer, const int & s, const Rule & r, const vvvs & currentState, const vvvc & currentMoveState, const Game & game) {
+    for(int y=pointer.second;y<game.currentLevelHeight;++y) {
+        for(int x=(y==pointer.second?pointer.first:0);x<game.currentLevelWidth;++x) {
+            if(x + r.lhsObjects[s].size() > game.currentLevelWidth) break;
+            int ret = matchesLayerEllipsis(r,s,x,y,true,currentState,currentMoveState);
+            if(ret >= -1) {
+                pointer.first = x;
+                pointer.second = y;
+                return ret;
+            }
+        }
+        //pointer.first = 0;
+    }
+    return -2;
+}
+
+static inline int advanceMatchDownEllipsis(pair<int,int> & pointer, const int & s, const Rule & r, const vvvs & currentState, const vvvc & currentMoveState, const Game & game) {
+    for(int x=pointer.first;x<game.currentLevelWidth;++x) {
+        for(int y=(x==pointer.first?pointer.second:0);y<game.currentLevelHeight;++y) {
+            if(y + r.lhsObjects[s].size() > game.currentLevelHeight) break;
+            int ret = matchesLayerEllipsis(r,s,x,y,false,currentState,currentMoveState);
+            if(ret >= -1) {
+                pointer.first = x;
+                pointer.second = y;
+                return ret;
+            }
+        }
+    }
+    return -2;
 }
 
 
@@ -242,10 +349,13 @@ static inline bool executeRuleNonOption(const Rule & r, vvvs & currentState, vvv
     if(r.direction == DIR_RIGHT) {
         for(;;) {
             for(size_t s=0;s<r.lhsObjects.size();++s) {
-                if(advanceMatchRight(pointers[s], s, r, currentState, currentMoveState, game)) {
+                //bool ellipsis = false;
+                //for(size_t j=0;j<r.lhsObjects[s].size();++j) {}
+                int ret = advanceMatchRightEllipsis(pointers[s], s, r, currentState, currentMoveState, game);
+                if(ret >= -1) { //there was a match = 0, if ret>0 that is the ellipsisoffset.
                     if(s+1==r.lhsObjects.size()) {
                         for(int sr=0;sr<r.rhsObjects.size();++sr)
-                            replacesLayer(r, game, sr, pointers[sr].first, pointers[sr].second, true, currentState, currentMoveState);
+                            replacesLayerEllipsis(r, game, sr, pointers[sr].first, pointers[sr].second, true, currentState, currentMoveState, ret);
                         
                         pointers.back().first += 1;
                         hasMatch = true;
@@ -258,6 +368,17 @@ static inline bool executeRuleNonOption(const Rule & r, vvvs & currentState, vvv
     } else { //r.direction == DIR_DOWN
         for(;;) {
             for(size_t s=0;s<r.lhsObjects.size();++s) {
+                int ret = advanceMatchDownEllipsis(pointers[s], s, r, currentState, currentMoveState, game);
+                if(ret >= -1) {
+                    if(s+1 == r.lhsObjects.size()) {
+                        for(size_t sr=0;sr<r.rhsObjects.size();++sr)
+                            replacesLayerEllipsis(r, game, sr, pointers[sr].first, pointers[sr].second, false, currentState, currentMoveState, ret);
+                        pointers.back().second += 1;
+                        hasMatch = true;
+                    }
+                }
+                else return hasMatch;
+                /*
                 if(advanceMatchDown(pointers[s], s, r, currentState, currentMoveState, game)) {
                     if(s+1 == r.lhsObjects.size()) {
                         for(size_t sr=0;sr<r.rhsObjects.size();++sr)
@@ -267,6 +388,7 @@ static inline bool executeRuleNonOption(const Rule & r, vvvs & currentState, vvv
                     }
                 }
                 else return hasMatch;
+                 */
             }
         }
     }
