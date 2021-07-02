@@ -837,8 +837,6 @@ static bool toCompiledRule(vector<RuleUncompiled> rulesUncompiled, vector<Rule> 
                         }
                         if(adir == "...") {
                             outrulescellType.back() = TYPE_ELLIPSIS;
-                            logger.logError("Ellipsis '...' are currently not supportedss.", rulesUncompiled[i].lineNumber);
-
                             if(rulesUncompiled[i].rhs[j][k].size() > 2) {
                                 logger.logError("You can't have anything in a cell together with an ellipsis '...'.", rulesUncompiled[i].lineNumber);
                                 return false;
