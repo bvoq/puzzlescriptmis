@@ -7,7 +7,8 @@
 
 // this combined with: https://stackoverflow.com/questions/2139637/hide-console-of-windows-application
 
-#ifdef false
+#ifdef WIN32
+//windows subsystem
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd) {
 	cout << "windows" << endl;
 	//ofAppGlutWindow window;

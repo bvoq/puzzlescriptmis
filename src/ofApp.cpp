@@ -78,7 +78,7 @@ void ofApp::draw(){
 //--------------------------------------------------------------
 static bool isSuperKey = false;
 void ofApp::keyPressed(int key){
-    if(key == OF_KEY_SUPER) isSuperKey = true;
+    if(key == OF_KEY_SUPER || key == 3682) isSuperKey = true;
     if(editor::activeIDE) {
         ideKeyPressed(key, isSuperKey);
     }
@@ -89,7 +89,7 @@ void ofApp::keyPressed(int key){
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key) {
-    if(key == OF_KEY_SUPER) isSuperKey = false;
+    if(key == OF_KEY_SUPER || key == 3682 ) isSuperKey = false;
 }
 
 //--------------------------------------------------------------
