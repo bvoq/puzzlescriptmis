@@ -6,6 +6,7 @@
 namespace generator {
     extern recursive_mutex generatorMutex;
     extern vector<set<pair<float,vvvs> > > generatorNeighborhood;
+    extern int counter, solvedCounter, unsolvableCounter, timedoutCounter, maxSolveTime;
 }
 extern void startGenerating();
 extern void stopGenerating();

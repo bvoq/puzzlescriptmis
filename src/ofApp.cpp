@@ -135,7 +135,7 @@ void ofApp::mouseScrolled(int x, int y, float scrollX, float scrollY) {
     if (scrollY > 0 && scrollY < 18) scrollY = 18;
     if (scrollY < 0 && scrollY > -18) scrollY = -18;
     
-    editor::offsetIDEY += scrollY;
+    editor::offsetIDEY += scrollY*4;
 }
 
 //--------------------------------------------------------------

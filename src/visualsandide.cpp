@@ -948,6 +948,7 @@ void displayLevelEditor() {
         //        if(info.statesExploredAStar != -1)
     }
     
+    
     if(gbl::mode == MODE_EXPLOITATION) { //DRAW THE MODIFY RECTANGLES
         float scaleY = (float)heightOfGame / MAX(min_field_size, modifyTable[gbl::currentGame.currentLevelIndex]   .size());
         float scaleX = (float)widthOfGame / MAX(min_field_size, modifyTable[gbl::currentGame.currentLevelIndex][0].size());
@@ -967,11 +968,18 @@ void displayLevelEditor() {
     }
     
     if((gbl::mode == MODE_LEVEL_EDITOR || gbl::mode == MODE_EXPLOITATION) && showGenerate) {
+        heightOfGame += heightButton*2; //add some space
         set<pair<float,vvvs> > neighborhoodLevels;
+        int generatedLevels, solvedLevels, unsolvableLevels, timedoutLevels, maxSolveTime;
         synchronized(generator::generatorMutex) {
             std::atomic_thread_fence(std::memory_order_seq_cst);
             neighborhoodLevels = generator::generatorNeighborhood[gbl::currentGame.currentLevelIndex];
             std::atomic_thread_fence(std::memory_order_seq_cst);
+            generatedLevels = generator::counter;
+            solvedLevels = generator::solvedCounter;
+            unsolvableLevels = generator::unsolvableCounter;
+            timedoutLevels = generator::timedoutCounter;
+            maxSolveTime = generator::maxSolveTime;
         }
         float offsetY2 = heightButton/3. + heightButton + heightButton/3. + heightOfGame + heightButton/3. + heightButton +heightButton/3. , offsetX2 = 0;
         float widthChangeOfGame2 = (ofGetWidth()*(1.-ideFactor))/4.;
@@ -1009,6 +1017,17 @@ void displayLevelEditor() {
             buttonFont.drawString(complexityInfoStr, offsetX2 + (widthOfGame2 - buttonFont.stringWidth(complexityInfoStr))/2.,offsetY2+heightOfGame2);
             offsetX2 += widthChangeOfGame2;
         }
+        
+        
+        ofSetColor(0);
+        string generatedStr = "";
+        generatedStr += "Solved:" + to_string(solvedLevels);
+        generatedStr += "\tTimedout: " + to_string(timedoutLevels);
+        generatedStr += "\tUnsolvable: " + to_string(unsolvableLevels);
+        generatedStr += "\tGenerated: " + to_string(generatedLevels);
+        generatedStr += "\tTimeout limit(ms): " + to_string(maxSolveTime);
+        int widthOfGeneratedStr = buttonFont.stringWidth(generatedStr);
+        buttonFont.drawString(generatedStr, offsetX + widthOfGame/2.-widthOfGeneratedStr/2.,offsetY2-heightButton);
         
         if(neighborhoodLevels.size() <= 3 && stillTransforming()) {
             string questionMarkStr = ofGetElapsedTimeMicros() % 750000 < 250000 ? ".  " : ofGetElapsedTimeMicros() % 750000 < 500000 ? ".. " : "...";

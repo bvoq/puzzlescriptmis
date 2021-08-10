@@ -149,7 +149,10 @@ static inline int matchesLayerEllipsis(const Rule & r, const int s, const int x,
         do {
             int cx = isrightrule ? x+t+ellipsisoffset : x;
             int cy = isrightrule ? y : y+t+ellipsisoffset; //if not right rule, it is a down rule
-            if(cx >= currentState[0][0].size() || cy >= currentState[0].size()) return -2;
+            if(cx >= currentState[0][0].size() || cy >= currentState[0].size()) {
+                //cout<< "RAAAAA" << endl;
+                return -2;
+            }
             
             for(int u=0;u<r.lhsObjects[s][t].size();++u) {
                 short layer = r.lhsLayers[s][t][u];

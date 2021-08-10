@@ -11,6 +11,7 @@
 namespace generator {
     recursive_mutex generatorMutex;
     vector<set<pair<float,vvvs> > > generatorNeighborhood;
+    int counter = 0, solvedCounter = 0, unsolvableCounter = 0, timedoutCounter = 0, maxSolveTime = 0;
 }
 
 /*
@@ -148,10 +149,10 @@ static void generating() {
         }
     }
     bool hasFoundAnyTransform = false;
-    int counter = 0;
+    generator::counter = 0; generator::solvedCounter = 0, generator::unsolvableCounter = 0, generator::timedoutCounter = 0, generator::maxSolveTime = timeToSolve;
     vector<vvvs> unknownStack;
     while(requestGenerating) {
-        counter++;
+        generator::counter++;
         //if(counter % 10 == 0) cerr << "generated " << counter << " levels." << endl;
         if(!hasFoundAnyTransform) {
             chrono::steady_clock::time_point ctime = chrono::steady_clock::now();
@@ -212,7 +213,7 @@ static void generating() {
                     std::atomic_thread_fence(std::memory_order_seq_cst);
                     if(generator::generatorNeighborhood[cgame.currentLevelIndex].empty() || -statesExplored < generator::generatorNeighborhood[cgame.currentLevelIndex].rbegin()->first)
                         addTime = true;
-                    
+                    generator::solvedCounter++;
                     generator::generatorNeighborhood[cgame.currentLevelIndex].insert( p );
                     if(generator::generatorNeighborhood[cgame.currentLevelIndex].size() > 4) {
                         generator::generatorNeighborhood[cgame.currentLevelIndex].erase(    prev(generator::generatorNeighborhood[cgame.currentLevelIndex].end()) );
@@ -221,16 +222,19 @@ static void generating() {
                 if(addTime) {
                     //cout << "alrighty " << timeToSolve << " " << timeItTook << endl;
                     if(!hasFoundAnyTransform)
-                        timeToSolve = MAX(500,timeItTook*7);
+                        timeToSolve = MAX(1000,timeItTook*7);
                     else {
                         timeToSolve = MAX(timeToSolve, timeItTook*7);
                         //cerr << "time to solve: " <<  timeToSolve << endl;
                     }
                     
-                    
+                    generator::maxSolveTime = timeToSolve;
                     hasFoundAnyTransform = true;
                 }
-            } else if(info.success == 2) {
+            } else if(info.success == 0) {
+                generator::unsolvableCounter++;
+            }else if(info.success == 2) {
+                generator::timedoutCounter++;
                 /* In case you also want to add the unsolved levels:
                 pair<long long, vvvs> p;
                 synchronized(generator::generatorMutex) {
