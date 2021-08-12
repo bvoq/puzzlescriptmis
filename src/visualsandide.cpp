@@ -19,7 +19,7 @@ namespace editor {
     
     bool activeIDE = false;
     bool generatorIDE = false;
-    bool showGenerate = false;
+    int showGenerate = 0; //0=no show, 1=show, 2=show+stats
     float ideFactor = 3./7; //how much of the screen should be IDE
     float offsetIDEY = 0;
     int levelIndex = 0;
@@ -610,7 +610,7 @@ void displayLevelEditor() {
         ofSetColor(0x67,0x6A,0x71);
         if(gbl::isFirstMousePressed && !activeIDE) {
             switchToLeftEditor(MODE_LEVEL_EDITOR, "switch_to_level_editor");
-            editor::showGenerate = false;
+            editor::showGenerate = 0;
         }
     }
     ofDrawRectRounded(xLevelEditor, heightButton/3., widthLevelEditorButton, heightButton, displaySize/200);
@@ -624,7 +624,8 @@ void displayLevelEditor() {
         ofSetColor(0x67,0x6A,0x71);
         if(gbl::isFirstMousePressed && !activeIDE) {
             switchToLeftEditor(MODE_EXPLOITATION,"switch_to_transform_editor");
-            editor::showGenerate = true;
+            if(editor::showGenerate == 0)
+                editor::showGenerate = 1;
         }
     }
     ofDrawRectRounded(xExploitation, heightButton/3., widthExploitationButton, heightButton, displaySize/200);
@@ -776,7 +777,7 @@ void displayLevelEditor() {
     float offsetY = heightButton/3. + heightButton + heightButton/3., offsetX = 0;
     float widthOfGame = ofGetWidth()*(1.-ideFactor), heightOfGame = ofGetHeight()-scaleBlockSelection-2*scaleBlockSelectionFont-offsetY;
     int min_field_size = 5;
-    if((gbl::mode == MODE_LEVEL_EDITOR || gbl::mode == MODE_EXPLOITATION) && showGenerate) {
+    if((gbl::mode == MODE_LEVEL_EDITOR || gbl::mode == MODE_EXPLOITATION) && showGenerate > 0) {
         heightOfGame *= 4/7.;
     }
     heightOfGame += -heightButton-2*heightButton/3.;
@@ -922,7 +923,7 @@ void displayLevelEditor() {
         
     
         
-        int widthGenerateButton = !showGenerate ? buttonFont.stringWidth("_Show Transforms_") : buttonFont.stringWidth("_Hide Transforms_");
+        int widthGenerateButton = showGenerate == 0 ? buttonFont.stringWidth("_Show Transforms_") : showGenerate == 1 ? buttonFont.stringWidth("_Show Statistics_") : buttonFont.stringWidth("_Hide Transforms_");
 
         ofFill();
         ofSetColor(0);
@@ -935,14 +936,14 @@ void displayLevelEditor() {
            && ofGetAppPtr()->mouseY >= offsetY+heightOfGame + heightButton/3. && ofGetAppPtr()->mouseY <= offsetY+heightOfGame + heightButton/3.+heightButton) {
             ofSetColor(0x67,0x6A,0x71);
             if(gbl::isFirstMousePressed && !activeIDE) {
-                showGenerate = !showGenerate;
+                showGenerate = (showGenerate+1)%3;
                 gbl::isFirstMousePressed = false;
                 gbl::isMousePressed = false;
             }
         }
         ofDrawRectRounded(offsetX + widthOfGame/2. - widthGenerateButton/2., offsetY+heightOfGame + heightButton/3., widthGenerateButton, heightButton, displaySize/200);
         ofSetColor(0xff);
-        buttonFont.drawString(!showGenerate ? " Show Transforms " : " Hide Transforms ", offsetX + widthOfGame/2. - widthGenerateButton/2., offsetY+heightOfGame+heightButton);
+        buttonFont.drawString(showGenerate == 0 ? " Show Transforms " : showGenerate == 1 ? " Show Statistics " : " Hide Transforms ", offsetX + widthOfGame/2. - widthGenerateButton/2., offsetY+heightOfGame+heightButton);
         
 
         //        if(info.statesExploredAStar != -1)
@@ -967,8 +968,10 @@ void displayLevelEditor() {
         }
     }
     
-    if((gbl::mode == MODE_LEVEL_EDITOR || gbl::mode == MODE_EXPLOITATION) && showGenerate) {
-        heightOfGame += heightButton*2; //add some space
+    if((gbl::mode == MODE_LEVEL_EDITOR || gbl::mode == MODE_EXPLOITATION) && showGenerate > 0) {
+        if(showGenerate == 2)
+            heightOfGame += heightButton*2; //add some space for statistics
+        
         set<pair<float,vvvs> > neighborhoodLevels;
         int generatedLevels, solvedLevels, unsolvableLevels, timedoutLevels, maxSolveTime;
         synchronized(generator::generatorMutex) {
@@ -1018,16 +1021,17 @@ void displayLevelEditor() {
             offsetX2 += widthChangeOfGame2;
         }
         
-        
-        ofSetColor(0);
-        string generatedStr = "";
-        generatedStr += "Solved:" + to_string(solvedLevels);
-        generatedStr += "\tTimedout: " + to_string(timedoutLevels);
-        generatedStr += "\tUnsolvable: " + to_string(unsolvableLevels);
-        generatedStr += "\tGenerated: " + to_string(generatedLevels);
-        generatedStr += "\tTimeout limit(ms): " + to_string(maxSolveTime);
-        int widthOfGeneratedStr = buttonFont.stringWidth(generatedStr);
-        buttonFont.drawString(generatedStr, offsetX + widthOfGame/2.-widthOfGeneratedStr/2.,offsetY2-heightButton);
+        if(showGenerate == 2) {
+            ofSetColor(0);
+            string generatedStr = "";
+            generatedStr += "Solved:" + to_string(solvedLevels);
+            generatedStr += "\tTimedout: " + to_string(timedoutLevels);
+            generatedStr += "\tUnsolvable: " + to_string(unsolvableLevels);
+            generatedStr += "\tGenerated: " + to_string(generatedLevels);
+            generatedStr += "\tTimeout limit(ms): " + to_string(maxSolveTime);
+            int widthOfGeneratedStr = buttonFont.stringWidth(generatedStr);
+            buttonFont.drawString(generatedStr, offsetX + widthOfGame/2.-widthOfGeneratedStr/2.,offsetY2-heightButton);
+        }
         
         if(neighborhoodLevels.size() <= 3 && stillTransforming()) {
             string questionMarkStr = ofGetElapsedTimeMicros() % 750000 < 250000 ? ".  " : ofGetElapsedTimeMicros() % 750000 < 500000 ? ".. " : "...";
@@ -1114,7 +1118,7 @@ void displayLevelEditor() {
 
 
 void ideKeyPressed(int key, bool isSuperKey) {
-	if (!isSuperKey && key >= 32 && key <= 256) {
+	if (!isSuperKey && key >= 32 && key <= 256 && key != 127) {
         if(selectPos != cursorPos)
             ideKeyPressed(8, false);
         
@@ -1138,7 +1142,8 @@ void ideKeyPressed(int key, bool isSuperKey) {
                 cursorPos.second = 0;
             }
                 break;
-            case 8: // delete macOS
+            case 8: // backspace
+            //case 127: //DEL button
                 if(cursorPos != selectPos) {
                     auto minPos = MIN(cursorPos, selectPos);
                     auto maxPos = MAX(cursorPos, selectPos);

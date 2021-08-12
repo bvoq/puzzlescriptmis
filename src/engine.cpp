@@ -70,7 +70,7 @@ static inline void moveCollisions(vvvs & currentState, vvvc & currentMoveState, 
                     short c = currentMoveState[l][cy][cx];
                     int ny = cy+(c == UP_MOVE ? -1 : c == DOWN_MOVE ? 1 : 0);
                     int nx = cx+(c == LEFT_MOVE ? -1 : c == RIGHT_MOVE ? 1 : 0);
-                    char oppositeC = c==UP_MOVE ? DOWN_MOVE : c==DOWN_MOVE ? UP_MOVE : c==LEFT_MOVE ? RIGHT_MOVE : LEFT_MOVE;
+                    short oppositeC = c==UP_MOVE ? DOWN_MOVE : c==DOWN_MOVE ? UP_MOVE : c==LEFT_MOVE ? RIGHT_MOVE : LEFT_MOVE;
                     
                     if(ny<0||nx<0||ny>=game.currentLevelHeight||nx>=game.currentLevelWidth||currentMoveState[l][ny][nx] == STATIONARY_MOVE||currentMoveState[l][ny][nx]==oppositeC) { // > x => x x and > < => x x and > edge => x edge
                         
@@ -105,7 +105,11 @@ static inline void moveCollisions(vvvs & currentState, vvvc & currentMoveState, 
         for(int y=0;y<game.currentLevelHeight;++y) {
             for(int x=0;x<game.currentLevelWidth;++x) {
                 if(currentState[l][y][x] == 0) assert(currentMoveState[l][y][x] == RE_MOVE);
-                else assert(currentMoveState[l][y][x] == STATIONARY_MOVE);
+                else {
+                    //cout << "no ortho ? " << currentMoveState[l][y][x] << endl;
+                    short q = currentMoveState[l][y][x];
+                    assert(q == STATIONARY_MOVE);
+                }
             }
         }
     }
@@ -181,9 +185,18 @@ static inline void replacesLayer(const Rule & r, const Game & game, const int s,
         //first remove lhs blocks
         int sl = r.lhsObjects[s][t].size(), sr = r.rhsObjects[s][t].size();
         for(int u=0;u<sl;++u) {
-            if(r.lhsDirs[s][t][u] != RE_MOVE) {
+            //this is 1.3 code and really quite annoying to deal with:
+            //potential issue when NO_OR_ORTHOGONAL_MOVE but it isn't updated on RHS.
+            //reasons: [> player ] -> [player] => [> player ] -> [stationary player]
+            //however: [player] -> [player] does not and actually keeps movement.
+            //for that matter the left rules are looped again later
+
+            if(r.lhsDirs[s][t][u] == NO_OR_ORTHOGONAL_MOVE) {
                 short layer = r.lhsLayers[s][t][u];
-                //cout << "removing " << game.objPrimaryName[currentState[layer][cy][cx]] << " at " << cy << " " << cx << " on layer " << layer << endl;
+                currentState[layer][cy][cx] = 0;
+            }
+            else if(r.lhsDirs[s][t][u] != RE_MOVE) {
+                short layer = r.lhsLayers[s][t][u];
                 currentState[layer][cy][cx] = 0;
                 currentMoveState[layer][cy][cx] = RE_MOVE;
             }
@@ -198,11 +211,27 @@ static inline void replacesLayer(const Rule & r, const Game & game, const int s,
                     currentMoveState[layer][cy][cx] = RE_MOVE;
                 }
             } else {
-                //set block
+                /*
+                cout << "setting move to " << r.rhsDirs[s][t][u] << " in rule ";
+                printRule(std::cout, r, game);*/
                 currentState[layer][cy][cx] = r.rhsObjects[s][t][u];
-                currentMoveState[layer][cy][cx] = r.rhsDirs[s][t][u];
+                
+                if(r.rhsDirs[s][t][u] != NO_OR_ORTHOGONAL_MOVE)
+                    currentMoveState[layer][cy][cx] = r.rhsDirs[s][t][u];
+                else if(currentMoveState[layer][cy][cx] == RE_MOVE)
+                    currentMoveState[layer][cy][cx] = STATIONARY_MOVE;
             }
             
+        }
+        
+        for(int u=0;u<sl;++u) {
+            //potential issue when NO_OR_ORTHOGONAL_MOVE but it isn't updated on RHS.
+            //for this reason we update them here.
+            if(r.lhsDirs[s][t][u] == NO_OR_ORTHOGONAL_MOVE) {
+                short layer = r.lhsLayers[s][t][u];
+                if(currentState[layer][cy][cx] == 0)
+                    currentMoveState[layer][cy][cx] = RE_MOVE;
+            }
         }
     }
 }
@@ -210,6 +239,9 @@ static inline void replacesLayer(const Rule & r, const Game & game, const int s,
 
 static inline void replacesLayerEllipsis(const Rule & r, const Game & game, const int s, const int x, const int y, const bool isrightrule, vvvs & currentState, vvvc & currentMoveState, int ellipsisoffset) {
     bool ellipsis = false;
+    /*
+    cout << "replacing at " << x << "," << y << " rule: ";
+    printRule(std::cout, r, game);*/
     for(int t=0;t<r.rhsObjects[s].size();++t) {
         if(r.lhsTypes[s][t] == TYPE_ELLIPSIS) {
             ellipsis = true;
@@ -220,9 +252,18 @@ static inline void replacesLayerEllipsis(const Rule & r, const Game & game, cons
         //first remove lhs blocks
         int sl = r.lhsObjects[s][t].size(), sr = r.rhsObjects[s][t].size();
         for(int u=0;u<sl;++u) {
-            if(r.lhsDirs[s][t][u] != RE_MOVE) {
+            //this is 1.3 code and really quite annoying to deal with:
+            //potential issue when NO_OR_ORTHOGONAL_MOVE but it isn't updated on RHS.
+            //reasons: [> player ] -> [player] => [> player ] -> [stationary player]
+            //however: [player] -> [player] does not and actually keeps movement.
+            //for that matter the left rules are looped again later
+
+            if(r.lhsDirs[s][t][u] == NO_OR_ORTHOGONAL_MOVE) {
                 short layer = r.lhsLayers[s][t][u];
-                //cout << "removing " << game.objPrimaryName[currentState[layer][cy][cx]] << " at " << cy << " " << cx << " on layer " << layer << endl;
+                currentState[layer][cy][cx] = 0;
+            }
+            else if(r.lhsDirs[s][t][u] != RE_MOVE) {
+                short layer = r.lhsLayers[s][t][u];
                 currentState[layer][cy][cx] = 0;
                 currentMoveState[layer][cy][cx] = RE_MOVE;
             }
@@ -237,11 +278,27 @@ static inline void replacesLayerEllipsis(const Rule & r, const Game & game, cons
                     currentMoveState[layer][cy][cx] = RE_MOVE;
                 }
             } else {
-                //set block
+                /*
+                cout << "setting move to " << r.rhsDirs[s][t][u] << " in rule ";
+                printRule(std::cout, r, game);*/
                 currentState[layer][cy][cx] = r.rhsObjects[s][t][u];
-                currentMoveState[layer][cy][cx] = r.rhsDirs[s][t][u];
+                
+                if(r.rhsDirs[s][t][u] != NO_OR_ORTHOGONAL_MOVE)
+                    currentMoveState[layer][cy][cx] = r.rhsDirs[s][t][u];
+                else if(currentMoveState[layer][cy][cx] == RE_MOVE)
+                    currentMoveState[layer][cy][cx] = STATIONARY_MOVE;
             }
             
+        }
+        
+        for(int u=0;u<sl;++u) {
+            //potential issue when NO_OR_ORTHOGONAL_MOVE but it isn't updated on RHS.
+            //for this reason we update them here.
+            if(r.lhsDirs[s][t][u] == NO_OR_ORTHOGONAL_MOVE) {
+                short layer = r.lhsLayers[s][t][u];
+                if(currentState[layer][cy][cx] == 0)
+                    currentMoveState[layer][cy][cx] = RE_MOVE;
+            }
         }
     }
 }
@@ -311,7 +368,14 @@ static inline int advanceMatchRightEllipsis(pair<int,int> & pointer, const int &
         for(int x=(y==pointer.second?pointer.first:0);x<game.currentLevelWidth;++x) {
             if(x + r.lhsObjects[s].size() > game.currentLevelWidth) break;
             int ret = matchesLayerEllipsis(r,s,x,y,true,currentState,currentMoveState);
+            /*
+            cout << "checking right match " << x << "," << y << " on rule ";
+            printRule(std::cout, r, game);
+            */
             if(ret >= -1) {
+                /*
+                cout << "found right match " << x << "," << y << " on rule ";
+                printRule(std::cout, r, game);*/
                 pointer.first = x;
                 pointer.second = y;
                 return ret;
@@ -327,7 +391,14 @@ static inline int advanceMatchDownEllipsis(pair<int,int> & pointer, const int & 
         for(int y=(x==pointer.first?pointer.second:0);y<game.currentLevelHeight;++y) {
             if(y + r.lhsObjects[s].size() > game.currentLevelHeight) break;
             int ret = matchesLayerEllipsis(r,s,x,y,false,currentState,currentMoveState);
+            /*
+            cout << "checking down match " << x << "," << y << " on rule ";
+            printRule(std::cout, r, game);*/
+            
             if(ret >= -1) {
+                /*
+                cout << "found down match " << x << "," << y << " on rule ";
+                printRule(std::cout, r, game);*/
                 pointer.first = x;
                 pointer.second = y;
                 return ret;

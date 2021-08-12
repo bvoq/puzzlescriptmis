@@ -285,7 +285,7 @@ void executeKeys() {
             
             case KEY_GENERATE:
                 if(gbl::mode == MODE_LEVEL_EDITOR || gbl::mode == MODE_EXPLOITATION || gbl::mode == MODE_INSPIRATION) {
-                    editor::showGenerate = true;
+                    editor::showGenerate = 1;
                     stopGenerating();
                     if(editor::successes.first && editor::successes.second) startGenerating();
                 }

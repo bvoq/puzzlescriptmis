@@ -7,7 +7,7 @@
 namespace editor {
     extern bool activeIDE;
     extern bool generatorIDE;
-    extern bool showGenerate;
+    extern int showGenerate;
     extern float ideFactor; //how much of the screen should be IDE
     extern float offsetIDEY;
     extern int selectedLevelIDE;

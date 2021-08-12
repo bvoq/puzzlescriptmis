@@ -17,7 +17,7 @@ bool parseWinconditions(vector<string> lines, int lineFrom, int lineTo, Game & g
             return false;
         }
         
-        if(tokens.size() == 2 && (tokens[0] == "no" || tokens[0] == "some")) {
+        if(tokens.size() == 2 && (tokens[0] == "no" || tokens[0] == "some" || tokens[0] == "any")) {
             if(game.synonyms.count(tokens[1]) != 0) {
                 short objIndex = game.synonyms[tokens[1]];
                 short objLayer = game.objLayer[objIndex];
@@ -28,7 +28,7 @@ bool parseWinconditions(vector<string> lines, int lineFrom, int lineTo, Game & g
                 cerr << "marr " << objIndex << " " << objLayer << endl;
                 if(tokens[0] == "no")
                     game.winConditionsNo.push_back({objIndex,objLayer});
-                else if(tokens[0] == "some")
+                else if(tokens[0] == "some" || tokens[0] == "any")
                     game.winConditionsSome.push_back({{objIndex,objLayer}});
             } else if(game.properties.count(tokens[1]) != 0) {
                 if(tokens[0] == "some") game.winConditionsSome.push_back({});

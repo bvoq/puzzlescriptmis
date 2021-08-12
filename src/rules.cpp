@@ -574,8 +574,8 @@ static bool toUncompiledRule(vector<string> lines, int sectionStartsFromLine, in
                             }
                         }
                         
-                        if(foundProperty >= 2) {
-                            logger.logError("This rule has a property on the right-hand side, '"+r.rhs[i][j][k]+"' that can't be inferred from the left-hand side. (either for every property on the right there has to be a corresponding one on the left in the same cell, OR, if there's a single occurrence of a particular property name on the left, all properties of the same name on the right are assumed to be the same).", r.lineNumber);
+                        if(foundProperty != 1) {
+                            logger.logError("Property '"+r.rhs[i][j][k]+"' on RHS can't be inferred from the LHS.", r.lineNumber);
                             return false;
                         }
                     }
@@ -823,7 +823,7 @@ static bool toCompiledRule(vector<RuleUncompiled> rulesUncompiled, vector<Rule> 
                         
                         short tokenDir = 0; //stationary, no movement!
                         
-                        if(adir == "") tokenDir = STATIONARY_MOVE;
+                        if(adir == "") tokenDir = NO_OR_ORTHOGONAL_MOVE;
                         else if(adir == "stationary") tokenDir = STATIONARY_MOVE;
                         else if(adir == "up") tokenDir = UP_MOVE;
                         else if(adir == "down") tokenDir = DOWN_MOVE;
@@ -883,12 +883,14 @@ static bool toCompiledRule(vector<RuleUncompiled> rulesUncompiled, vector<Rule> 
                                 outrulescellDir.back().push_back(tokenDir);
                                 outrulescellObject.back().push_back(game.synonyms.at( keyword ) );
                                 outrulescellLayer.back().push_back(game.objLayer[game.synonyms.at( keyword )]);
+
                             } else if(game.aggregates.count(keyword) != 0) {
                                 for(int index : game.aggregates.at( keyword )) {
                                     outrulescellDir.back().push_back( tokenDir );
                                     outrulescellObject.back().push_back( index );
                                     outrulescellLayer.back().push_back( game.objLayer[index] );
                                 }
+                                
                             } else {
                                 DEB("This shouldn't happen...");
                                 exit(1);
@@ -965,15 +967,16 @@ static bool toCompiledRule(vector<RuleUncompiled> rulesUncompiled, vector<Rule> 
         rules[ri].groupNumber = groupNumbers[rules[ri].groupNumber];
     }
     
-    /* DEBUGGING PURPOSES
+    // DEBUGGING PURPOSES
+    /*
     cout << "==============" << endl;
     cout << "EXPANDED RULES" << endl;
     cout << "==============" << endl;
     
     for(const Rule & r : rules) {
         printRule(cout, r, game);
-    }
-    */
+    }*/
+    
     
     return true;
 }
@@ -1020,7 +1023,7 @@ void printRule(ostream & o, const Rule & r, const Game & game) {
         for(int t=0;t<r.rhsObjects[s].size();++t) {
             if(r.rhsTypes[s][t] == TYPE_ELLIPSIS) o << "...";
             else for(int u=0;u<r.rhsObjects[s][t].size();++u) {
-                if(r.rhsDirs[s][t][u] == STATIONARY_MOVE) o <<" ";
+                if(r.rhsDirs[s][t][u] == STATIONARY_MOVE) o <<" stationary ";
                 else if(r.rhsDirs[s][t][u] == UP_MOVE) o << " up ";
                 else if(r.rhsDirs[s][t][u] == DOWN_MOVE) o << " down ";
                 else if(r.rhsDirs[s][t][u] == LEFT_MOVE) o << " left ";
@@ -1028,6 +1031,7 @@ void printRule(ostream & o, const Rule & r, const Game & game) {
                 else if(r.rhsDirs[s][t][u] == ORTHOGONAL_MOVE) o << " orthogonal ";
                 else if(r.rhsDirs[s][t][u] == ACTION_MOVE) o << " action ";
                 else if(r.rhsDirs[s][t][u] == RE_MOVE) o << " no ";
+                else if(r.rhsDirs[s][t][u] == NO_OR_ORTHOGONAL_MOVE) o << " ";
                 else assert(false);
                 o << game.objPrimaryName[ r.rhsObjects[s][t][u] ];
             }

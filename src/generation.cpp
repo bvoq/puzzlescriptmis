@@ -264,6 +264,7 @@ static volatile bool stillGenerating = false;
 static int generatorCount = 1;
 static vector<thread> generatorThread;
 void startGenerating() {
+    //return; //uncomment this for debugging
     cout << "start generating" << endl;
     if(stillGenerating && cgame.getHash() == gbl::currentGame.getHash() && cmodifyTable == editor::modifyTable[gbl::currentGame.currentLevelIndex] && cgame.currentState == gbl::currentGame.currentState) return;
     if(stillGenerating) stopGenerating();

@@ -295,7 +295,25 @@ static bool parseGameLines(vector<string> lines, Game & game, Logger & logger) {
                     logger.logError("Expected integer, but received: "+tokens[1], line);
                     return false;
                 }
+            } /*
+               //default assumption actually
+               else if(tokens.size()==1 && tokens[0] == "run_rules_on_level_start") {
+               logger.logError("Currently unsupported run_rules_on_level_start");
+            }*/
+            else if(tokens.size()==1 && tokens[0] == "noaction") {
+                logger.logError("noaction unsupported. use [action player] -> cancel instead.", line);
             }
+            else if(tokens.size()==1 && tokens[0] == "require_player_movement") {
+                logger.logError("require_player_movement unsupported. Instead place a marker on the player and use: late [Player Marker] -> Cancel", line);
+            }
+            else if(tokens.size()==1 && tokens[0] == "norepeat_action") {
+                logger.logError("norepeat_action unsupported. use a marker instead.", line);
+            }
+            /*
+            else if(tokens.size()==1 && tokens[0] == "noundo") {
+                logger.logError("noundo is ignored", line);
+            }*/
+            //run_rules_on_level_start is on by default!!!
         }
         
         if( find(sections.begin(),sections.end(),str) != sections.end() ) {
@@ -372,7 +390,7 @@ static bool parseGameGeneratorLines(vector<string> generatorLines, Game & game, 
     //remove "generation"
     for(int i=0;i<generatorLines.size();++i) {
         string fstr = formatString(generatorLines[i]);
-        if(fstr == "generation" || fstr == "transform") generatorLines[i] = "";
+        if(fstr == "generation" || fstr == "transform") generatorLines[i] = "";
     }
     
     bool success = parseRules(generatorLines, 0, generatorLines.size(), true, game, logger);
