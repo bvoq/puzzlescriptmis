@@ -542,8 +542,7 @@ static inline pair<vector<vvvs>, vector<vvvs> > executeRuleSingleMatch(const Rul
 }
 
 
-// returns true on win command.
-static bool engineStep(vvvs & currentState, vvvc & currentMoveState, const Game & game) {
+static void engineStep(vvvs & currentState, vvvc & currentMoveState, const Game & game) {
     vvvc oldCurrentState = currentState;
     vvvc oldCurrentMoveState = currentMoveState;
     
@@ -592,13 +591,10 @@ static bool engineStep(vvvs & currentState, vvvc & currentMoveState, const Game 
                     //cout << "CANCEL CANCEL" << endl;
                     currentState = oldCurrentState;
                     currentMoveState = oldCurrentMoveState;
-                    return false;
+                    return;
                 } else if(cmd == CMD_AGAIN) {
                     again = true;
-                } else if(cmd == CMD_WIN) {
-                    return true;
-                }
-                else if(cmd == CMD_RESTART || cmd == CMD_CHECKPOINT) {}
+                } else if(cmd == CMD_WIN || cmd == CMD_RESTART || cmd == CMD_CHECKPOINT) {}
                 else { //sfx
                     
                 }
@@ -617,7 +613,7 @@ static bool engineStep(vvvs & currentState, vvvc & currentMoveState, const Game 
                 cerr << "Warning: Rule group " << r.groupNumber << " has been looped " << repeatedGroupRuleCount << " times!" << endl;
                 currentState = oldCurrentState;
                 currentMoveState = oldCurrentMoveState;
-                return false;
+                return;
             }
             continue;
         }
@@ -633,7 +629,7 @@ static bool engineStep(vvvs & currentState, vvvc & currentMoveState, const Game 
                 cerr << "Warning: Startloop/Endloop pair has been looped " << repeatedGroupRuleCount << " times!" << endl;
                 currentState = oldCurrentState;
                 currentMoveState = oldCurrentMoveState;
-                return false;
+                return;
             }
             continue;
         }
@@ -645,10 +641,8 @@ static bool engineStep(vvvs & currentState, vvvc & currentMoveState, const Game 
     }
     
     if(again && (oldCurrentState != currentState || oldCurrentMoveState != currentMoveState)) {
-        return engineStep(currentState, currentMoveState, game);
+        engineStep(currentState, currentMoveState, game);
     }
-    
-    return false; // finished engineStep but didn't win (yet).
 }
 
 //currentStates contains all generated levels. currentStates[from]
@@ -853,8 +847,8 @@ void moveAndChangeField(const short & moveDir, vvvs & currentState, const Game &
 
 bool moveAndChangeFieldAndReturnWinningCondition(const short & moveDir, vvvs & currentState, const Game & game) {
     vvvc moveField = generateMoveField(moveDir, currentState, game);
-    bool winCondition = engineStep(currentState, moveField, game);
-    return winCondition || checkWinCondition(currentState, game);
+    engineStep(currentState, moveField, game);
+    return checkWinCondition(currentState, game);
 }
 
 

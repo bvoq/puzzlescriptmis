@@ -346,7 +346,7 @@ static bool toUncompiledRule(vector<string> lines, int sectionStartsFromLine, in
                     ccell.clear();
                 } else if(keywords_modifiers.count(token) != 0) {
                     if(keywords_modifiers_unsupported.count(token) != 0) {
-                        logger.logError("'"+token+"' is not supported for this engine (I prefer it to be deterministic).", line);
+                        logger.logError("'"+token+"' is not supported for this engine, so the solver remains deterministic.", line);
                         return false;
                     }
                     if (ccell.size() % 2 == 1) {
