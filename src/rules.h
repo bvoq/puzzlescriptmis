@@ -36,6 +36,7 @@ struct Rule {
     
     int lineNumber = -1;
     int groupNumber = -1;
+    int startloopNumber = -1;
     
     uint64_t getHash(uint64_t chash) const;
 };

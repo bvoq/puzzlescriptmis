@@ -304,7 +304,7 @@ static bool parseGameLines(vector<string> lines, Game & game, Logger & logger) {
                 logger.logError("noaction unsupported. use [action player] -> cancel instead.", line);
             }
             else if(tokens.size()==1 && tokens[0] == "require_player_movement") {
-                logger.logError("require_player_movement unsupported. Instead place a marker on the player and use: late [Player Marker] -> Cancel", line);
+                logger.logError("require_player_movement unsupported. Instead use: [Player] -> [Player Marker] ; late [Player Marker] -> Cancel; [Marker] -> []", line);
             }
             else if(tokens.size()==1 && tokens[0] == "norepeat_action") {
                 logger.logError("norepeat_action unsupported. use a marker instead.", line);

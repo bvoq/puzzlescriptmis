@@ -72,12 +72,7 @@ int main( ){
  - IDE syntax highlight
  DONE add own solution
  DONE stationary move block
- DONE Add stationary move to solver 
- - THESIS: Puzzle game have inherent complexity => ...
- - Transferability of complexity for agents.
- - Jurgen Schmidhuber: Formal theory of fun.
- 
+ DONE Add stationary move to solver
  - Don't do dppair with copy of game perhaps?
-
  - maybe use dynamic compilation of PS files into a TinyCC compiler 
  */

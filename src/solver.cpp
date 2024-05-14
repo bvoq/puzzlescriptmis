@@ -6,6 +6,7 @@
 #include "game.h"
 #include "global.h"
 
+
 #include <unordered_set>
 
 namespace solver {
@@ -15,7 +16,7 @@ namespace solver {
 }
 
 std::random_device rd;
-std::mt19937 g(rd());
+std::mt19937 gen_solver(rd());
 
 SolveInformation mergeSolveInformation(const SolveInformation & a, const SolveInformation & b) {
     SolveInformation i = a;
@@ -144,9 +145,7 @@ SolveInformation bfsSolver(const vvvs & stateToBeSolved, const Game & game, int 
         const vvvs cp = qstates.front();
         qstates.pop();
         
-        std::random_device rd;
-        std::mt19937 g(rd());
-        shuffle(moves.begin(), moves.end(), g);
+        shuffle(moves.begin(), moves.end(), gen_solver);
         
         for(short dir : moves) {
             vvvs c = cp;
@@ -373,9 +372,8 @@ static float costEstimateFromGoal(const vvvs & currentState, const Game & game) 
         vector<bool> taken (rhsMatches.size(), false);
         vector<int> lindices (lhsMatches.size());
         for(int l=0;l<lhsMatches.size();++l) lindices[l] = l;
-        std::random_device rd;
-        std::mt19937 g(rd());
-        shuffle(lindices.begin(),lindices.end(),g); //make sure there's no skew
+    
+        shuffle(lindices.begin(),lindices.end(),gen_solver); //make sure there's no skew
         for(int l : lindices) {
             const auto & X = lhsMatches[l];
             float minDist = 1e7;
@@ -605,9 +603,7 @@ SolveInformation heuristicSolver(const vvvs & stateToBeSolved, const Game & game
         int stateIndex = qstates.top().first.second;
         qstates.pop();
 
-        std::random_device rd;
-        std::mt19937 g(rd());
-        shuffle(moves.begin(), moves.end(), g); //shuffle a bit so there's no search direction skew
+        shuffle(moves.begin(), moves.end(), gen_solver); //shuffle a bit so there's no search direction skew
         
         //Loop unrolled for efficiency purposes
         for(short dir : moves) {

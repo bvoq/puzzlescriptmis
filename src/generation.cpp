@@ -126,6 +126,8 @@ static volatile std::atomic_bool requestGenerating(false);
 static Game cgame;
 static vector<vector<bool> > cmodifyTable;
 static void generating() {
+    
+    
     cerr << "START GENERATING THREAD" << endl;
 
     int solverID = bestSolver(cgame.currentState, cgame);
@@ -172,7 +174,8 @@ static void generating() {
         
         if(newStates.size() > 0) {
             SolveInformation info;
-            
+            // cgame.updateLevelState(newStates[0], cgame.currentLevelIndex);
+
             if(solverID == 0)
                 info = bfsSolver(newStates[0], cgame, -1, timeToSolve, gbl::emptyMoves, true, requestGenerating);
             else if(solverID == 1)

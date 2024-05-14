@@ -114,9 +114,8 @@ struct RuleUncompiled {
     
     int lineNumber = -1;
     int groupNumber = -1;
-    int startloopNumber = -1; //if startloopNumber == lineNumber => store startloop,
-                              //ef startloopNumber == -1 => nothing
-                              //else => goto startloopNumber if something has changed in the field.
+    int startloopNumber = -1; // -1 = not in a startloop/endloop bracket, otherwise rule number that starts with startloop.
+    
     vector<Commands> commands = {}; //potentially executed if empty
     string msgString;
 };
@@ -153,6 +152,35 @@ static bool toUncompiledRule(vector<string> lines, int sectionStartsFromLine, in
             continue;
         }
         
+        // single token lines
+        if(tokens[0] == "startloop") {
+            if(tokens.size() > 1) {
+                logger.logError("startloop needs to be alone on a line..", line);
+                return false;
+            }
+            if(startloopNumber != -1) {
+                logger.logError("Cannot have nested 'startloop' commands.", line);
+                return false;
+            }
+            startloopNumber = crules.size();
+            continue;
+        } else if(tokens[0] == "endloop") {
+            if(tokens.size() > 1) {
+                logger.logError("startloop needs to be alone on a line..", line);
+                return false;
+            }
+            if(startloopNumber == -1) {
+                logger.logError("Missing 'startloop'.", line);
+                return false;
+            }
+            if(startloopNumber == crules.size()) {
+                logger.logError("Missing content in 'startloop/endloop'.", line);
+                return false;
+            }
+            startloopNumber = -1;
+            continue;
+        }
+        
         //PARSE
         /*
          STATE
@@ -165,6 +193,7 @@ static bool toUncompiledRule(vector<string> lines, int sectionStartsFromLine, in
         RuleUncompiled crule;
         crule.lineNumber = line;
         crule.groupNumber = line; //Assume it's a single standing group. updated if different
+        crule.startloopNumber = startloopNumber;
         
         vector<string> ccell = {};
         vector<vector<string> > ccellrow = {};
@@ -196,7 +225,6 @@ static bool toUncompiledRule(vector<string> lines, int sectionStartsFromLine, in
                         //crule.optionProb = crules.back().optionProb;
                         crule.choose = crules.back().choose;
                         crule.chooseCount = crules.back().chooseCount;
-                        crule.startloopNumber = crules.back().startloopNumber;
                     }
                 } else if(token == "option") {
                     if(!generatorSection) {
@@ -303,20 +331,7 @@ static bool toUncompiledRule(vector<string> lines, int sectionStartsFromLine, in
                     }
                     parseState = 1;
                     tokenno--;
-                } else if(token == "startloop") {
-                    if(startloopNumber != -1) {
-                        logger.logError("Cannot have nested 'startloop' commands.", line);
-                        return false;
-                    }
-                    startloopNumber = crules.size();
-                } else if(token == "endloop") {
-                    if(startloopNumber == -1) {
-                        logger.logError("Missing 'startloop'.", line);
-                        return false;
-                    }
-                    startloopNumber = -1;
-                }
-                else {
+                } else {
                     logger.logError("Unexpected token: '"+token+"'.", line);
                     return false;
                 }
@@ -472,9 +487,14 @@ static bool toUncompiledRule(vector<string> lines, int sectionStartsFromLine, in
         }
         
         //DEBUGGING PURPOSES
-        //cout << "[" << crule.lineNumber << "] " << lines[crule.lineNumber] << endl;
-
+        cout << "[" << crule.lineNumber << "] " << lines[crule.lineNumber] << endl;
+        
         crules.push_back(crule);
+    }
+    
+    if(startloopNumber != -1) {
+        logger.logError("Missing endloop.", sectionEndsAtLine - 1);
+        return false;
     }
     
     
@@ -599,6 +619,16 @@ static bool toUncompiledRule(vector<string> lines, int sectionStartsFromLine, in
         }
     }
     
+    //check that all rules in startloop/endloop are either all late or not.
+    for(int i=1;i<crules.size();++i) {
+        if(crules[i-1].startloopNumber != -1 && crules[i-1].startloopNumber == crules[i].startloopNumber) {
+            if(crules[i-1].late != crules[i].late) {
+                logger.logError("Cannot mix late and non-late rules in a startloop/endloop block.", crules[i].lineNumber);
+                return false;
+            }
+        }
+    }
+    
     sort(crules.begin(),crules.end()); //shift all late rules to the end
     
     
@@ -659,8 +689,10 @@ static bool toCompiledRule(vector<RuleUncompiled> rulesUncompiled, vector<Rule> 
             crule.late = rulesUncompiled[i].late;
             crule.lineNumber = rulesUncompiled[i].lineNumber;
             crule.groupNumber = rulesUncompiled[i].groupNumber;
+            crule.startloopNumber = rulesUncompiled[i].startloopNumber;
             crule.commands = rulesUncompiled[i].commands;
             crule.msgString = rulesUncompiled[i].msgString;
+            
             
             //crule.commands = inrules[i].commands;
             
@@ -832,7 +864,7 @@ static bool toCompiledRule(vector<RuleUncompiled> rulesUncompiled, vector<Rule> 
                         else if(adir == "action") tokenDir = ACTION_MOVE;
                         else if(adir == "no") tokenDir = RE_MOVE;
                         else if(adir != "...") {
-                            logger.logError("RHS does not allow direction '"+adir+"'.", rulesUncompiled[i].lineNumber);
+                            logger.logError("RHS does not allow direction moving, vertical or orthogonal. Replace it with a group.", rulesUncompiled[i].lineNumber);
                             return false;
                         }
                         if(adir == "...") {
@@ -965,6 +997,18 @@ static bool toCompiledRule(vector<RuleUncompiled> rulesUncompiled, vector<Rule> 
             groupNumbers[rules[ri].groupNumber] = newGroupNumber;
         }
         rules[ri].groupNumber = groupNumbers[rules[ri].groupNumber];
+    }
+    
+    //renumber startloop rules
+    map<int,int> startloopNumbers;
+    for(int ri=0;ri<rules.size();++ri) {
+        if(rules[ri].startloopNumber != -1) {
+            if(startloopNumbers.count(rules[ri].startloopNumber) == 0) {
+                int newStartLoopNumber = ri;
+                startloopNumbers[rules[ri].startloopNumber] = newStartLoopNumber;
+            }
+            rules[ri].startloopNumber = startloopNumbers[rules[ri].startloopNumber];
+        }
     }
     
     // DEBUGGING PURPOSES
