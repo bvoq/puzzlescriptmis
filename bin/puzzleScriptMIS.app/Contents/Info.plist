@@ -3,19 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>18G87</string>
+	<string>23E224</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>puzzleScriptMIS</string>
+	<string>puzzlescriptmis</string>
 	<key>CFBundleIconFile</key>
-	<string>icon.icns</string>
+	<string>of.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>cc.openFrameworks.ofapp</string>
+	<string>cc.openFrameworks.puzzlescriptmis</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>puzzlescriptmis</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -27,17 +31,23 @@
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>10G8</string>
+	<string></string>
+	<key>DTPlatformName</key>
+	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>GM</string>
+	<string>14.4</string>
 	<key>DTSDKBuild</key>
-	<string>18G74</string>
+	<string>23E208</string>
 	<key>DTSDKName</key>
-	<string>macosx10.14</string>
+	<string>macosx14.4</string>
 	<key>DTXcode</key>
-	<string>1030</string>
+	<string>1530</string>
 	<key>DTXcodeBuild</key>
-	<string>10G8</string>
+	<string>15E204a</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.graphics-design</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.15</string>
 	<key>NSCameraUsageDescription</key>
 	<string>This app needs to access the camera</string>
 	<key>NSHighResolutionCapable</key>

@@ -14,6 +14,9 @@ namespace solver {
     unordered_map<uint64_t, SolveInformation> solutionDP;
 }
 
+std::random_device rd;
+std::mt19937 g(rd());
+
 SolveInformation mergeSolveInformation(const SolveInformation & a, const SolveInformation & b) {
     SolveInformation i = a;
     if(i.solutionPath.size()  == 0 || (b.solutionPath.size() != 0 && b.solutionPath.size() < i.solutionPath.size()))
@@ -141,7 +144,9 @@ SolveInformation bfsSolver(const vvvs & stateToBeSolved, const Game & game, int 
         const vvvs cp = qstates.front();
         qstates.pop();
         
-        random_shuffle(moves.begin(), moves.end());
+        std::random_device rd;
+        std::mt19937 g(rd());
+        shuffle(moves.begin(), moves.end(), g);
         
         for(short dir : moves) {
             vvvs c = cp;
@@ -368,7 +373,9 @@ static float costEstimateFromGoal(const vvvs & currentState, const Game & game) 
         vector<bool> taken (rhsMatches.size(), false);
         vector<int> lindices (lhsMatches.size());
         for(int l=0;l<lhsMatches.size();++l) lindices[l] = l;
-        random_shuffle(lindices.begin(),lindices.end()); //make sure there's no skew
+        std::random_device rd;
+        std::mt19937 g(rd());
+        shuffle(lindices.begin(),lindices.end(),g); //make sure there's no skew
         for(int l : lindices) {
             const auto & X = lhsMatches[l];
             float minDist = 1e7;
@@ -597,8 +604,10 @@ SolveInformation heuristicSolver(const vvvs & stateToBeSolved, const Game & game
         const vvvs cp = qstates.top().second;
         int stateIndex = qstates.top().first.second;
         qstates.pop();
-        
-        random_shuffle(moves.begin(), moves.end()); //shuffle a bit so there's no search direction skew
+
+        std::random_device rd;
+        std::mt19937 g(rd());
+        shuffle(moves.begin(), moves.end(), g); //shuffle a bit so there's no search direction skew
         
         //Loop unrolled for efficiency purposes
         for(short dir : moves) {
@@ -680,7 +689,7 @@ bool operator<(const AStarElem & lhs, const AStarElem & rhs) {
 
 SolveInformation astarSolver(const vvvs & stateToBeSolved, const Game & game, int memoizationMaxSize, long long maxMillis,
                              const deque<short> & additionalZeroCostMoves, bool dpLookup,
-                             volatile std::atomic_bool & keepSolving) {
+                             volatile std::atomic_bool & keepSolving ) {
     uint64_t solhash = game.getHash(); HashVVV(stateToBeSolved, solhash);
     
     if(dpLookup) {
@@ -1072,13 +1081,13 @@ void startSolving(int ind, const vvvs & state, const Game & game, const deque<sh
 #endif
 
     if(3*ind+2 >= threads.size()) {
-        threads.push_back(move(t0));
-        threads.push_back(move(t1));
-        threads.push_back(move(t2));
+        threads.push_back(std::move(t0));
+        threads.push_back(std::move(t1));
+        threads.push_back(std::move(t2));
     } else {
-        threads[3*ind+0] = move(t0);
-        threads[3*ind+1] = move(t1);
-        threads[3*ind+2] = move(t2);
+        threads[3*ind+0] = std::move(t0);
+        threads[3*ind+1] = std::move(t1);
+        threads[3*ind+2] = std::move(t2);
     }
 }
 

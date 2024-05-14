@@ -48,7 +48,9 @@ namespace msa {
                     state.get_actions(actions);
 
                     // randomize the order
-                    std::random_shuffle(actions.begin(), actions.end());
+                    std::random_device rd;
+                    std::mt19937 g(rd());
+                    std::shuffle(actions.begin(), actions.end(), g);
                 }
 
                 // add the next action in queue as a child

@@ -157,7 +157,7 @@ static int lastLogIndex(string dirlocation) {
     for (int i=0; i<numFiles; ++i) {
         cout << "Path at index [" << i << "] = " << dir.getPath(i) << endl;
     }
-    
+    return 0;
 }
 
 void exportRecordToFile(const Record & r, string location) {
