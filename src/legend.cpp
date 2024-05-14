@@ -136,11 +136,10 @@ bool parseLegend(vector<string> lines, int lineFrom, int lineTo, Game & game, Lo
     
     
     if(game.synonyms.count("background") == 0) {
-        
-        logger.logError("No background defined.", lineFrom);
+        logger.logError("No background defined in the objects layer.", lineFrom);
         return false;
     }
-    
+
     
     //previously some objects might be single character:
     /*
