@@ -302,12 +302,15 @@ static bool parseGameLines(vector<string> lines, Game & game, Logger & logger) {
             }*/
             else if(tokens.size()==1 && tokens[0] == "noaction") {
                 logger.logError("noaction unsupported. use [action player] -> cancel instead.", line);
+                return false;
             }
             else if(tokens.size()==1 && tokens[0] == "require_player_movement") {
                 logger.logError("require_player_movement unsupported. Instead use: [Player] -> [Player Marker] ; late [Player Marker] -> Cancel; late [Marker] -> []", line);
+                return false;
             }
             else if(tokens.size()==1 && tokens[0] == "norepeat_action") {
                 logger.logError("norepeat_action unsupported. use a marker instead.", line);
+                return false;
             }
             /*
             else if(tokens.size()==1 && tokens[0] == "noundo") {
