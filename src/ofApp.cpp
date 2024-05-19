@@ -78,11 +78,14 @@ void ofApp::draw(){
 //--------------------------------------------------------------
 static bool isSuperKey = false;
 static bool isAltKey = false;
+static bool isShiftKey = false;
 void ofApp::keyPressed(int key){
     if(key == OF_KEY_SUPER || key == 3682) isSuperKey = true;
     if(key == OF_KEY_ALT || key == 3684) isAltKey = true;
+    if(key == OF_KEY_SHIFT || key == OF_KEY_LEFT_SHIFT || key == OF_KEY_RIGHT_SHIFT || key == 3684) isShiftKey = true;
+
     if(editor::activeIDE) {
-        ideKeyPressed(key, isSuperKey, isAltKey);
+        ideKeyPressed(key, isSuperKey, isAltKey, isShiftKey);
     }
     else {
         keyHandle(key); // in keyHandler.h
@@ -93,6 +96,8 @@ void ofApp::keyPressed(int key){
 void ofApp::keyReleased(int key) {
     if(key == OF_KEY_SUPER || key == 3682 ) isSuperKey = false;
     if(key == OF_KEY_ALT || key == 3684) isAltKey = false;
+    if(key == OF_KEY_SHIFT || key == OF_KEY_LEFT_SHIFT || key == OF_KEY_RIGHT_SHIFT || key == 3684) isShiftKey = false;
+
 }
 
 //--------------------------------------------------------------
