@@ -14,6 +14,7 @@
 #include "testCases.h"
 
 #ifndef compiledWithoutOpenframeworks
+#include "ofApp.h"
 
 namespace editor {
     
@@ -1117,11 +1118,11 @@ void displayLevelEditor() {
 }
 
 
-void ideKeyPressed(int key, bool isSuperKey, bool isAltKey) {
+void ideKeyPressed(int key, bool isSuperKey, bool isAltKey, bool isShiftKey) {
     cout << "key pressed " << key << " is super: " << isSuperKey << " is alt: "<< isAltKey << endl;
-	if (!isSuperKey && key >= 32 && key <= 256 && key != 127) {
+	if (!isSuperKey && !isAltKey && key >= 32 && key <= 256 && key != 127) {
         if(selectPos != cursorPos)
-            ideKeyPressed(8, false, false);
+            ideKeyPressed(OF_KEY_BACKSPACE, false, false, false);
         
         ideString[cursorPos.first] = ideString[cursorPos.first].substr(0, cursorPos.second) + (char)key + ideString[cursorPos.first].substr(cursorPos.second);
         cursorPos.second++;
@@ -1129,10 +1130,10 @@ void ideKeyPressed(int key, bool isSuperKey, bool isAltKey) {
     } else {
         
         switch(key) {
-            case 13: // enter macOS
+            case OF_KEY_RETURN: // enter macOS
             {
                 if(selectPos != cursorPos)
-                    ideKeyPressed(8, false, false);
+                    ideKeyPressed(OF_KEY_BACKSPACE, false, false, false);
                 string str1 = ideString[cursorPos.first].substr(0,cursorPos.second);
                 string str2 = ideString[cursorPos.first].substr(cursorPos.second);
                 
@@ -1142,8 +1143,7 @@ void ideKeyPressed(int key, bool isSuperKey, bool isAltKey) {
                 cursorPos.second = 0;
             }
                 break;
-            case 8: // backspace
-            //case 127: //DEL button
+            case OF_KEY_BACKSPACE: // backspace
                 if(cursorPos != selectPos) {
                     auto minPos = MIN(cursorPos, selectPos);
                     auto maxPos = MAX(cursorPos, selectPos);
@@ -1177,7 +1177,7 @@ void ideKeyPressed(int key, bool isSuperKey, bool isAltKey) {
                 }
                 break;
             case 46: // DELETE
-            case 127:
+            case OF_KEY_DEL:
                 if(cursorPos != selectPos) {
                     auto minPos = MIN(cursorPos, selectPos);
                     auto maxPos = MAX(cursorPos, selectPos);
@@ -1209,23 +1209,25 @@ void ideKeyPressed(int key, bool isSuperKey, bool isAltKey) {
                 }
                 break;
             case 35: // END KEY
-            case 57361:
-            case 57363:
+            case OF_KEY_PAGE_DOWN:
+            case OF_KEY_END:
                 if(cursorPos != selectPos) selectPos = cursorPos = MIN(cursorPos, selectPos);
                 if(ideString[cursorPos.first].size() <= cursorPos.second) cursorPos.second = ideString[cursorPos.first].size();
                 cursorPos.first = MAX(0,(int)ideString.size() - 1);
                 cursorPos.second = MAX(0,(int)ideString[cursorPos.first].size());
+                selectPos = cursorPos;
                 break;
             case 36: // HOME KEY
-            case 57360:
-            case 57362:
+            case OF_KEY_HOME:
+            case OF_KEY_PAGE_UP:
                 if(cursorPos != selectPos) selectPos = cursorPos = MIN(cursorPos, selectPos);
                 cursorPos.first = 0;
                 cursorPos.second = 0;
+                selectPos = cursorPos;
                 break;
                 
             case 356: //left windows
-            case 57356: //left macOS
+            case OF_KEY_LEFT: //left macOS
                 if(isSuperKey) {
                     if(cursorPos != selectPos) selectPos = cursorPos = MIN(cursorPos, selectPos);
                     cursorPos.second = 0;
@@ -1238,6 +1240,12 @@ void ideKeyPressed(int key, bool isSuperKey, bool isAltKey) {
                             do { cursorPos.second --; }
                             while(cursorPos.second > 0 && ideString[cursorPos.first][cursorPos.second - 1] != ' ');
                         }
+                    }
+                } else if(isShiftKey) {
+                    if(selectPos.second > 0) selectPos.second --;
+                    else if(selectPos.first > 0) {
+                        selectPos.first--;
+                        selectPos.second = ideString[selectPos.first].size()-1;
                     }
                 }
                 else {
@@ -1252,9 +1260,15 @@ void ideKeyPressed(int key, bool isSuperKey, bool isAltKey) {
                 break;
                 
             case 357: //up windows
-            case 57357: //up macOS
+            case OF_KEY_UP: //up macOS
                 if(isSuperKey) {
-                    ideKeyPressed(36, false, false);
+                    ideKeyPressed(OF_KEY_HOME, false, false, false);
+                } else if(isShiftKey) {
+                    if(selectPos.first == 0) selectPos = {0,0};
+                    else {
+                        selectPos.first--;
+                        selectPos.second = MIN(cursorPos.second, ideString[selectPos.first].size());
+                    }
                 } else {
                     if(cursorPos != selectPos) selectPos = cursorPos = MIN(cursorPos, selectPos);
                     else {
@@ -1269,7 +1283,7 @@ void ideKeyPressed(int key, bool isSuperKey, bool isAltKey) {
                 
                 
             case 358: //right windows
-            case 57358: //right macOS
+            case OF_KEY_RIGHT: //right macOS
                 if(isSuperKey) {
                     if(cursorPos != selectPos) selectPos = cursorPos = MIN(cursorPos, selectPos);
                     cursorPos.second = MAX(0,(int)ideString[cursorPos.first].size());
@@ -1283,7 +1297,14 @@ void ideKeyPressed(int key, bool isSuperKey, bool isAltKey) {
                         do { cursorPos.second ++;}
                         while(cursorPos.second < ideString[cursorPos.first].size() && ideString[cursorPos.first][cursorPos.second] != ' ');
                     }
-                } else {
+                } else if(isShiftKey) {
+                    if(selectPos.second < ideString[selectPos.first].size()) selectPos.second ++;
+                    else if(selectPos.first < ideString.size()) {
+                        selectPos.first++;
+                        selectPos.second = 0;
+                    }
+                }
+                else {
                     if(cursorPos != selectPos) selectPos = cursorPos = MAX(cursorPos, selectPos);
                     else {
                         if(cursorPos.second < ideString[cursorPos.first].size())
@@ -1298,9 +1319,15 @@ void ideKeyPressed(int key, bool isSuperKey, bool isAltKey) {
                 
                 
             case 359: //down windows
-            case 57359: //down macOS
+            case OF_KEY_DOWN: //down macOS
                 if(isSuperKey) {
-                    ideKeyPressed(35, 0, false);
+                    ideKeyPressed(OF_KEY_PAGE_DOWN, false, false, false);
+                } else if(isShiftKey) {
+                    if(selectPos.first + 1 == ideString.size()) selectPos.second = ideString[selectPos.first].size();
+                    else {
+                        selectPos.first++;
+                        selectPos.second = MIN(cursorPos.second, ideString[selectPos.first].size());
+                    }
                 } else {
                     if(cursorPos != selectPos) selectPos = cursorPos = MIN(cursorPos, selectPos);
                     else {
@@ -1312,7 +1339,6 @@ void ideKeyPressed(int key, bool isSuperKey, bool isAltKey) {
                     }
                 }
                 break;
-			case 1:
             case 97:
                 if(isSuperKey) {
                     selectPos = { 0,0 };
@@ -1325,8 +1351,8 @@ void ideKeyPressed(int key, bool isSuperKey, bool isAltKey) {
                 string result = ofGetWindowPtr()->getClipboardString();
                 for(unsigned char c : result) {
                     if(c != 10 && c < 32) continue;
-                    if(c != 10) ideKeyPressed(c, false, false);
-                    else ideKeyPressed(13, false, false);
+                    if(c != 10) ideKeyPressed(c, false, false, false);
+                    else ideKeyPressed(13, false, false, false);
                 }
             }
             break;
@@ -1364,7 +1390,7 @@ void ideKeyPressed(int key, bool isSuperKey, bool isAltKey) {
                 cerr << "unknown keytype " << key << " " << isSuperKey << endl;
         }
         
-        if(key == 13 || key == 8 || key == 356 || key == 57356 || key == 357 || key == 57357 || key == 358 || key == 57358 || key == 359 || key == 57359 || key == 118) {
+        if(key == 13 || key == 8  || (!isShiftKey && (key == 356 || key == 357 || key == 57357 || key == 358 || key == 57358 || key == 359 || key == 57359)) || key == 118 || key == 22) {
             selectPos = cursorPos;
         }
     }
