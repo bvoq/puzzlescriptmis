@@ -1120,7 +1120,7 @@ void displayLevelEditor() {
 
 void ideKeyPressed(int key, bool isSuperKey, bool isAltKey, bool isShiftKey) {
     cout << "key pressed " << key << " is super: " << isSuperKey << " is alt: "<< isAltKey << endl;
-	if (!isSuperKey && !isAltKey && key >= 32 && key <= 256 && key != 127) {
+	if (!isSuperKey && key >= 32 && key <= 256 && key != 127) {
         if(selectPos != cursorPos)
             ideKeyPressed(OF_KEY_BACKSPACE, false, false, false);
         
