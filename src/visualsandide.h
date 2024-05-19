@@ -32,7 +32,7 @@ extern void switchToRightEditor(MODE_TYPE newmode);
 extern void refreshIDEStrings();
 
 extern void readjustIDEOffset();
-extern void ideKeyPressed(int key, bool isSuperKey);
+extern void ideKeyPressed(int key, bool isSuperKey, bool isAltKey);
 
 extern void displayLevelEditor();
 extern void displayPlayMode();
