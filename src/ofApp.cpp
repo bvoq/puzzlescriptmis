@@ -82,7 +82,7 @@ static bool isShiftKey = false;
 void ofApp::keyPressed(int key){
     if(key == OF_KEY_SUPER || key == 3682) isSuperKey = true;
     if(key == OF_KEY_ALT || key == 3684) isAltKey = true;
-    if(key == OF_KEY_SHIFT || key == OF_KEY_LEFT_SHIFT || key == OF_KEY_RIGHT_SHIFT || key == 3684) isShiftKey = true;
+    if(key == OF_KEY_SHIFT || key == OF_KEY_LEFT_SHIFT || key == OF_KEY_RIGHT_SHIFT) isShiftKey = true;
 
     if(editor::activeIDE) {
         ideKeyPressed(key, isSuperKey, isAltKey, isShiftKey);
@@ -96,7 +96,7 @@ void ofApp::keyPressed(int key){
 void ofApp::keyReleased(int key) {
     if(key == OF_KEY_SUPER || key == 3682 ) isSuperKey = false;
     if(key == OF_KEY_ALT || key == 3684) isAltKey = false;
-    if(key == OF_KEY_SHIFT || key == OF_KEY_LEFT_SHIFT || key == OF_KEY_RIGHT_SHIFT || key == 3684) isShiftKey = false;
+    if(key == OF_KEY_SHIFT || key == OF_KEY_LEFT_SHIFT || key == OF_KEY_RIGHT_SHIFT) isShiftKey = false;
 
 }
 

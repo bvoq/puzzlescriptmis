@@ -1119,7 +1119,7 @@ void displayLevelEditor() {
 
 
 void ideKeyPressed(int key, bool isSuperKey, bool isAltKey, bool isShiftKey) {
-    cout << "key pressed " << key << " is super: " << isSuperKey << " is alt: "<< isAltKey << endl;
+    cout << "key pressed " << key << " is super: " << isSuperKey << " is alt: "<< isAltKey << " is shift " << isShiftKey << endl;
 	if (!isSuperKey && key >= 32 && key <= 256 && key != 127) {
         if(selectPos != cursorPos)
             ideKeyPressed(OF_KEY_BACKSPACE, false, false, false);
@@ -1216,6 +1216,7 @@ void ideKeyPressed(int key, bool isSuperKey, bool isAltKey, bool isShiftKey) {
                 cursorPos.first = MAX(0,(int)ideString.size() - 1);
                 cursorPos.second = MAX(0,(int)ideString[cursorPos.first].size());
                 selectPos = cursorPos;
+                editor::offsetIDEY = -1 *((int)ideString.size() - 10) * editor::ideFont.getLineHeight();
                 break;
             case 36: // HOME KEY
             case OF_KEY_HOME:
@@ -1224,6 +1225,7 @@ void ideKeyPressed(int key, bool isSuperKey, bool isAltKey, bool isShiftKey) {
                 cursorPos.first = 0;
                 cursorPos.second = 0;
                 selectPos = cursorPos;
+                editor::offsetIDEY = 0;
                 break;
                 
             case 356: //left windows
@@ -1233,14 +1235,14 @@ void ideKeyPressed(int key, bool isSuperKey, bool isAltKey, bool isShiftKey) {
                     cursorPos.second = 0;
                 }
                 else if(isAltKey) {
-                    if(cursorPos != selectPos) selectPos = cursorPos = MIN(cursorPos, selectPos);
-                    else {
-                        if(cursorPos.first > 0 && cursorPos.second == 0) cursorPos.second = ideString[--cursorPos.first].size();
-                        if(cursorPos.second > 0 ) {
-                            do { cursorPos.second --; }
-                            while(cursorPos.second > 0 && ideString[cursorPos.first][cursorPos.second - 1] != ' ');
+                        if(selectPos.first > 0 && selectPos.second == 0) selectPos.second = ideString[--selectPos.first].size();
+                        if(selectPos.second > 0 ) {
+                            do { selectPos.second --; }
+                            while(selectPos.second > 0 && ideString[selectPos.first][selectPos.second - 1] != ' ');
                         }
-                    }
+                        if(!isShiftKey) {
+                            cursorPos = selectPos;
+                        }
                 } else if(isShiftKey) {
                     if(selectPos.second > 0) selectPos.second --;
                     else if(selectPos.first > 0) {
@@ -1288,14 +1290,16 @@ void ideKeyPressed(int key, bool isSuperKey, bool isAltKey, bool isShiftKey) {
                     if(cursorPos != selectPos) selectPos = cursorPos = MIN(cursorPos, selectPos);
                     cursorPos.second = MAX(0,(int)ideString[cursorPos.first].size());
                 } else if(isAltKey) {
-                    if(cursorPos != selectPos) selectPos = cursorPos = MIN(cursorPos, selectPos);
-                    if(cursorPos.second == ideString[cursorPos.first].size() && cursorPos.first+1 < ideString.size()) {
-                        cursorPos.first++;
-                        cursorPos.second = 0;
+                    if(selectPos.second == ideString[selectPos.first].size() && selectPos.first+1 < ideString.size()) {
+                        selectPos.first++;
+                        selectPos.second = 0;
                     }
-                    if(cursorPos.second < ideString[cursorPos.first].size()) {
-                        do { cursorPos.second ++;}
-                        while(cursorPos.second < ideString[cursorPos.first].size() && ideString[cursorPos.first][cursorPos.second] != ' ');
+                    if(selectPos.second < ideString[selectPos.first].size()) {
+                        do { selectPos.second ++;}
+                        while(selectPos.second < ideString[selectPos.first].size() && ideString[selectPos.first][selectPos.second] != ' ');
+                    }
+                    if(!isShiftKey) {
+                        cursorPos = selectPos;
                     }
                 } else if(isShiftKey) {
                     if(selectPos.second < ideString[selectPos.first].size()) selectPos.second ++;
