@@ -366,7 +366,14 @@ static inline bool advanceMatchDown(pair<int,int> & pointer, const int & s, cons
 static inline int advanceMatchRightEllipsis(pair<int,int> & pointer, const int & s, const Rule & r, const vvvs & currentState, const vvvc & currentMoveState, const Game & game) {
     for(int y=pointer.second;y<game.currentLevelHeight;++y) {
         for(int x=(y==pointer.second?pointer.first:0);x<game.currentLevelWidth;++x) {
-            if(x + r.lhsObjects[s].size() > game.currentLevelWidth) break;
+            int endofrulewidth = x + r.lhsObjects[s].size();
+            if(endofrulewidth > game.currentLevelWidth) {
+                // https://github.com/bvoq/puzzlescriptmis/issues/12
+                for(int t=0;t<r.lhsTypes[s].size();++t) {
+                    if(r.lhsTypes[s][t] == TYPE_ELLIPSIS) endofrulewidth--;
+                }
+                if(endofrulewidth > game.currentLevelWidth) break;
+            }
             int ret = matchesLayerEllipsis(r,s,x,y,true,currentState,currentMoveState);
             /*
             cout << "checking right match " << x << "," << y << " on rule ";
