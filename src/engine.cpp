@@ -542,7 +542,7 @@ static inline pair<vector<vvvs>, vector<vvvs> > executeRuleSingleMatch(const Rul
 }
 
 
-static void engineStep(vvvs & currentState, vvvc & currentMoveState, const Game & game) {
+static void engineStep(vvvs & currentState, vvvc & currentMoveState, const Game & game, int againCount=0) {
     vvvc oldCurrentState = currentState;
     vvvc oldCurrentMoveState = currentMoveState;
     
@@ -641,7 +641,8 @@ static void engineStep(vvvs & currentState, vvvc & currentMoveState, const Game 
     }
     
     if(again && (oldCurrentState != currentState || oldCurrentMoveState != currentMoveState)) {
-        engineStep(currentState, currentMoveState, game);
+        if(againCount > 500) return;
+        engineStep(currentState, currentMoveState, game, againCount + 1);
     }
 }
 
@@ -842,12 +843,12 @@ static bool checkWinCondition(vvvs & currentState, const Game & game) {
 
 void moveAndChangeField(const short & moveDir, vvvs & currentState, const Game & game) {
     vvvc moveField = generateMoveField(moveDir, currentState, game);
-    engineStep(currentState, moveField, game);
+    engineStep(currentState, moveField, game, 0);
 }
 
 bool moveAndChangeFieldAndReturnWinningCondition(const short & moveDir, vvvs & currentState, const Game & game) {
     vvvc moveField = generateMoveField(moveDir, currentState, game);
-    engineStep(currentState, moveField, game);
+    engineStep(currentState, moveField, game, 0);
     return checkWinCondition(currentState, game);
 }
 

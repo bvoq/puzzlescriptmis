@@ -117,8 +117,9 @@ void switchToLeftEditor(MODE_TYPE newmode, const string reason) {
     
     bool restartGenerating = false;
     static Game oldGame = gbl::currentGame;
-    //detects any changes to the game / editor
+    //detects any changes to the game / editor or if there have been errors in the previous IDE build.
     if(gbl::record.editorHistory.size() == 0
+       || ideLastErrorStr != ""
        || gbl::currentGame.currentLevelIndex != get<1>(gbl::record.editorHistory.back().second).currentLevelIndex
        || levelEditorString != get<3>(gbl::record.editorHistory.back().second)
        || exploitationString != get<4>(gbl::record.editorHistory.back().second)

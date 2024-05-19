@@ -133,10 +133,32 @@ static bool toUncompiledRule(vector<string> lines, int sectionStartsFromLine, in
     
     int groupNumber = 0;
     int startloopNumber = -1;
-
+    
     for(int line=sectionStartsFromLine;line<sectionEndsAtLine;++line) {
         string str = formatString(lines[line]);
         if(str.size() == 0) continue; // skip empty lines
+        
+        int bracketCount = 0;
+        for(int i=0;i<str.size();++i) {
+            if(str[i] != ' ' && isspace(str[i]) ) {
+                logger.logError("Unsupported space character: " + to_string(i), line);
+                return false;
+            }
+            if(str[i] == '[') bracketCount++;
+            else if(str[i] == ']') bracketCount--;
+            if(bracketCount < 0) {
+                logger.logError("Missing an opening bracket [ on this line.", line);
+                return false;
+            }
+            if(bracketCount > 1) {
+                logger.logError("Nested square brackets are not allowed in puzzlescript.", line);
+                return false;
+            }
+        }
+        if(bracketCount != 0) {
+            logger.logError("Missing a bracket [ ] on this line.", line);
+            return false;
+        }
         
         //TOKENIZE
         str = replaceStrOnce(str, "->"," -> ");
