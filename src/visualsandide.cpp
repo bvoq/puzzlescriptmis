@@ -1208,8 +1208,18 @@ void ideKeyPressed(int key, bool isSuperKey, bool isAltKey, bool isShiftKey) {
                     }
                 }
                 break;
-            case 35: // END KEY
+                
             case OF_KEY_PAGE_DOWN:
+            {
+                int totalDown = MIN(20, ideString.size() - 1 - selectPos.first);
+                selectPos.first += totalDown;
+                if(selectPos.second > ideString[selectPos.first].size()) selectPos.second = ideString[selectPos.first].size();
+                
+                if(!isShiftKey) cursorPos = selectPos;
+                editor::offsetIDEY = -1 * (selectPos.first - 10) * editor::ideFont.getLineHeight();
+                break;
+            }
+            case 35: // END KEY
             case OF_KEY_END:
                 if(cursorPos != selectPos) selectPos = cursorPos = MIN(cursorPos, selectPos);
                 if(ideString[cursorPos.first].size() <= cursorPos.second) cursorPos.second = ideString[cursorPos.first].size();
@@ -1218,9 +1228,20 @@ void ideKeyPressed(int key, bool isSuperKey, bool isAltKey, bool isShiftKey) {
                 selectPos = cursorPos;
                 editor::offsetIDEY = -1 *((int)ideString.size() - 10) * editor::ideFont.getLineHeight();
                 break;
+                
+                
+            case OF_KEY_PAGE_UP:
+            {
+                int totalUp = MIN(20, selectPos.first);
+                selectPos.first -= totalUp;
+                if(selectPos.second > ideString[selectPos.first].size()) selectPos.second = ideString[selectPos.first].size();
+                
+                if(!isShiftKey) cursorPos = selectPos;
+                editor::offsetIDEY = -1 * (selectPos.first - 10) * editor::ideFont.getLineHeight();
+                break;
+            }
             case 36: // HOME KEY
             case OF_KEY_HOME:
-            case OF_KEY_PAGE_UP:
                 if(cursorPos != selectPos) selectPos = cursorPos = MIN(cursorPos, selectPos);
                 cursorPos.first = 0;
                 cursorPos.second = 0;
