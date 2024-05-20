@@ -160,6 +160,7 @@ static void generating() {
             chrono::steady_clock::time_point ctime = chrono::steady_clock::now();
             auto timePassedSinceLastImprovement = chrono::duration_cast<std::chrono::milliseconds>(ctime - timeSinceLastImprovement).count();
             timeToSolve = MAX(timeToSolve, timePassedSinceLastImprovement/10);
+            generator::maxSolveTime = timeToSolve;
         }
         solverID = bestSolver(cgame.currentState, cgame); //update best known solver
         

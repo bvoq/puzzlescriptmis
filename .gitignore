@@ -1,4 +1,5 @@
 *.mov
 .DS_Store
+bin/puzzlescriptmis.app
 bin/puzzlescriptmis.app/
 bin/puzzlescriptmisDebug.app/

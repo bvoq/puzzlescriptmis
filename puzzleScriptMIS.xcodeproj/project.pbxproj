@@ -513,7 +513,11 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_USE_OPTIMIZATION_PROFILE = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = Y3K8YFHWL8;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_DYNAMIC_NO_PIC = NO;
 				HEADER_SEARCH_PATHS = (
@@ -526,6 +530,8 @@
 					src/utf8,
 					../../../addons/ofxGui/src,
 				);
+				INFOPLIST_KEY_CFBundleDisplayName = PuzzleScriptMIS;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
@@ -533,6 +539,7 @@
 					"$(LIB_OF_DEBUG)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ch.dekeyser.puzzlescriptmisdebug;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -542,7 +549,11 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_USE_OPTIMIZATION_PROFILE = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = Y3K8YFHWL8;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
@@ -554,13 +565,17 @@
 					src/utf8,
 					../../../addons/ofxGui/src,
 				);
+				INFOPLIST_KEY_CFBundleDisplayName = PuzzleScriptMIS;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LLVM_LTO = YES;
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
 					"$(OF_CORE_FRAMEWORKS)",
 					"$(LIB_OF)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ch.dekeyser.puzzlescriptmis;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
 			};
 			name = Release;
