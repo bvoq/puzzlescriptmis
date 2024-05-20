@@ -229,6 +229,12 @@ void displayLevelEditor() {
             ideLongestSentence = MAX(ideLongestSentence, MIN(150, ideLastErrorStr.size()+ideString[ideLastErrorLine].size()+16));
         }
     }
+    if(ideLastWarningStr.size() > 0) {
+        ideLongestSentence = MAX(ideLongestSentence, MIN(150,ideLastWarningStr.size()+16));
+        if(ideLastWarningLine >= 0 && ideLastWarningLine < ideString.size()) {
+            ideLongestSentence = MAX(ideLongestSentence, MIN(150, ideLastWarningStr.size()+ideString[ideLastWarningLine].size()+16));
+        }
+    }
     
     
     int objCount = MAX(5,gbl::currentGame.synsWithSingleCharName.size()+gbl::currentGame.aggsWithSingleCharName.size());
