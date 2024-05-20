@@ -23,6 +23,7 @@
 		"940BF662-5D7E-4108-9A59-8C53E7789A95" /* legend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "BE5F6D59-62CC-4C52-BC46-B47110F7E580" /* legend.cpp */; };
 		"956DD703-84AA-4D67-821C-45EAF145A027" /* ofxColorPicker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "CA712899-7CE5-481B-AF45-7BDA6807D14C" /* ofxColorPicker.cpp */; };
 		"A5791B4D-1284-4D6F-A959-EFA51069072E" /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "EFA681A6-6671-477A-8C23-014A43B3832E" /* game.cpp */; };
+		A92E28F62BFB357000C79443 /* data in CopyFiles */ = {isa = PBXBuildFile; fileRef = A92E28F52BFB357000C79443 /* data */; };
 		"B681DD5F-2620-4251-9ADE-F24F1BB6A469" /* solver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "C647529E-58B7-4DB2-ADA2-936C7AF39F71" /* solver.cpp */; };
 		"B6EA879D-6CDC-4F39-A5EC-916B744A1A19" /* ofxToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "1AF5D881-7041-4646-9D2C-DA67C3786B4A" /* ofxToggle.cpp */; };
 		"C221B404-EF67-43D5-8659-1BB8DF8C2C79" /* visualsandide.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "A53F7745-6528-4409-96E6-CAFB2FEAE142" /* visualsandide.cpp */; };
@@ -45,8 +46,9 @@
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 6;
+			dstSubfolderSpec = 7;
 			files = (
+				A92E28F62BFB357000C79443 /* data in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +118,7 @@
 		"A5B2FB95-1220-4C22-9602-BDAACF7FA48B" /* MSALoopTimer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = MSALoopTimer.h; path = src/mcts/MSALoopTimer.h; sourceTree = SOURCE_ROOT; };
 		"A837505B-26A0-4250-A217-048D569D7A57" /* levels.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = levels.cpp; path = src/levels.cpp; sourceTree = SOURCE_ROOT; };
 		A92E28F32BFB33A200C79443 /* puzzlescriptmis.profdata */ = {isa = PBXFileReference; lastKnownFileType = file; path = puzzlescriptmis.profdata; sourceTree = "<group>"; };
+		A92E28F52BFB357000C79443 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = data; sourceTree = "<group>"; };
 		"AB41D11C-EBC8-411A-A5F3-3EFACFAB781A" /* ofxGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxGui.h; path = ../../../addons/ofxGui/src/ofxGui.h; sourceTree = SOURCE_ROOT; };
 		"B0B3D418-8174-49CC-A8D2-E426A1384DB7" /* objects.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = objects.h; path = src/objects.h; sourceTree = SOURCE_ROOT; };
 		"B694E32E-5C7E-4A5F-B067-E96E11669E7E" /* stringUtilities.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stringUtilities.h; path = src/stringUtilities.h; sourceTree = SOURCE_ROOT; };
@@ -276,6 +279,7 @@
 		E4B69B4A0A3A1720003C02F2 = {
 			isa = PBXGroup;
 			children = (
+				A92E28F52BFB357000C79443 /* data */,
 				191CD6FA2847E21E0085CBB6 /* of.entitlements */,
 				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
 				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
