@@ -115,6 +115,7 @@
 		"A547E0EF-844A-417E-BABF-549F6416D23B" /* winconditions.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = winconditions.cpp; path = src/winconditions.cpp; sourceTree = SOURCE_ROOT; };
 		"A5B2FB95-1220-4C22-9602-BDAACF7FA48B" /* MSALoopTimer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = MSALoopTimer.h; path = src/mcts/MSALoopTimer.h; sourceTree = SOURCE_ROOT; };
 		"A837505B-26A0-4250-A217-048D569D7A57" /* levels.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = levels.cpp; path = src/levels.cpp; sourceTree = SOURCE_ROOT; };
+		A92E28F32BFB33A200C79443 /* puzzlescriptmis.profdata */ = {isa = PBXFileReference; lastKnownFileType = file; path = puzzlescriptmis.profdata; sourceTree = "<group>"; };
 		"AB41D11C-EBC8-411A-A5F3-3EFACFAB781A" /* ofxGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxGui.h; path = ../../../addons/ofxGui/src/ofxGui.h; sourceTree = SOURCE_ROOT; };
 		"B0B3D418-8174-49CC-A8D2-E426A1384DB7" /* objects.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = objects.h; path = src/objects.h; sourceTree = SOURCE_ROOT; };
 		"B694E32E-5C7E-4A5F-B067-E96E11669E7E" /* stringUtilities.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stringUtilities.h; path = src/stringUtilities.h; sourceTree = SOURCE_ROOT; };
@@ -237,6 +238,14 @@
 			path = src/utf8;
 			sourceTree = SOURCE_ROOT;
 		};
+		A92E28F42BFB33A200C79443 /* OptimizationProfiles */ = {
+			isa = PBXGroup;
+			children = (
+				A92E28F32BFB33A200C79443 /* puzzlescriptmis.profdata */,
+			);
+			path = OptimizationProfiles;
+			sourceTree = "<group>";
+		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +283,7 @@
 				191EF70929D778A400F35F26 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,
 				E4B69B5B0A3A1756003C02F2 /* puzzlescriptmisDebug.app */,
+				A92E28F42BFB33A200C79443 /* OptimizationProfiles */,
 			);
 			sourceTree = "<group>";
 		};
@@ -498,6 +508,7 @@
 			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -525,6 +536,7 @@
 			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
