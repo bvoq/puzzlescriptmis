@@ -532,6 +532,7 @@
 					"$(OF_CORE_FRAMEWORKS)",
 					"$(LIB_OF_DEBUG)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.dekeyser.puzzlescriptmisdebug;
 			};
 			name = Debug;
 		};
@@ -559,6 +560,7 @@
 					"$(OF_CORE_FRAMEWORKS)",
 					"$(LIB_OF)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.dekeyser.puzzlescriptmis;
 				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
 			};
 			name = Release;
