@@ -65,14 +65,14 @@ static inline void moveCollisions(vvvs & currentState, vvvc & currentMoveState, 
                 if(currentMoveState[l][y][x] == STATIONARY_MOVE || currentMoveState[l][y][x] == RE_MOVE) continue;
                 stack<pair<short,short> > s;
                 int cy = y, cx = x;
-                
-                for(;;) {
+                int maxMvmntI = 5 * game.currentLevelHeight * game.currentLevelWidth;
+                for(int mvmntI=0;;++mvmntI) {
                     short c = currentMoveState[l][cy][cx];
                     int ny = cy+(c == UP_MOVE ? -1 : c == DOWN_MOVE ? 1 : 0);
                     int nx = cx+(c == LEFT_MOVE ? -1 : c == RIGHT_MOVE ? 1 : 0);
                     short oppositeC = c==UP_MOVE ? DOWN_MOVE : c==DOWN_MOVE ? UP_MOVE : c==LEFT_MOVE ? RIGHT_MOVE : LEFT_MOVE;
                     
-                    if(ny<0||nx<0||ny>=game.currentLevelHeight||nx>=game.currentLevelWidth||currentMoveState[l][ny][nx] == STATIONARY_MOVE||currentMoveState[l][ny][nx]==oppositeC) { // > x => x x and > < => x x and > edge => x edge
+                    if(ny<0||nx<0||ny>=game.currentLevelHeight||nx>=game.currentLevelWidth||currentMoveState[l][ny][nx] == STATIONARY_MOVE||currentMoveState[l][ny][nx]==oppositeC || mvmntI > maxMvmntI) { // > x => x x and > < => x x and > edge => x edge
                         
                         currentMoveState[l][cy][cx] = STATIONARY_MOVE;
                         while(!s.empty()) {
