@@ -65,7 +65,7 @@ static inline void moveCollisions(vvvs & currentState, vvvc & currentMoveState, 
                 if(currentMoveState[l][y][x] == STATIONARY_MOVE || currentMoveState[l][y][x] == RE_MOVE) continue;
                 stack<pair<short,short> > s;
                 int cy = y, cx = x;
-                int maxMvmntI = 2 * game.currentLevelHeight * game.currentLevelWidth;
+                int maxMvmntI = game.currentLevelHeight * game.currentLevelWidth;
                 for(int mvmntI=0;;++mvmntI) {
                     short c = currentMoveState[l][cy][cx];
                     int ny = cy+(c == UP_MOVE ? -1 : c == DOWN_MOVE ? 1 : 0);
