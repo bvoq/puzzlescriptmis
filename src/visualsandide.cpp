@@ -1426,17 +1426,17 @@ void ideKeyPressed(int key, bool isSuperKey, bool isAltKey, bool isShiftKey) {
                 cerr << "unknown keytype " << key << " " << isSuperKey << endl;
         }
         
-        float minimalIdeOffset = -1 * (selectPos.first - 5) * editor::ideFont.getLineHeight();
-        if(editor::offsetIDEY < minimalIdeOffset ) editor::offsetIDEY = minimalIdeOffset;
-
-        float numberOfLinesHeight = (ofGetHeight() / editor::ideFont.getLineHeight()) - 5;
-        float maximalIdeOffset = -1 * (selectPos.first - numberOfLinesHeight) * editor::ideFont.getLineHeight();
-        if(editor::offsetIDEY > maximalIdeOffset ) editor::offsetIDEY = maximalIdeOffset;
-
         if(key == 13 || key == 8  || (!isShiftKey && (key == 356 || key == 357 || key == 57357 || key == 358 || key == 57358 || key == 359 || key == 57359)) || key == 118 || key == 22) {
             selectPos = cursorPos;
         }
     }
+    
+    float minimalIdeOffset = -1 * (selectPos.first - 5) * editor::ideFont.getLineHeight();
+    if(editor::offsetIDEY < minimalIdeOffset ) editor::offsetIDEY = minimalIdeOffset;
+
+    float numberOfLinesHeight = (ofGetHeight() / editor::ideFont.getLineHeight()) - 5;
+    float maximalIdeOffset = -1 * (selectPos.first - numberOfLinesHeight) * editor::ideFont.getLineHeight();
+    if(editor::offsetIDEY > maximalIdeOffset ) editor::offsetIDEY = maximalIdeOffset;
 }
 
 

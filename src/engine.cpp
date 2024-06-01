@@ -86,7 +86,7 @@ static inline void moveCollisions(vvvs & currentState, vvvc & currentMoveState, 
                         while(!s.empty()) {
                             currentState[l][cy][cx] = currentState[l][s.top().first][s.top().second];
                             currentMoveState[l][cy][cx] = STATIONARY_MOVE;
-                            cy = s.top().first, cx = s.top().second;
+                            cy = s.top().first; cx = s.top().second;
                             s.pop();
                         }
                         currentState[l][cy][cx] = 0;
