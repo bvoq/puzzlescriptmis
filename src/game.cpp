@@ -309,7 +309,7 @@ static bool parseGameLines(vector<string> lines, Game & game, Logger & logger) {
                 return false;
             }
             else if(tokens.size()==1 && tokens[0] == "norepeat_action") {
-                logger.logError("norepeat_action unsupported. use a marker instead.", line);
+                logger.logWarning("norepeat_action is the default behaviour for PSMIS.", line);
                 return false;
             }
             /*
